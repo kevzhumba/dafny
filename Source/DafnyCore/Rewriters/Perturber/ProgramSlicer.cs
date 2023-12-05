@@ -1,19 +1,54 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Boogie;
 
 namespace Microsoft.Dafny.Perturber;
 
 public class ProgramSlicer {
 
-  public static Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>> computeProgramSlice(ISet<CfgToAstTransformer.CFGNode> nodes, ISet<IVariable> initialVars, List<Formal> outs) {
-    Console.WriteLine("Computing Program slice");
-    initialVars.ForEach(v => Console.Write(v.Name + ",\n"));
+
+  public static Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>> computeProgramSlice(
+    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<IVariable> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
+    Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>> resultDict =
+      new Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>>();
+    foreach (var sliceVar in initialVars) {
+      var (result, slice) = computeDirectlyDependentSlice(nodes, new HashSet<IVariable> { sliceVar }, outs, startingNode);
+      var changed = true;
+      while (changed) {
+        changed = false;
+        var branchStatements = slice.SelectMany(a => a.parentBranchNodes).ToHashSet();
+        foreach (var branch in branchStatements) {
+          var used = Used(branch.getStmt());
+          var (branchDirectDependent, addedStatements) = computeDirectlyDependentSlice(nodes, used, outs, branch);
+          foreach (var kv in branchDirectDependent) {
+            result[kv.Key].UnionWith(kv.Value);
+          }
+        }
+        var newSlice = branchStatements.Union(result.Keys.Where(a => {
+          var def = Defined(a.getStmt(), outs);
+          return a.successors.Any(s => result[s].Overlaps(def));
+        })).ToHashSet();
+        if (!slice.SetEquals(newSlice)) {
+          changed = true;
+          slice = newSlice;
+        }
+      }
+      //after this, slice contains the total 
+      resultDict[sliceVar] = slice;
+    }
+    return resultDict;
+  }
+
+
+  public static (Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>>, ISet<CfgToAstTransformer.CFGNode>) computeDirectlyDependentSlice(
+    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<IVariable> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
     Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>> result = new Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>>();
     Queue<CfgToAstTransformer.CFGNode> worklist = new Queue<CfgToAstTransformer.CFGNode>();
+    ISet<CfgToAstTransformer.CFGNode> sliced = new HashSet<CfgToAstTransformer.CFGNode>();
     foreach (var node in nodes) {
       worklist.Enqueue(node);
-      if (node is CfgToAstTransformer.ExitNode) {
+      if (node == startingNode) {
         result.Add(node, initialVars);
       } else {
         result.Add(node, new HashSet<IVariable>());
@@ -43,13 +78,16 @@ public class ProgramSlicer {
       if (!old.SetEquals(result[curr])) {
         curr.predecessors.ForEach(worklist.Enqueue);
       }
+
+      if (defined.Overlaps(inputToCurr)) { //add the node
+        sliced.Add(curr);
+      }
     }
     //Now that we have the initial, we need to return it along with the set of uhhh statements that are in the slice. 
     //Think about how we want to do this. Does it matter whether or not we keep the indirect? If we don't then our slices are worse, but 
     //that's fine as long as it's runnable and able to be verified. This just means that there will be more interesting control flow things that must be done. 
     //This essentially means that if we keep a statement that is inside a control flow, we should keep that statmenet along with the control flow. Easy enough. 
-    return result;
-
+    return (result, sliced);
   }
 
   public static HashSet<IVariable> Defined(Statement stmt, List<Formal> outs) {
@@ -74,7 +112,7 @@ public class ProgramSlicer {
   public static HashSet<IVariable> Used(Statement stmt) {
     HashSet<IVariable> result = new HashSet<IVariable>();
     //This is annoying because some rhs could have this right, like in sequence selects? Let's
-    // just consider sequences selects to both use and define the variables. 
+    // just consider sequences selects to both use and define the variables. This is technicaly correct
     if (stmt is ConcreteUpdateStatement c) {
       c.Lhss.ForEach(e => {
         if (!(e.Resolved is IdentifierExpr)) {

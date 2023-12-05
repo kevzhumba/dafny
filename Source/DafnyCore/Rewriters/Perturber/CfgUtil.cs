@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Microsoft.Dafny.Perturber;
@@ -11,6 +12,7 @@ public class CfgUtil {
     entry.successors.Add(head);
     head.predecessors.Add(entry);
     visited.Add(entry);
+    visited.Add(exit);
     while (stack.Count != 0) {
       var curr = stack.Pop();
       if (!visited.Contains(curr)) {
@@ -29,4 +31,21 @@ public class CfgUtil {
     return visited;
   }
 
+  public static void PrintDotGraph(ISet<CfgToAstTransformer.CFGNode> nodes) {
+    Dictionary<CfgToAstTransformer.CFGNode, int> map = new Dictionary<CfgToAstTransformer.CFGNode, int>();
+    Console.WriteLine("digraph G {");
+    var count = 0;
+    foreach (var node in nodes) {
+      map[node] = count;
+      Console.WriteLine($"n_{count++}[label=\"{node}\"]");
+    }
+
+    foreach (var node in nodes) {
+      foreach (var succ in node.successors) {
+        Console.WriteLine($"n_{map[node]} -> n_{map[succ]}");
+      }
+    }
+
+    Console.WriteLine("}");
+  }
 }

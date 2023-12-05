@@ -24,7 +24,7 @@ public class PerturbationRewriter : IRewriter {
         foreach (MemberDecl member in tld.Members) {
           if (member is Method method) {
             ProgramDependenceSlicing(method);
-            var (head, ends) = CfgToAstTransformer.AstToCfgForStatement(method.Body);
+            var (head, ends, allNodes, toplevelNodes) = CfgToAstTransformer.AstToCfgForStatement(method.Body);
             CfgToAstTransformer.CFGNode entry = new CfgToAstTransformer.EntryNode();
             CfgToAstTransformer.CFGNode exit = new CfgToAstTransformer.ExitNode();
             var nodes = CfgUtil.DFS(head, entry, exit);
@@ -74,36 +74,19 @@ public class PerturbationRewriter : IRewriter {
       variablesInPostCond.ForEach(a => varsInPostconds.Add(a));
       // Console.WriteLine(expression);
     }
+    var (head, endNodes, _, topLevelNodes) = CfgToAstTransformer.AstToCfgForStatement(method.Body);
+    var exit = new CfgToAstTransformer.ExitNode();
+    var entry = new CfgToAstTransformer.EntryNode();
+    endNodes.ForEach(a => a.addSuccessor(exit));
+    var nodes = CfgUtil.DFS(head, entry, exit);
+    CfgUtil.PrintDotGraph(nodes);
+    var slicesForVar = ProgramSlicer.computeProgramSlice(nodes, varsInPostconds, method.Outs, exit);
 
-    var (head, _) = CfgToAstTransformer.AstToCfgForStatement(method.Body);
-    var nodes = CfgUtil.DFS(head, new CfgToAstTransformer.EntryNode(), new CfgToAstTransformer.ExitNode());
-
-    foreach (var variable in varsInPostconds) {
-      var slice = ProgramSlicer.computeProgramSlice(nodes, new HashSet<IVariable> { variable }, method.Outs);
-      slice.ForEach(pv => {
-        Console.WriteLine(pv.Key);
-        pv.Value.ForEach(v => Console.Write(v.Name + ", "));
-        Console.WriteLine("\n");
-      });
+    Console.WriteLine("Slicing");
+    foreach (var kv in slicesForVar) {
+      Console.WriteLine(kv.Key.Name);
+      kv.Value.ForEach(Console.WriteLine);
+      Console.WriteLine(CfgToAstTransformer.CfgToAstForNodeList(topLevelNodes, kv.Value));
     }
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
