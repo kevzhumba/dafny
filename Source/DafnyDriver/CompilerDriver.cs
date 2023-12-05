@@ -44,6 +44,7 @@ namespace Microsoft.Dafny {
     }
 
     public static async Task<int> RunCompiler(DafnyOptions options) {
+      Console.WriteLine("In run compiler");
       options.RunningBoogieFromCommandLine = true;
 
       var backend = GetBackend(options);
@@ -141,6 +142,7 @@ namespace Microsoft.Dafny {
       }
 
       string programName = dafnyFileNames.Count == 1 ? dafnyFileNames[0] : "the_program";
+      Console.WriteLine("In compiler driver");
       var err = DafnyMain.ParseCheck(options.Input, dafnyFiles, programName, options, out var dafnyProgram);
       if (err != null) {
         exitValue = ExitValue.DAFNY_ERROR;

@@ -112,6 +112,7 @@ public class LiteralModuleDecl : ModuleDecl, ICanFormat, IHasSymbolChildren {
       rewriter.PreResolve(module);
     }
 
+
     Signature = module.RegisterTopLevelDecls(resolver, true);
     Signature.Refines = module.Implements?.Target.Sig;
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading;
+using Microsoft.Boogie;
 using Microsoft.Dafny.Compilers;
 
 namespace Microsoft.Dafny;
@@ -69,6 +70,13 @@ public class ProgramResolver {
       var moduleResolutionResult = ResolveModuleDeclaration(compilation, decl);
       ProcessDeclarationResolutionResult(moduleDeclarationPointers, decl, moduleResolutionResult);
     }
+
+    //
+    var pr = new Printer(Program.Options.OutputWriter, Program.Options, Program.Options.PrintMode);
+    pr.PrintProgram(Program, true);
+
+    //TODO Should do our thing here
+
 
     if (Reporter.ErrorCount != startingErrorCount) {
       return;

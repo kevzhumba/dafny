@@ -62,7 +62,6 @@ namespace Microsoft.Dafny {
         DafnyOptions.DiagnosticsFormats.JSON => new JsonConsoleErrorReporter(options),
         _ => throw new ArgumentOutOfRangeException()
       };
-
       program = new ProgramParser().ParseFiles(programName, files, reporter, CancellationToken.None);
       var errorCount = program.Reporter.ErrorCount;
       if (errorCount != 0) {

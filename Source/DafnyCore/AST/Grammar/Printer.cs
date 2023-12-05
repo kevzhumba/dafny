@@ -2227,6 +2227,9 @@ NoGhost - disable printing of functions, ghost methods, and proof
         wr.Write("]");
 
       } else if (expr is NameSegment) {
+        // wr.WriteLine("blah");
+        // wr.WriteLine(((NameSegment) expr).ResolvedExpression.Type);
+        // wr.WriteLine(expr.Type);
         var e = (NameSegment)expr;
         wr.Write(e.Name);
         if (e.OptTypeArguments != null) {

@@ -51,6 +51,7 @@ public static class DafnyCli {
 
   private static Task<int> ThreadMain(TextWriter outputWriter, TextWriter errorWriter, TextReader inputReader, string[] args) {
     Contract.Requires(cce.NonNullElements(args));
+    Console.WriteLine("Executing thread main of cli");
     return Execute(outputWriter, errorWriter, inputReader, args, async parseArgumentResult => {
 
       switch (parseArgumentResult) {
@@ -214,9 +215,10 @@ public static class DafnyCli {
 
     var legacyResult = TryLegacyArgumentParser(inputReader, outputWriter, errorWriter, arguments);
     if (legacyResult != null) {
+      Console.WriteLine("Legacy result");
       return await onLegacyArguments(legacyResult);
     }
-
+    Console.WriteLine("Not legacy result");
     bool allowHidden = arguments.All(a => a != ToolchainDebuggingHelpName);
     foreach (var symbol in AllSymbols) {
       if (!allowHidden) {
