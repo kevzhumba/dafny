@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny0/_ArrayElementInitCompile_114.dfy(153,11): Error: assertion might not hold
+    |
+153 |     assert arr.Length == 3;
+    |                       ^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

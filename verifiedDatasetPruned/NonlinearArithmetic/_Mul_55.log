@@ -1,0 +1,22 @@
+datset/NonlinearArithmetic/_Mul_55.dfy(360,2): Error: a postcondition could not be proved on this return path
+    |
+360 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_Mul_55.dfy(358,12): Related location: this is the postcondition that could not be proved
+    |
+358 |     ensures forall x: int, y: int, z: int {:trigger (y + z) * x} :: (y + z) * x == y * x + z * x
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/_Mul_55.dfy(360,2): Error: a postcondition could not be proved on this return path
+    |
+360 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_Mul_55.dfy(359,12): Related location: this is the postcondition that could not be proved
+    |
+359 |     ensures forall x: int, y: int, z: int {:trigger (y - z) * x} :: (y - z) * x == y * x - z * x
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 53 verified, 2 errors

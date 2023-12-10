@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny0/_MoForallCompilation_73.dfy(73,4): Error: variable 'm0', which is subject to definite-assignment rules, might be uninitialized here
+   |
+73 |     m0[i, j] := m[j, i];
+   |     ^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_73.dfy(76,4): Error: variable 'm1', which is subject to definite-assignment rules, might be uninitialized here
+   |
+76 |     m1[i, j] := m[j, i];
+   |     ^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_73.dfy(79,4): Error: variable 'm2', which is subject to definite-assignment rules, might be uninitialized here
+   |
+79 |     m2[i, j] := m[j, i];
+   |     ^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_73.dfy(79,10): Error: index 1 out of range
+   |
+79 |     m2[i, j] := m[j, i];
+   |           ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_73.dfy(81,0): Error: out-parameter 'm0', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+81 | }
+   | ^
+
+
+Dafny program verifier finished with 17 verified, 5 errors

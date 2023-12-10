@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_pow2_6.dfy(53,4): Error: cannot prove termination; try supplying a decreases clause
+   |
+53 |     Theorem(n / 2);
+   |     ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 6 verified, 1 error

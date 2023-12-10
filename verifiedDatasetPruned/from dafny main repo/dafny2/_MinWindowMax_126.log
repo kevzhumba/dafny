@@ -1,0 +1,57 @@
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(69,4): Error: a precondition for this call could not be proved
+   |
+69 |     Maxes(a, n - W + 1, b[k], n + 1);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(113,16): Related location: this is the precondition that could not be proved
+    |
+113 |   requires 0 <= lo <= x < hi <= a.Length
+    |                 ^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(69,4): Error: a precondition for this call could not be proved
+   |
+69 |     Maxes(a, n - W + 1, b[k], n + 1);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(114,11): Related location: this is the precondition that could not be proved
+    |
+114 |   requires RightmostMax(a, lo, x, hi)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(104,3): Related location
+    |
+104 |   (forall i :: 
+    |    ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(69,4): Error: a precondition for this call could not be proved
+   |
+69 |     Maxes(a, n - W + 1, b[k], n + 1);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(114,11): Related location: this is the precondition that could not be proved
+    |
+114 |   requires RightmostMax(a, lo, x, hi)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(107,2): Related location
+    |
+107 |   forall i :: 
+    |   ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(69,4): Error: a precondition for this call could not be proved
+   |
+69 |     Maxes(a, n - W + 1, b[k], n + 1);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(113,22): Related location: this is the precondition that could not be proved
+    |
+113 |   requires 0 <= lo <= x < hi <= a.Length
+    |                       ^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_126.dfy(69,24): Error: index out of range
+   |
+69 |     Maxes(a, n - W + 1, b[k], n + 1);
+   |                          ^^^
+
+
+Dafny program verifier finished with 11 verified, 5 errors

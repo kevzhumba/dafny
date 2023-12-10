@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using Microsoft.Boogie;
 
 namespace Microsoft.Dafny.Perturber;
@@ -8,12 +9,12 @@ namespace Microsoft.Dafny.Perturber;
 public class ProgramSlicer {
 
 
-  public static Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>> computeProgramSlice(
-    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<IVariable> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
-    Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>> resultDict =
-      new Dictionary<IVariable, ISet<CfgToAstTransformer.CFGNode>>();
+  public static Dictionary<String, ISet<CfgToAstTransformer.CFGNode>> computeProgramSlice(
+    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<String> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
+    Dictionary<String, ISet<CfgToAstTransformer.CFGNode>> resultDict =
+      new Dictionary<String, ISet<CfgToAstTransformer.CFGNode>>();
     foreach (var sliceVar in initialVars) {
-      var (result, slice) = computeDirectlyDependentSlice(nodes, new HashSet<IVariable> { sliceVar }, outs, startingNode);
+      var (result, slice) = computeDirectlyDependentSlice(nodes, new HashSet<String> { sliceVar }, outs, startingNode);
       var changed = true;
       while (changed) {
         changed = false;
@@ -26,7 +27,7 @@ public class ProgramSlicer {
           }
         }
         var newSlice = branchStatements.Union(result.Keys.Where(a => {
-          var def = Defined(a.getStmt(), outs);
+          var def = Defined(a, outs);
           return a.successors.Any(s => result[s].Overlaps(def));
         })).ToHashSet();
         if (!slice.SetEquals(newSlice)) {
@@ -41,9 +42,9 @@ public class ProgramSlicer {
   }
 
 
-  public static (Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>>, ISet<CfgToAstTransformer.CFGNode>) computeDirectlyDependentSlice(
-    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<IVariable> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
-    Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>> result = new Dictionary<CfgToAstTransformer.CFGNode, ISet<IVariable>>();
+  public static (Dictionary<CfgToAstTransformer.CFGNode, ISet<String>>, ISet<CfgToAstTransformer.CFGNode>) computeDirectlyDependentSlice(
+    ISet<CfgToAstTransformer.CFGNode> nodes, ISet<String> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
+    Dictionary<CfgToAstTransformer.CFGNode, ISet<String>> result = new Dictionary<CfgToAstTransformer.CFGNode, ISet<String>>();
     Queue<CfgToAstTransformer.CFGNode> worklist = new Queue<CfgToAstTransformer.CFGNode>();
     ISet<CfgToAstTransformer.CFGNode> sliced = new HashSet<CfgToAstTransformer.CFGNode>();
     foreach (var node in nodes) {
@@ -51,26 +52,26 @@ public class ProgramSlicer {
       if (node == startingNode) {
         result.Add(node, initialVars);
       } else {
-        result.Add(node, new HashSet<IVariable>());
+        result.Add(node, new HashSet<String>());
       }
     }
     while (worklist.Count != 0) {
       var curr = worklist.Dequeue();
-      var inputToCurr = new HashSet<IVariable>(); //this is the union of all the successors
+      var inputToCurr = new HashSet<String>(); //this is the union of all the successors
       var isExitOrEntry = (curr is CfgToAstTransformer.EntryNode || curr is CfgToAstTransformer.ExitNode);
-      ISet<IVariable> defined =
-        isExitOrEntry ? new HashSet<IVariable>() : Defined(curr.getStmt(), outs);
-      ISet<IVariable> used =
-        isExitOrEntry ? new HashSet<IVariable>() : Used(curr.getStmt());
+      ISet<String> defined =
+        isExitOrEntry ? new HashSet<String>() : Defined(curr, outs);
+      ISet<String> used =
+        isExitOrEntry ? new HashSet<String>() : Used(curr.getStmt());
       curr.successors.ForEach(s => result[s].ForEach(v => inputToCurr.Add(v)));
-      ISet<IVariable> firstComponent = new HashSet<IVariable>();
+      ISet<String> firstComponent = new HashSet<String>();
       inputToCurr.ForEach(v => {
         if (!defined.Contains(v)) {
           firstComponent.Add(v);
         }
       });
-      ISet<IVariable> secondComponent = defined.Overlaps(inputToCurr) ? used : new HashSet<IVariable>();
-      var old = new HashSet<IVariable>(result[curr]);
+      ISet<String> secondComponent = defined.Overlaps(inputToCurr) ? used : new HashSet<String>();
+      var old = new HashSet<String>(result[curr]);
 
       result[curr].UnionWith(firstComponent);
       result[curr].UnionWith(secondComponent);
@@ -90,18 +91,34 @@ public class ProgramSlicer {
     return (result, sliced);
   }
 
-  public static HashSet<IVariable> Defined(Statement stmt, List<Formal> outs) {
-    var result = new HashSet<IVariable>();
+  private static HashSet<String> GetAllDefinedVariables(ExtendedPattern ex) {
+    var result = new HashSet<String>();
+    if (ex is IdPattern i) {
+      if (i.BoundVar != null) {
+        result.Add(i.BoundVar.Name);
+      } else if (i.Arguments != null) {
+        i.Arguments.ForEach(arg => result.UnionWith(GetAllDefinedVariables(arg)));
+      }
+    }
+    return result;
+  }
+
+  public static HashSet<String> Defined(CfgToAstTransformer.CFGNode node, List<Formal> outs) {
+    var result = new HashSet<String>();
+    if (node is CfgToAstTransformer.CaseNode caseNode) {
+      return GetAllDefinedVariables(caseNode.CaseStmt.Pat);
+    }
+    var stmt = node.getStmt();
     if (stmt is ConcreteUpdateStatement c) { //need to add handling for method calls 
       c.Lhss.ForEach(e => {
         GetAllVariables(e).ForEach(i => result.Add(i));
       });
     } else if (stmt is VarDeclStmt v) {
-      v.Locals.ForEach(local => result.Add(local));
+      v.Locals.ForEach(local => result.Add(local.Name));
     } else if (stmt is ReturnStmt) {
-      outs.ForEach(f => result.Add(f));
+      outs.ForEach(f => result.Add(f.Name));
     } else if (stmt is ForLoopStmt f) {
-      result.Add(f.LoopIndex);
+      result.Add(f.LoopIndex.Name);
     } else {
       //TODO We should try to be sound here with respect to the heap, but for now it's fine
 
@@ -109,13 +126,16 @@ public class ProgramSlicer {
     return result;
   }
 
-  public static HashSet<IVariable> Used(Statement stmt) {
-    HashSet<IVariable> result = new HashSet<IVariable>();
+  public static HashSet<String> Used(Statement stmt) { //this relies on the fact that for the control flow we set the ast nodes to null
+    HashSet<String> result = new HashSet<String>();
+    if (stmt == null) {
+      return result;
+    }
     //This is annoying because some rhs could have this right, like in sequence selects? Let's
     // just consider sequences selects to both use and define the variables. This is technicaly correct
     if (stmt is ConcreteUpdateStatement c) {
       c.Lhss.ForEach(e => {
-        if (!(e.Resolved is IdentifierExpr)) {
+        if (!(e is NameSegment)) {
           GetAllVariables(e).ForEach(i => result.Add(i));
         }
       }); //this should add everything but normal var assingment which is good?
@@ -138,10 +158,10 @@ public class ProgramSlicer {
     return result;
   }
 
-  public static HashSet<IVariable> GetAllVariables(Expression expression) {
-    var result = new HashSet<IVariable>();
-    if (expression.Resolved is IdentifierExpr i) {
-      result.Add(i.Var);
+  public static HashSet<String> GetAllVariables(Expression expression) {
+    var result = new HashSet<String>();
+    if (expression is NameSegment n) {
+      result.Add(n.Name);
       return result;
     }
     var subExprs = expression.SubExpressions;
@@ -151,9 +171,12 @@ public class ProgramSlicer {
     return result;
   }
 
-  public static HashSet<IVariable> GetAllVariables(AssignmentRhs assignmentRhs) {
-    var result = new HashSet<IVariable>();
+  public static HashSet<String> GetAllVariables(AssignmentRhs assignmentRhs) {
+    var result = new HashSet<String>();
     assignmentRhs.SubExpressions.ForEach(se => GetAllVariables(se).ForEach(n => result.Add(n)));
     return result;
   }
+
+
+
 }

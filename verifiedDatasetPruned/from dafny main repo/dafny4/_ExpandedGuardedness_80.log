@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_ExpandedGuardedness_80.dfy(170,0): Error: a postcondition could not be proved on this return path
+    |
+170 | {
+    | ^
+
+datset/from dafny main repo/dafny4/_ExpandedGuardedness_80.dfy(169,10): Related location: this is the postcondition that could not be proved
+    |
+169 |   ensures TotalLang_Nat(OnlyDs())
+    |           ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ExpandedGuardedness_80.dfy(157,2): Related location
+    |
+157 |   forall s: S :: 
+    |   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

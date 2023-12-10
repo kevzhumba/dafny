@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_MinWindowMax_21.dfy(36,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+36 |     while k <= l - 1 <==> a[b[l - 1]] <= a[n]
+   |     ^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

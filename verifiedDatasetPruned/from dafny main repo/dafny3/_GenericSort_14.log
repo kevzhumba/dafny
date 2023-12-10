@@ -1,0 +1,97 @@
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(70,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+70 |     while i >= a.Length
+   |     ^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(76,38): Error: index out of range
+   |
+76 |       while 0 < j && !O.Leq(a[j - 1], a[j])
+   |                                        ^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(79,18): Error: function precondition could not be proved
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(39,25): Related location
+   |
+39 |     requires 0 <= low <= high <= a.Length
+   |                          ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(89,4): Error: a precondition for this call could not be proved
+   |
+89 |     NeighborSorted_implies_Sorted(a, 0, a.Length);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(49,13): Related location: this is the precondition that could not be proved
+   |
+49 |     requires NeighborSorted(a, low, high)
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy(42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](76,38): Error: index out of range
+   |
+76 |       while 0 < j && !O.Leq(a[j - 1], a[j])
+   |                                        ^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](79,18): Error: function precondition could not be proved
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](39,25): Related location
+   |
+39 |     requires 0 <= low <= high <= a.Length
+   |                          ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](89,4): Error: a precondition for this call could not be proved
+   |
+89 |     NeighborSorted_implies_Sorted(a, 0, a.Length);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](49,13): Related location: this is the precondition that could not be proved
+   |
+49 |     requires NeighborSorted(a, low, high)
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[IntSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](76,38): Error: index out of range
+   |
+76 |       while 0 < j && !O.Leq(a[j - 1], a[j])
+   |                                        ^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](79,18): Error: function precondition could not be proved
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](39,25): Related location
+   |
+39 |     requires 0 <= low <= high <= a.Length
+   |                          ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](89,4): Error: a precondition for this call could not be proved
+   |
+89 |     NeighborSorted_implies_Sorted(a, 0, a.Length);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](49,13): Related location: this is the precondition that could not be proved
+   |
+49 |     requires NeighborSorted(a, low, high)
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_14.dfy[intSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 29 verified, 10 errors

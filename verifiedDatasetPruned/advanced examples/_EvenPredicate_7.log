@@ -1,0 +1,12 @@
+datset/advanced examples/_EvenPredicate_7.dfy(20,4): Error: a precondition for this call could not be proved
+   |
+20 |     EvenSquare(a - 2);
+   |     ^^^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_EvenPredicate_7.dfy(16,11): Related location: this is the precondition that could not be proved
+   |
+16 |   requires a >= 0
+   |            ^^^^^^
+
+
+Dafny program verifier finished with 6 verified, 1 error

@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_67.dfy(63,27): Error: this invariant could not be proved to be maintained by the loop
+   |
+63 |     invariant visitedLower == multiset(people[..lower])
+   |                            ^^
+
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_67.dfy(63,27): Related message: loop invariant violation
+   |
+63 |     invariant visitedLower == multiset(people[..lower])
+   |                            ^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

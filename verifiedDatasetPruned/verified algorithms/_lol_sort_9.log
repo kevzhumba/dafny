@@ -1,0 +1,22 @@
+datset/verified algorithms/_lol_sort_9.dfy(36,26): Error: this invariant could not be proved to be maintained by the loop
+   |
+36 |       invariant j < i ==> forall k | 0 <= k < j :: a[k] <= a[i]
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_9.dfy(36,26): Related message: loop invariant violation
+   |
+36 |       invariant j < i ==> forall k | 0 <= k < j :: a[k] <= a[i]
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_9.dfy(38,27): Error: this invariant could not be proved to be maintained by the loop
+   |
+38 |       invariant j >= i ==> sorted(a[..i + 1])
+   |                            ^^^^^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_9.dfy(38,27): Related message: loop invariant violation
+   |
+38 |       invariant j >= i ==> sorted(a[..i + 1])
+   |                            ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

@@ -1,0 +1,7 @@
+datset/vetri-sparse/_concurrent_poc_6_12.dfy(47,13): Error: assertion might not hold
+   |
+47 |       assert sum(s1[1..]) == sum(s2[1..]);
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

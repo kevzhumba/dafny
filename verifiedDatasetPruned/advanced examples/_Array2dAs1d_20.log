@@ -1,0 +1,7 @@
+datset/advanced examples/_Array2dAs1d_20.dfy(20,15): Error: index out of range
+   |
+20 |       var s := input[i * cols + j];
+   |                     ^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

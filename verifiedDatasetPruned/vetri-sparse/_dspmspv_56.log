@@ -1,0 +1,42 @@
+datset/vetri-sparse/_dspmspv_56.dfy(98,15): Error: variable 'pX_end', which is subject to definite-assignment rules, might be uninitialized here
+   |
+98 |     while kX < pX_end && kV < pV_end
+   |                ^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(99,28): Error: this loop invariant could not be proved on entry
+   |
+99 |       invariant X_pos[n] <= kX <= pX_end
+   |                             ^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(99,28): Related message: loop invariant violation
+   |
+99 |       invariant X_pos[n] <= kX <= pX_end
+   |                             ^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(99,34): Error: variable 'pX_end', which is subject to definite-assignment rules, might be uninitialized here
+   |
+99 |       invariant X_pos[n] <= kX <= pX_end
+   |                                   ^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(104,16): Error: this loop invariant could not be proved on entry
+    |
+104 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(104,16): Related message: loop invariant violation
+    |
+104 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(104,31): Error: function precondition could not be proved
+    |
+104 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_56.dfy(7,16): Related location
+  |
+7 |   requires 0 <= kX <= X_crd.Length
+  |                 ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 5 errors

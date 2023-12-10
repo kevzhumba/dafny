@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny3/_InfiniteTrees_121.dfy(618,4): Error: a postcondition could not be proved on this return path
+    |
+618 |     case {:split false} Succ(next) =>
+    |     ^^^^
+
+datset/from dafny main repo/dafny3/_InfiniteTrees_121.dfy(604,10): Related location: this is the postcondition that could not be proved
+    |
+604 |   ensures IsNeverEndingStream(N2S'(n, num))
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_InfiniteTrees_121.dfy(40,4): Related location
+   |
+40 |     false
+   |     ^^^^^
+
+
+Dafny program verifier finished with 47 verified, 1 error

@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_6.dfy(27,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+27 |   while i < d.Length
+   |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

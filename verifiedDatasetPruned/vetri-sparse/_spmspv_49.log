@@ -1,0 +1,22 @@
+datset/vetri-sparse/_spmspv_49.dfy(58,4): Error: decreases expression might not decrease
+   |
+58 |     while kX < pX_end && kV < pV_end
+   |     ^^^^^
+
+datset/vetri-sparse/_spmspv_49.dfy(63,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+63 |       invariant y[n] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, pX_end, pV_end)
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_49.dfy(63,16): Related message: loop invariant violation
+   |
+63 |       invariant y[n] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, pX_end, pV_end)
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_49.dfy(68,16): Error: variable 'k', which is subject to definite-assignment rules, might be uninitialized here
+   |
+68 |       if kX0 == k && kV0 == k {
+   |                 ^
+
+
+Dafny program verifier finished with 3 verified, 3 errors

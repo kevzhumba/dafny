@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_UnionFind_60.dfy(269,10): Error: a precondition for this call could not be proved
+    |
+269 |           JoinMaintainsReaches1(r0, r1, old(Collect()), Collect());
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_UnionFind_60.dfy(278,15): Related location: this is the precondition that could not be proved
+    |
+278 |       requires C' == C[r0 := Link(r1)][r1 := Root(C[r1].depth + 1)]
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 89 verified, 1 error

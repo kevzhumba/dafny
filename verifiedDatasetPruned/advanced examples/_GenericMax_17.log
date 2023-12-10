@@ -1,0 +1,17 @@
+datset/advanced examples/_GenericMax_17.dfy(14,51): Error: variable 'max', which is subject to definite-assignment rules, might be uninitialized here
+   |
+14 |     invariant forall x :: 0 <= x < i ==> cmp(a[x], max)
+   |                                                    ^^^
+
+datset/advanced examples/_GenericMax_17.dfy(16,18): Error: variable 'max', which is subject to definite-assignment rules, might be uninitialized here
+   |
+16 |     if !cmp(a[i], max) {
+   |                   ^^^
+
+datset/advanced examples/_GenericMax_17.dfy(21,0): Error: out-parameter 'max', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+21 | }
+   | ^
+
+
+Dafny program verifier finished with 1 verified, 3 errors

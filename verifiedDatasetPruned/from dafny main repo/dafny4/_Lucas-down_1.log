@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Lucas-down_1.dfy(41,23): Error: a postcondition could not be proved on this return path
+   |
+41 |   if a == 0 ==> b == 0 {
+   |                        ^
+
+datset/from dafny main repo/dafny4/_Lucas-down_1.dfy(39,10): Related location: this is the postcondition that could not be proved
+   |
+39 |   ensures binom(a, b) % 2 == if EVEN(a) && !EVEN(b) then 0 else binom(a / 2, b / 2) % 2
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Lucas-down_1.dfy(43,21): Error: value does not satisfy the subset constraints of 'nat'
+   |
+43 |     Lucas_Binary''(a - 1, b);
+   |                      ^
+
+
+Dafny program verifier finished with 11 verified, 2 errors

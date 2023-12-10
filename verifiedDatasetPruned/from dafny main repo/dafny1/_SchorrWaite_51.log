@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny1/_SchorrWaite_51.dfy(64,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+64 |     invariant forall n :: n in stackNodes || n == t ==> n.marked && 0 <= n.childrenVisited <= |n.children| && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_51.dfy(64,14): Related message: loop invariant violation
+   |
+64 |     invariant forall n :: n in stackNodes || n == t ==> n.marked && 0 <= n.childrenVisited <= |n.children| && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_51.dfy(83,44): Error: target object might be null
+   |
+83 |     } else if t.children[t.childrenVisited].marked <== t.children[t.childrenVisited] == null {
+   |                                             ^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

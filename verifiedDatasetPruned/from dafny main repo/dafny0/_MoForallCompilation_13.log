@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny0/_MoForallCompilation_13.dfy(30,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+30 |   while i != a.Length {
+   |   ^^^^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_13.dfy(31,10): Error: index out of range
+   |
+31 |     print a[i], " ";
+   |            ^^^
+
+
+Dafny program verifier finished with 17 verified, 2 errors

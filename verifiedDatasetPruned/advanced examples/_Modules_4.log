@@ -1,0 +1,7 @@
+datset/advanced examples/_Modules_4.dfy(38,11): Error: assertion might not hold
+   |
+38 |     assert false;
+   |            ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

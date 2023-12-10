@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_190.dfy(205,16): Error: this invariant could not be proved to be maintained by the loop
+    |
+205 |       invariant forall k, l :: 0 <= k < kn && 0 <= l < n && Nexxxt(k, S) != null && Nexxxt(k, S).next != null ==> Nexxxt(k, S).next.Nexxxt(l, S) != Nexxxt(k, S)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_190.dfy(205,16): Related message: loop invariant violation
+    |
+205 |       invariant forall k, l :: 0 <= k < kn && 0 <= l < n && Nexxxt(k, S) != null && Nexxxt(k, S).next != null ==> Nexxxt(k, S).next.Nexxxt(l, S) != Nexxxt(k, S)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

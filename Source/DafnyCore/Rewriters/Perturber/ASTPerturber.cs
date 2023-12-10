@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -7,7 +8,7 @@ using Microsoft.Boogie;
 namespace Microsoft.Dafny.Perturber;
 
 public class ASTPerturber {
-  private static ISet<Expression> TransformLiteral(LiteralExpr literal) {
+  public static ISet<Expression> TransformLiteral(LiteralExpr literal) {
     var result = new HashSet<Expression>();
     if (literal.Value is bool b) {
       result.Add(new LiteralExpr(literal.tok, !b));
@@ -19,9 +20,10 @@ public class ASTPerturber {
     return result;
   }
 
+
   //Expression Transformations
 
-  private static ISet<Expression> TransformBinaryExpression(BinaryExpr expr) {
+  public static ISet<Expression> TransformBinaryExpression(BinaryExpr expr) {
     var result = new HashSet<Expression>();
     var booleanOps = ImmutableHashSet.Create(
       BinaryExpr.Opcode.Iff,
@@ -78,7 +80,7 @@ public class ASTPerturber {
     return result;
   }
 
-  private static HashSet<AssignmentRhs> TransformRhs(AssignmentRhs rhs) {
+  public static HashSet<AssignmentRhs> TransformRhs(AssignmentRhs rhs) {
     var result = new HashSet<AssignmentRhs>();
     if (rhs is ExprRhs exprRhs) {
       var expressions = TransformExpression(exprRhs.Expr);
@@ -93,7 +95,7 @@ public class ASTPerturber {
    * Transforms an expression and returns a set of possible expressions.
    * The returned set of expressions should be their own object
    */
-  private static ISet<Expression> TransformExpression(Expression expression) {
+  public static ISet<Expression> TransformExpression(Expression expression) {
     var result = new HashSet<Expression>();
     if (expression is BinaryExpr b) {
       TransformBinaryExpression(b).ForEach(a => result.Add(a));
@@ -106,7 +108,7 @@ public class ASTPerturber {
   }
 
   //Statement transformations
-  private static ISet<Statement> TransformUpdateStatement(UpdateStmt assign) {
+  public static ISet<Statement> TransformUpdateStatement(UpdateStmt assign) {
     var result = new HashSet<Statement>();
     assign.Rhss.Select((value, index) => new { value, index }).ForEach(
       rhs => {
@@ -125,9 +127,9 @@ public class ASTPerturber {
     return result;
   }
 
-  private static ISet<Statement> TransformVarDeclStatement(VarDeclStmt varDecl) {
+  public static ISet<Statement> TransformVarDeclStatement(VarDeclStmt varDecl, List<Formal> outs) {
     var result = new HashSet<Statement>();
-    var transformedUpdates = TransformStatement(varDecl.Update);
+    var transformedUpdates = TransformStatement(varDecl.Update, outs);
     transformedUpdates.ForEach(a => {
       if (a is ConcreteUpdateStatement c) {
         result.Add(new VarDeclStmt(varDecl.RangeToken, varDecl.Locals, c));
@@ -137,31 +139,37 @@ public class ASTPerturber {
     return result;
   }
 
-  private static ISet<Statement> TransformIfStmt(IfStmt ifStmt) {
+  public static ISet<Statement> TransformIfStmt(IfStmt ifStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedGuard = TransformExpression(ifStmt.Guard);
-    var transformedTrueBranch = TransformStatement(ifStmt.Thn);
-    var transformedElseBranch = TransformStatement(ifStmt.Els);
+    var transformedTrueBranch = TransformStatement(ifStmt.Thn, outs);
+    var transformedElseBranch = TransformStatement(ifStmt.Els, outs);
     transformedGuard.ForEach(g => result.Add(new IfStmt(ifStmt.RangeToken, ifStmt.IsBindingGuard, g, ifStmt.Thn, ifStmt.Els)));
     transformedTrueBranch.ForEach(g => result.Add(new IfStmt(ifStmt.RangeToken, ifStmt.IsBindingGuard, ifStmt.Guard, (BlockStmt)g, ifStmt.Els)));
     transformedElseBranch.ForEach(g => result.Add(new IfStmt(ifStmt.RangeToken, ifStmt.IsBindingGuard, ifStmt.Guard, ifStmt.Thn, g)));
     return result;
   }
 
-  private static ISet<Statement> TransformWhileStmt(WhileStmt whileStmt) {
+  public static ISet<Statement> TransformWhileStmt(WhileStmt whileStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedGuard = TransformExpression(whileStmt.Guard);
-    var transformedBody = TransformStatement(whileStmt.Body);
+    var transformedBody = TransformStatement(whileStmt.Body, outs);
+    var slicingVars = whileStmt.Invariants.SelectMany(i => ProgramSlicer.GetAllVariables(i.E)).ToHashSet();
+    slicingVars.UnionWith(whileStmt.Decreases.Expressions.SelectMany(i => ProgramSlicer.GetAllVariables(i)));
+    transformedBody.UnionWith(TransformBlockStatementWithSlicing(whileStmt.Body, slicingVars, outs));
     transformedGuard.ForEach(g => result.Add(new WhileStmt(whileStmt.RangeToken, g, whileStmt.Invariants, whileStmt.Decreases, whileStmt.Mod, whileStmt.Body)));
     transformedBody.ForEach(g => result.Add(new WhileStmt(whileStmt.RangeToken, whileStmt.Guard, whileStmt.Invariants, whileStmt.Decreases, whileStmt.Mod, (BlockStmt)g)));
     return result;
   }
 
-  private static ISet<Statement> TransformForLoopStmt(ForLoopStmt forLoopStmt) {
+  public static ISet<Statement> TransformForLoopStmt(ForLoopStmt forLoopStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedStart = TransformExpression(forLoopStmt.Start);
     var transformedEnd = TransformExpression(forLoopStmt.End);
-    var transformedBody = TransformStatement(forLoopStmt.Body);
+    var transformedBody = TransformStatement(forLoopStmt.Body, outs);
+    var slicingVars = forLoopStmt.Invariants.SelectMany(i => ProgramSlicer.GetAllVariables(i.E)).ToHashSet();
+    slicingVars.UnionWith(forLoopStmt.Decreases.Expressions.SelectMany(i => ProgramSlicer.GetAllVariables(i)));
+    transformedBody.UnionWith(TransformBlockStatementWithSlicing(forLoopStmt.Body, slicingVars, outs));
     transformedStart.ForEach(g => result.Add(
       new ForLoopStmt(
         forLoopStmt.RangeToken,
@@ -213,13 +221,13 @@ public class ASTPerturber {
     return result;
   }
 
-  private static ISet<Statement> TransformBlockStmt(BlockStmt blockStmt) {
+  public static ISet<Statement> TransformBlockStmt(BlockStmt blockStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
-    //potential deletes allowed as well.
+    //allow perturbing one at a time
     blockStmt.Body.Select((value, index) => new { value, index })
       .ForEach(
         stmt => {
-          var transformed = TransformStatement(stmt.value);
+          var transformed = TransformStatement(stmt.value, outs);
           foreach (var transformStmt in transformed) {
             var updatedBody = blockStmt.Body.Select((value, index) => {
               if (index == stmt.index) {
@@ -232,25 +240,71 @@ public class ASTPerturber {
           }
         }
       );
+    //delete all statement. More interesting deletes are done with program slicing.
+    result.Add(new BlockStmt(blockStmt.RangeToken, new List<Statement>()));
+
+    blockStmt.Body.ForEach(a => {
+      if (!(a is VarDeclStmt)) { // we want to make sure that removed statements don't define a new variable, which we might use later. 
+        result.Add(new BlockStmt(blockStmt.RangeToken, blockStmt.Body.ToImmutableList().Remove(a).ToList()));
+      }
+    });
     return result;
   }
 
+  public static ISet<Statement> TransformNestedMatchStmt(NestedMatchStmt nestedMatchStmt, List<Formal> outs) {
+    var cases = nestedMatchStmt.Cases;
+    var transformedCases =
+      cases.Select(a => TransformBlockStmt(new BlockStmt(RangeToken.NoToken, a.Body), outs).ToList());
+    var newCasesWithIndex = transformedCases.Select((value, index) => new { value, index }).Select(
+      a => {
+        var newCases = a.value.Select(c =>
+          new NestedMatchCaseStmt(cases[a.index].RangeToken, cases[a.index].Pat, ((BlockStmt)c).Body)
+        );
+        return (newCases, a.index);
+      }
+    );
+    return newCasesWithIndex
+       .SelectMany(a =>
+         a.newCases.Select(b => cases.ToImmutableList().SetItem(a.index, b)))
+       .Select(a => (Statement)new NestedMatchStmt(nestedMatchStmt.RangeToken, nestedMatchStmt.Source, a.ToList(), nestedMatchStmt.UsesOptionalBraces, nestedMatchStmt.Attributes)).ToHashSet()
+       ;
+  }
 
-  private static ISet<Statement> TransformStatement(Statement stmt) {
+
+  public static ISet<Statement> TransformStatement(Statement stmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     if (stmt is UpdateStmt update) {
-      TransformUpdateStatement(update).ForEach(a => result.Add(a));
-    } else if (stmt is VarDeclStmt varDecl) {
-      TransformVarDeclStatement(varDecl).ForEach(a => result.Add(a));
-    } else if (stmt is IfStmt ifStmt) {
-      TransformIfStmt(ifStmt).ForEach(a => result.Add(a));
-    } else if (stmt is WhileStmt whileStmt) {
-      TransformWhileStmt(whileStmt).ForEach(a => result.Add(a));
-    } else if (stmt is ForLoopStmt forLoopStmt) {
-      TransformForLoopStmt(forLoopStmt).ForEach(a => result.Add(a));
-    } else if (stmt is BlockStmt blockStmt) {
-      TransformBlockStmt(blockStmt).ForEach(a => result.Add(a));
+      return TransformUpdateStatement(update);
     }
+    if (stmt is VarDeclStmt varDecl) {
+      return TransformVarDeclStatement(varDecl, outs);
+    }
+    if (stmt is IfStmt ifStmt) {
+      return TransformIfStmt(ifStmt, outs);
+    }
+    if (stmt is WhileStmt whileStmt) {
+      return TransformWhileStmt(whileStmt, outs);
+    }
+    if (stmt is ForLoopStmt forLoopStmt) {
+      return TransformForLoopStmt(forLoopStmt, outs);
+    }
+    if (stmt is BlockStmt blockStmt) {
+      return TransformBlockStmt(blockStmt, outs);
+    }
+    if (stmt is NestedMatchStmt nestedMatchStmt) {
+      return TransformNestedMatchStmt(nestedMatchStmt, outs);
+    }
+
     return result;
+  }
+
+  public static ISet<Statement> TransformBlockStatementWithSlicing(BlockStmt stmt, ISet<String> slicingVars, List<Formal> outs) {
+    var (head, endNodes, _, topLevelNodes) = CfgToAstTransformer.AstToCfgForStatement(stmt);
+    var exit = new CfgToAstTransformer.ExitNode();
+    var entry = new CfgToAstTransformer.EntryNode();
+    endNodes.ForEach(a => a.addSuccessor(exit));
+    var nodes = CfgUtil.DFS(head, entry, exit);
+    var slicesForVar = ProgramSlicer.computeProgramSlice(nodes, slicingVars, outs, exit);
+    return slicesForVar.Select(kv => (Statement)CfgToAstTransformer.CfgToAstForNodeList(topLevelNodes, kv.Value)).ToHashSet();
   }
 }

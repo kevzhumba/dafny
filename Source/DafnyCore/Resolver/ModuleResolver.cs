@@ -1099,6 +1099,7 @@ namespace Microsoft.Dafny {
         }
 
       } else {
+
         // Resolve all names and infer types. These two are done together, because name resolution depends on having type information
         // and type inference depends on having resolved names.
         // The task is first performed for (the constraints of) newtype declarations, (the constraints of) subset type declarations, and
@@ -1124,6 +1125,7 @@ namespace Microsoft.Dafny {
       if (reporter.Count(ErrorLevel.Error) == prevErrorCount) {
         FillInDefaultValueExpressions();
       }
+
 
       // ---------------------------------- Pass 1 ----------------------------------
       // This pass does the following:

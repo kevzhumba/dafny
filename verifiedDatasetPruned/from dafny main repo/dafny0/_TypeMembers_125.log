@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny0/_TypeMembers_125.dfy(242,2): Error: a postcondition could not be proved on this return path
+    |
+242 |   {
+    |   ^
+
+datset/from dafny main repo/dafny0/_TypeMembers_125.dfy(240,12): Related location: this is the postcondition that could not be proved
+    |
+240 |     ensures z == 0
+    |             ^^^^^^
+
+datset/from dafny main repo/dafny0/_TypeMembers_125.dfy(247,2): Error: out-parameter 'z', which is subject to definite-assignment rules, might be uninitialized at this return point
+    |
+247 |   }
+    |   ^
+
+
+Dafny program verifier finished with 29 verified, 2 errors

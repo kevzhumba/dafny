@@ -1,0 +1,7 @@
+datset/advanced examples/_MatrixMultiplication_39.dfy(37,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+37 |     while j < m2.Length1
+   |     ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

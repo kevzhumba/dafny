@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny0/_Constant_38.dfy(78,2): Error: a postcondition could not be proved on this return path
+   |
+78 |   {
+   |   ^
+
+datset/from dafny main repo/dafny0/_Constant_38.dfy(77,12): Related location: this is the postcondition that could not be proved
+   |
+77 |     ensures r == 11
+   |             ^^^^^^^
+
+
+Dafny program verifier finished with 16 verified, 1 error

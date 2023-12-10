@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/lib/_seq_23.dfy(46,24): Error: a postcondition could not be proved on this return path
+   |
+46 |     } else if t - s > 0 {
+   |                         ^
+
+datset/algorithms and leetcode/lib/_seq_23.dfy(42,12): Related location: this is the postcondition that could not be proved
+   |
+42 |     ensures xs[k .. j][s .. t] == xs[k + s .. k + s + (t - s)]
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 51 verified, 1 error

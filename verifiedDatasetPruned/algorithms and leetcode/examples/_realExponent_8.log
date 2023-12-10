@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/examples/_realExponent_8.dfy(59,16): Error: this loop invariant could not be proved on entry
+   |
+59 |     invariant i <= n
+   |                 ^^
+
+datset/algorithms and leetcode/examples/_realExponent_8.dfy(59,16): Related message: loop invariant violation
+   |
+59 |     invariant i <= n
+   |                 ^^
+
+datset/algorithms and leetcode/examples/_realExponent_8.dfy(60,22): Error: this loop invariant could not be proved on entry
+   |
+60 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+datset/algorithms and leetcode/examples/_realExponent_8.dfy(60,22): Related message: loop invariant violation
+   |
+60 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

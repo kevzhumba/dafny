@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_17.dfy(177,11): Warning: /!\ No terms found to trigger on.
+    |
+177 |   var S := set x | lo <= x < lo + len;
+    |            ^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_17.dfy(125,0): Error: a postcondition could not be proved on this return path
+    |
+125 | {
+    | ^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_17.dfy(124,10): Related location: this is the postcondition that could not be proved
+    |
+124 |   ensures A == B
+    |           ^^^^^^
+
+
+Dafny program verifier finished with 20 verified, 1 error

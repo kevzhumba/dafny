@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_81.dfy(111,6): Error: index out of range
+    |
+111 |       elements[length - M] := t;
+    |               ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_81.dfy(117,6): Error: decreases clause might not decrease
+    |
+117 |       more.Append(elements);
+    |       ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 2 errors

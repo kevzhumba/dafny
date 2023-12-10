@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_156.dfy(168,9): Error: function precondition could not be proved
+    |
+168 |       if Nexxxt(j, S) == null {
+    |          ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_156.dfy(20,28): Related location
+   |
+20 |     requires IsClosed(S) && 0 <= k
+   |                             ^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

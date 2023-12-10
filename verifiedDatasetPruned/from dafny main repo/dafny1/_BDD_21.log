@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_BDD_21.dfy(75,13): Error: assertion might not hold
+   |
+75 |       assert s[n - i..] == [];
+   |                         ^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

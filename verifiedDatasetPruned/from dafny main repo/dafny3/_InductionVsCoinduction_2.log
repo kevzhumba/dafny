@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny3/_InductionVsCoinduction_2.dfy(50,2): Warning: /!\ No terms found to trigger on.
+   |
+50 |   forall k: nat | true {
+   |   ^^^^^^
+
+datset/from dafny main repo/dafny3/_InductionVsCoinduction_2.dfy(43,4): Error: a postcondition could not be proved on this return path
+   |
+43 |     case {:split false} SCons(h, t) =>
+   |     ^^^^
+
+datset/from dafny main repo/dafny3/_InductionVsCoinduction_2.dfy(38,36): Related location: this is the postcondition that could not be proved
+   |
+38 |   ensures SAppend(SAppend(a, b), c) ==#[k] SAppend(a, SAppend(b, c))
+   |                                     ^^
+
+datset/from dafny main repo/dafny3/_InductionVsCoinduction_2.dfy(103,30): Related location
+    |
+103 | codatatype Stream<T> = SNil | SCons(head: T, tail: Stream<T>)
+    |                               ^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

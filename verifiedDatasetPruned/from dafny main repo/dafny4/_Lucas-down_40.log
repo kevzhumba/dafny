@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_Lucas-down_40.dfy(99,32): Error: a postcondition could not be proved on this return path
+   |
+99 |   } else if EVEN(n) && !EVEN(m) {
+   |                                 ^
+
+datset/from dafny main repo/dafny4/_Lucas-down_40.dfy(96,10): Related location: this is the postcondition that could not be proved
+   |
+96 |   ensures BitSet(m) <= BitSet(n) <==> !EVEN(binom(n, m))
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

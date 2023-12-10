@@ -1,0 +1,17 @@
+datset/NonlinearArithmetic/Internals/_ModInternals_11.dfy(69,14): Error: possible violation of postcondition of forall statement
+   |
+69 |       ensures 0 == n * zp + (x + n) % n - x % n
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_11.dfy(76,4): Error: a postcondition could not be proved on this return path
+   |
+76 |     if zp < 0 {
+   |     ^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_11.dfy(63,12): Related location: this is the postcondition that could not be proved
+   |
+63 |     ensures (x + n) / n == x / n + 1
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 2 errors

@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/_heap2_58.dfy(75,8): Error: a postcondition could not be proved on this return path
+   |
+75 |         return;
+   |         ^^^^^^
+
+datset/algorithms and leetcode/_heap2_58.dfy(57,27): Related location: this is the postcondition that could not be proved
+   |
+57 |     ensures nidx == -1 ==> IsMaxHeap(this.arr[..])
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/_heap2_58.dfy(25,4): Related location
+   |
+25 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/algorithms and leetcode/_heap2_58.dfy(89,63): Error: possible violation of postcondition of forall statement
+   |
+89 |           ensures i != nidx && 2 * i + 2 < this.arr.Length ==> this.arr[i] >= this.arr[2 * i + 2]
+   |                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

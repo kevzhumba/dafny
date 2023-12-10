@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_15.dfy(35,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+35 |     invariant forall j :: 0 <= j < d.Length ==> (d[j] == -1 && forall k :: 0 <= k < i ==> a[k] != j) || (0 <= d[j] < i && a[d[j]] == j)
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_15.dfy(35,14): Related message: loop invariant violation
+   |
+35 |     invariant forall j :: 0 <= j < d.Length ==> (d[j] == -1 && forall k :: 0 <= k < i ==> a[k] != j) || (0 <= d[j] < i && a[d[j]] == j)
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

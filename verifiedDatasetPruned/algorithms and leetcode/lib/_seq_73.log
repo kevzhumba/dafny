@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/lib/_seq_73.dfy(191,13): Error: assertion might not hold
+    |
+191 |       assert xs + ys == ys;
+    |                      ^^^^^
+
+datset/algorithms and leetcode/lib/_seq_73.dfy(193,13): Error: assertion might not hold
+    |
+193 |       assert xs + ys == [xs[0]] + (xs[1..] + ys);
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/_seq_73.dfy(193,25): Error: index out of range
+    |
+193 |       assert xs + ys == [xs[0]] + (xs[1..] + ys);
+    |                            ^^^
+
+datset/algorithms and leetcode/lib/_seq_73.dfy(193,35): Error: lower bound out of range
+    |
+193 |       assert xs + ys == [xs[0]] + (xs[1..] + ys);
+    |                                      ^^^^^
+
+
+Dafny program verifier finished with 51 verified, 4 errors

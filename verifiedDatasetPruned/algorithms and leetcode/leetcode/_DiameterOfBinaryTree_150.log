@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_150.dfy(463,0): Error: a postcondition could not be proved on this return path
+    |
+463 | {
+    | ^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_150.dfy(462,10): Related location: this is the postcondition that could not be proved
+    |
+462 |   ensures injectiveSeq(path)
+    |           ^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_150.dfy(13,2): Related location
+   |
+13 |   forall x, y :: 
+   |   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 78 verified, 1 error

@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_20.dfy(37,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+37 |     invariant forall k {:trigger old(a[k])} :: 0 <= k < i && IsPrefixDuplicate(a, i, a[k]) ==> p == q == a[k]
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_20.dfy(37,14): Related message: loop invariant violation
+   |
+37 |     invariant forall k {:trigger old(a[k])} :: 0 <= k < i && IsPrefixDuplicate(a, i, a[k]) ==> p == q == a[k]
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

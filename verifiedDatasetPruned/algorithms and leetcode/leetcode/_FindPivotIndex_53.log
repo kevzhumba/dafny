@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_53.dfy(108,2): Error: a postcondition could not be proved on this return path
+    |
+108 |   return -1;
+    |   ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_53.dfy(67,26): Related location: this is the postcondition that could not be proved
+   |
+67 |   ensures index == -1 ==> forall k: nat :: k < |nums| ==> sum(nums[0 .. k]) != sum(nums[k + 1..])
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

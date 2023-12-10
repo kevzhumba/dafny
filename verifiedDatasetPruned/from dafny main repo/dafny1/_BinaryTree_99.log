@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_BinaryTree_99.dfy(192,15): Error: target object might be null
+    |
+192 |       var t := right.Remove(x);
+    |                ^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

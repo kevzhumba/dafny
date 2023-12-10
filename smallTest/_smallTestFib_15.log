@@ -1,0 +1,18 @@
+Not legacy result
+smallTest/_smallTestFib_15.dfy(28,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_15.dfy(28,14): Related message: loop invariant violation
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_15.dfy(31,17): Error: value does not satisfy the subset constraints of 'nat'
+   |
+31 |     a, b := b, a - b;
+   |                  ^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

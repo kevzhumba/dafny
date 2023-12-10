@@ -1,0 +1,18 @@
+Not legacy result
+smallTest/_sliceTest_9.dfy(10,0): Error: a postcondition could not be proved on this return path
+   |
+10 | {
+   | ^
+
+smallTest/_sliceTest_9.dfy(8,10): Related location: this is the postcondition that could not be proved
+  |
+8 |   ensures x == same
+  |           ^^^^^^^^^
+
+smallTest/_sliceTest_9.dfy(13,0): Error: out-parameter 'same', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+13 | }
+   | ^
+
+
+Dafny program verifier finished with 0 verified, 2 errors

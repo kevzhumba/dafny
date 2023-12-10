@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_MajorityVote_166.dfy(113,7): Error: index out of range
+    |
+113 |     if a[up] == k {
+    |         ^^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

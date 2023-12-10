@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_57.dfy(102,13): Error: assertion might not hold
+    |
+102 |       assert sum(nums[0 .. i]) == sum(nums[i + 1..]);
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_57.dfy(105,11): Error: assertion might not hold
+    |
+105 |     assert sum(nums[0 .. i]) != sum(nums[i + 1..]);
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

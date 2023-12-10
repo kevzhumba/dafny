@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_45.dfy(81,30): Error: this invariant could not be proved to be maintained by the loop
+   |
+81 |       invariant 0 <= steps && p == Nexxxt(steps, S) && p in S && null in Visited && Visited <= S
+   |                               ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_45.dfy(81,30): Related message: loop invariant violation
+   |
+81 |       invariant 0 <= steps && p == Nexxxt(steps, S) && p in S && null in Visited && Visited <= S
+   |                               ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_45.dfy(83,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+83 |       invariant forall q :: q in Visited && q != null ==> q in NexxxtInverse && 0 <= NexxxtInverse[q] < steps && Nexxxt(NexxxtInverse[q], S) == q
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_45.dfy(83,16): Related message: loop invariant violation
+   |
+83 |       invariant forall q :: q in Visited && q != null ==> q in NexxxtInverse && 0 <= NexxxtInverse[q] < steps && Nexxxt(NexxxtInverse[q], S) == q
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 2 errors

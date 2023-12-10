@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny3/_Abstemious_51.dfy(164,0): Error: a postcondition could not be proved on this return path
+    |
+164 | {
+    | ^
+
+datset/from dafny main repo/dafny3/_Abstemious_51.dfy(163,10): Related location: this is the postcondition that could not be proved
+    |
+163 |   ensures nth(n, OhOnes()) == if n == 0 then 0 else 1
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

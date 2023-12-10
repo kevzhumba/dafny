@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_NumberRepresentations_208.dfy(483,8): Error: a precondition for this call could not be proved
+    |
+483 |   var p := MulProperty(base, d, m, d', y);
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_208.dfy(519,11): Related location: this is the precondition that could not be proved
+    |
+519 |   requires k * a + x == k * b + y
+    |            ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

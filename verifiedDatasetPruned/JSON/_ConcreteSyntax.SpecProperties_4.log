@@ -1,0 +1,17 @@
+datset/JSON/_ConcreteSyntax.SpecProperties_4.dfy(49,17): Error: assertion might not hold
+   |
+49 |           assert ts0 + ts1 == [ts0[0]] + (ts0[1..] + ts1);
+   |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/JSON/_ConcreteSyntax.SpecProperties_4.dfy(49,31): Error: index out of range
+   |
+49 |           assert ts0 + ts1 == [ts0[0]] + (ts0[1..] + ts1);
+   |                                   ^^^
+
+datset/JSON/_ConcreteSyntax.SpecProperties_4.dfy(49,42): Error: lower bound out of range
+   |
+49 |           assert ts0 + ts1 == [ts0[0]] + (ts0[1..] + ts1);
+   |                                              ^^^^^
+
+
+Dafny program verifier finished with 6 verified, 3 errors

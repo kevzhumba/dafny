@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_git-issue195_2.dfy(11,0): Error: a postcondition could not be proved on this return path
+   |
+11 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_git-issue195_2.dfy(10,10): Related location: this is the postcondition that could not be proved
+   |
+10 |   ensures eq <==> b == GenesisBlock()
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_git-issue195_2.dfy(13,0): Error: out-parameter 'eq', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+13 | }
+   | ^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

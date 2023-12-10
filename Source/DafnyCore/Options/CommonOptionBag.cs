@@ -188,6 +188,8 @@ true - Print debug information for the new type system.".TrimStart()) {
     IsHidden = true
   };
 
+  public static readonly Option<bool> Perturb = new("--perturbed", () => false, "Perturb");
+
   public static readonly Option<bool> VerifyIncludedFiles = new("--verify-included-files",
     "Verify code in included files.");
   public static readonly Option<bool> UseBaseFileName = new("--use-basename-for-filename",
@@ -445,6 +447,7 @@ NoGhost - disable printing of functions, ghost methods, and proof
     });
 
     DafnyOptions.RegisterLegacyBinding(BuildFile, (options, value) => { options.DafnyPrintCompiledFile = value?.FullName; });
+    DafnyOptions.RegisterLegacyBinding(Perturb, (options, value) => options.GeneratePerturbed = value);
 
     DafnyOptions.RegisterLegacyBinding(Libraries,
       (options, value) => { options.LibraryFiles = value.Select(fi => fi.FullName).ToHashSet(); });
@@ -522,7 +525,8 @@ NoGhost - disable printing of functions, ghost methods, and proof
       OptimizeErasableDatatypeWrapper,
       AddCompileSuffix,
       SystemModule,
-      ExecutionCoverageReport
+      ExecutionCoverageReport,
+      Perturb
     );
   }
 

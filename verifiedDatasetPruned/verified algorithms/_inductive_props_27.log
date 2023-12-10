@@ -1,0 +1,17 @@
+datset/verified algorithms/_inductive_props_27.dfy(151,9): Error: a postcondition could not be proved on this return path
+    |
+151 |   } else if n >= 2 {
+    |          ^^
+
+datset/verified algorithms/_inductive_props_27.dfy(146,10): Related location: this is the postcondition that could not be proved
+    |
+146 |   ensures even(n)
+    |           ^^^^^^^
+
+datset/verified algorithms/_inductive_props_27.dfy(10,6): Related location
+   |
+10 |       false
+   |       ^^^^^
+
+
+Dafny program verifier finished with 31 verified, 1 error

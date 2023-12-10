@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny3/_Dijkstra_4.dfy(35,2): Error: a postcondition could not be proved on this return path
+   |
+35 |   if 0 >= j {
+   |   ^^
+
+datset/from dafny main repo/dafny3/_Dijkstra_4.dfy(33,21): Related location: this is the postcondition that could not be proved
+   |
+33 |   ensures j <= n ==> j <= f(n)
+   |                      ^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_Dijkstra_4.dfy(45,21): Error: value does not satisfy the subset constraints of 'nat'
+   |
+45 |         lemma_ping(j - 1, f(n - 1));
+   |                      ^
+
+datset/from dafny main repo/dafny3/_Dijkstra_4.dfy(51,21): Error: value does not satisfy the subset constraints of 'nat'
+   |
+51 |         lemma_ping(j - 1, n - 1);
+   |                      ^
+
+datset/from dafny main repo/dafny3/_Dijkstra_4.dfy(56,8): Error: the calculation step between the previous line and this line could not be proved
+   |
+56 |       j <= n;
+   |         ^^
+
+
+Dafny program verifier finished with 6 verified, 4 errors

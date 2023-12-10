@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny4/_NumberRepresentations_110.dfy(209,22): Error: index out of range
+    |
+209 |   if |digits| != 0 && digits[last] == 0 {
+    |                             ^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

@@ -1,0 +1,23 @@
+Not legacy result
+smallTest/_smallTestFib_1.dfy(20,4): Error: a postcondition could not be proved on this return path
+   |
+20 |     return 0;
+   |     ^^^^^^
+
+smallTest/_smallTestFib_1.dfy(16,10): Related location: this is the postcondition that could not be proved
+   |
+16 |   ensures b == fib(n)
+   |           ^^^^^^^^^^^
+
+smallTest/_smallTestFib_1.dfy(26,18): Error: this loop invariant could not be proved on entry
+   |
+26 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+smallTest/_smallTestFib_1.dfy(26,18): Related message: loop invariant violation
+   |
+26 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

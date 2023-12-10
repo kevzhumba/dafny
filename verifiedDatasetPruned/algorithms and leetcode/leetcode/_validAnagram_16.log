@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/leetcode/_validAnagram_16.dfy(27,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+27 |     invariant forall x :: x in sremoved ==> x in s && x in t && t[x] == s[x]
+   |               ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_validAnagram_16.dfy(27,14): Related message: loop invariant violation
+   |
+27 |     invariant forall x :: x in sremoved ==> x in s && x in t && t[x] == s[x]
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

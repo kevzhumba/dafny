@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(98,2): Error: a postcondition could not be proved on this return path
+   |
+98 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(97,17): Related location: this is the postcondition that could not be proved
+   |
+97 |     ensures list.IsAcyclic()
+   |                  ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(79,4): Related location
+   |
+79 |     this in ListNodes &&
+   |     ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(98,2): Error: a postcondition could not be proved on this return path
+   |
+98 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(97,17): Related location: this is the postcondition that could not be proved
+   |
+97 |     ensures list.IsAcyclic()
+   |                  ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_41.dfy(81,6): Related location
+   |
+81 |       next.ListNodes <= ListNodes &&
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 2 errors

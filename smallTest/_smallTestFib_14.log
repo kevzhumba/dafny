@@ -1,0 +1,13 @@
+Not legacy result
+smallTest/_smallTestFib_14.dfy(18,0): Error: a postcondition could not be proved on this return path
+   |
+18 | {
+   | ^
+
+smallTest/_smallTestFib_14.dfy(16,10): Related location: this is the postcondition that could not be proved
+   |
+16 |   ensures b == fib(n)
+   |           ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

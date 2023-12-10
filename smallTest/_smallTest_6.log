@@ -1,0 +1,13 @@
+Not legacy result
+smallTest/_smallTest_6.dfy(11,4): Error: a postcondition could not be proved on this return path
+   |
+11 |     return x;
+   |     ^^^^^^
+
+smallTest/_smallTest_6.dfy(5,10): Related location: this is the postcondition that could not be proved
+  |
+5 |   ensures 0 <= y
+  |           ^^^^^^
+
+
+Dafny program verifier finished with 0 verified, 1 error

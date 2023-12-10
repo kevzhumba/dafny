@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(60,2): Error: decreases expression might not decrease
+   |
+60 |   while true
+   |   ^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(68,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+68 |     invariant forall n :: n in S && n.marked && n !in stackNodes && n != t ==> forall ch :: ch in n.children && ch != null ==> ch.marked
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(68,14): Related message: loop invariant violation
+   |
+68 |     invariant forall n :: n in S && n.marked && n !in stackNodes && n != t ==> forall ch :: ch in n.children && ch != null ==> ch.marked
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(69,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+69 |     invariant forall n :: n in S && n !in stackNodes && n != t ==> n.childrenVisited == old(n.childrenVisited)
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(69,14): Related message: loop invariant violation
+   |
+69 |     invariant forall n :: n in S && n !in stackNodes && n != t ==> n.childrenVisited == old(n.childrenVisited)
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_76.dfy(76,11): Error: index out of range
+   |
+76 |       t := stackNodes[|stackNodes| - 1];
+   |                      ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 4 errors

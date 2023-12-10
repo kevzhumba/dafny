@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_25.dfy(113,20): Error: this loop invariant could not be proved on entry
+    |
+113 |     invariant -1 <= i < xs.Length
+    |                     ^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_25.dfy(113,20): Related message: loop invariant violation
+    |
+113 |     invariant -1 <= i < xs.Length
+    |                     ^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 10 verified, 1 error

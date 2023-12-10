@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny1/_ExtensibleArray_85.dfy(124,2): Error: a postcondition could not be proved on this return path
+    |
+124 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_85.dfy(121,12): Related location: this is the postcondition that could not be proved
+    |
+121 |     ensures Valid() && fresh(Repr - old(Repr))
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_85.dfy(66,6): Related location
+   |
+66 |       M < length) &&
+   |       ^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_85.dfy(136,6): Error: decreases clause might not decrease
+    |
+136 |       more.Append(elements);
+    |       ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 2 errors

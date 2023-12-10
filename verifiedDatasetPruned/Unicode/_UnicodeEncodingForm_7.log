@@ -1,0 +1,12 @@
+datset/Unicode/_UnicodeEncodingForm_7.dfy(70,2): Error: a postcondition could not be proved on this return path
+   |
+70 |   {
+   |   ^
+
+datset/Unicode/_UnicodeEncodingForm_7.dfy(69,12): Related location: this is the postcondition that could not be proved
+   |
+69 |     ensures PartitionCodeUnitSequenceChecked(m) == Some([m])
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

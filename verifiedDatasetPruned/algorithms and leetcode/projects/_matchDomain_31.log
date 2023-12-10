@@ -1,0 +1,7 @@
+datset/algorithms and leetcode/projects/_matchDomain_31.dfy(41,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+41 |   while i < |allowedDomain|
+   |   ^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

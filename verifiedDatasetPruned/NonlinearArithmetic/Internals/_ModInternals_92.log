@@ -1,0 +1,52 @@
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(162,2): Error: a postcondition could not be proved on this return path
+    |
+162 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(157,12): Related location: this is the postcondition that could not be proved
+    |
+157 |     ensures forall x: int {:trigger (x + n) % n} :: (x + n) % n == x % n
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(162,2): Error: a postcondition could not be proved on this return path
+    |
+162 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(158,12): Related location: this is the postcondition that could not be proved
+    |
+158 |     ensures forall x: int {:trigger (x - n) % n} :: (x - n) % n == x % n
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(162,2): Error: a postcondition could not be proved on this return path
+    |
+162 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(159,12): Related location: this is the postcondition that could not be proved
+    |
+159 |     ensures forall x: int {:trigger (x + n) / n} :: (x + n) / n == x / n + 1
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(162,2): Error: a postcondition could not be proved on this return path
+    |
+162 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(160,12): Related location: this is the postcondition that could not be proved
+    |
+160 |     ensures forall x: int {:trigger (x - n) / n} :: (x - n) / n == x / n - 1
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(162,2): Error: a postcondition could not be proved on this return path
+    |
+162 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_92.dfy(161,12): Related location: this is the postcondition that could not be proved
+    |
+161 |     ensures forall x: int {:trigger x % n} :: 0 <= x < n <==> x % n == x
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 5 errors

@@ -1,0 +1,18 @@
+Not legacy result
+smallTest/_sliceTest_8.dfy(10,0): Error: a postcondition could not be proved on this return path
+   |
+10 | {
+   | ^
+
+smallTest/_sliceTest_8.dfy(7,10): Related location: this is the postcondition that could not be proved
+  |
+7 |   ensures less < x
+  |           ^^^^^^^^
+
+smallTest/_sliceTest_8.dfy(13,0): Error: out-parameter 'less', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+13 | }
+   | ^
+
+
+Dafny program verifier finished with 0 verified, 2 errors

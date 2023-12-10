@@ -1,0 +1,22 @@
+datset/advanced examples/_ReverseString_0.dfy(25,19): Error: this loop invariant could not be proved on entry
+   |
+25 |     invariant 0 <= i <= arr.Length
+   |                    ^^^^^^^^^^^^^^^
+
+datset/advanced examples/_ReverseString_0.dfy(25,19): Related message: loop invariant violation
+   |
+25 |     invariant 0 <= i <= arr.Length
+   |                    ^^^^^^^^^^^^^^^
+
+datset/advanced examples/_ReverseString_0.dfy(26,16): Error: this loop invariant could not be proved on entry
+   |
+26 |     invariant j == arr.Length - 1 - i
+   |                 ^^
+
+datset/advanced examples/_ReverseString_0.dfy(26,16): Related message: loop invariant violation
+   |
+26 |     invariant j == arr.Length - 1 - i
+   |                 ^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

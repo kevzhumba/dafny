@@ -1,0 +1,17 @@
+datset/NonlinearArithmetic/Internals/_DivInternals_12.dfy(68,4): Error: a postcondition could not be proved on this return path
+   |
+68 |     forall x: int, y: int {:trigger (x - y) / n} | true
+   |     ^^^^^^
+
+datset/NonlinearArithmetic/Internals/_DivInternals_12.dfy(62,12): Related location: this is the postcondition that could not be proved
+   |
+62 |     ensures DivAuto(n)
+   |             ^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_DivInternals_12.dfy(54,5): Related location
+   |
+54 |     (forall x: int, y: int {:trigger (x + y) / n} :: 
+   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 10 verified, 1 error

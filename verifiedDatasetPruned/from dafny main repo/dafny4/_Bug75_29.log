@@ -1,0 +1,37 @@
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(40,0): Error: a postcondition could not be proved on this return path
+   |
+40 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(38,10): Related location: this is the postcondition that could not be proved
+   |
+38 |   ensures n <= n' <= |s|
+   |           ^^^^^^^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(40,0): Error: a postcondition could not be proved on this return path
+   |
+40 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(38,15): Related location: this is the postcondition that could not be proved
+   |
+38 |   ensures n <= n' <= |s|
+   |                ^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(40,0): Error: a postcondition could not be proved on this return path
+   |
+40 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(39,10): Related location: this is the postcondition that could not be proved
+   |
+39 |   ensures forall j :: 0 <= j < n' ==> Increasing(s, j)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Bug75_29.dfy(45,0): Error: out-parameter 'n'', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+45 | }
+   | ^
+
+
+Dafny program verifier finished with 8 verified, 4 errors

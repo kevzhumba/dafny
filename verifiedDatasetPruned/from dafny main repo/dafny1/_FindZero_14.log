@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_FindZero_14.dfy(9,0): Error: a postcondition could not be proved on this return path
+  |
+9 | {
+  | ^
+
+datset/from dafny main repo/dafny1/_FindZero_14.dfy(8,20): Related location: this is the postcondition that could not be proved
+  |
+8 |   ensures r < 0 ==> forall i :: 0 <= i < a.Length ==> a[i] != 0
+  |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 1 error

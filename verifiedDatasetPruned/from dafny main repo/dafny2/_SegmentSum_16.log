@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_SegmentSum_16.dfy(16,0): Error: a postcondition could not be proved on this return path
+   |
+16 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_SegmentSum_16.dfy(15,10): Related location: this is the postcondition that could not be proved
+   |
+15 |   ensures forall p, q :: 0 <= p <= q <= |a| ==> Sum(a, p, q) <= Sum(a, k, m)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

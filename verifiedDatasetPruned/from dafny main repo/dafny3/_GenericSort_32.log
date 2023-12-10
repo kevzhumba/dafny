@@ -1,0 +1,122 @@
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(77,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(77,18): Related message: loop invariant violation
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(79,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(79,18): Related message: loop invariant violation
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(80,32): Error: this invariant could not be proved to be maintained by the loop
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy(80,32): Related message: loop invariant violation
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](77,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](77,18): Related message: loop invariant violation
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](79,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](79,18): Related message: loop invariant violation
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](80,32): Error: this invariant could not be proved to be maintained by the loop
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[IntSort](80,32): Related message: loop invariant violation
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](77,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](77,18): Related message: loop invariant violation
+   |
+77 |         invariant 0 <= j <= i
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](79,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](79,18): Related message: loop invariant violation
+   |
+79 |         invariant NeighborSorted(a, j, i + 1)
+   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](42,4): Related location
+   |
+42 |     forall i :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](80,32): Error: this invariant could not be proved to be maintained by the loop
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_GenericSort_32.dfy[intSort](80,32): Related message: loop invariant violation
+   |
+80 |         invariant 0 < j < i ==> O.Leq(a[j - 1], a[j + 1])
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 29 verified, 9 errors

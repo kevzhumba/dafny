@@ -1,0 +1,22 @@
+datset/vetri-sparse/_dspmspv_52.dfy(91,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+91 |     invariant n <= X_crd1.Length
+   |                 ^^
+
+datset/vetri-sparse/_dspmspv_52.dfy(91,16): Related message: loop invariant violation
+   |
+91 |     invariant n <= X_crd1.Length
+   |                 ^^
+
+datset/vetri-sparse/_dspmspv_52.dfy(92,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+92 |     invariant forall i :: 0 <= i < n ==> y[X_crd1[i]] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], pV_end)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_52.dfy(92,14): Related message: loop invariant violation
+   |
+92 |     invariant forall i :: 0 <= i < n ==> y[X_crd1[i]] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], pV_end)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 2 errors

@@ -1,0 +1,7 @@
+datset/vetri-sparse/_concurrent_poc_6_0.dfy(18,9): Error: lower bound out of range
+   |
+18 |     sum0(s[1..]);
+   |           ^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

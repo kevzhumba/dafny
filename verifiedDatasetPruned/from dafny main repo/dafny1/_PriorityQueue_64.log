@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_64.dfy(95,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+95 |       invariant forall j :: 2 <= j <= n && j / 2 != i ==> a[j / 2] <= a[j]
+   |                 ^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_64.dfy(95,16): Related message: loop invariant violation
+   |
+95 |       invariant forall j :: 2 <= j <= n && j / 2 != i ==> a[j / 2] <= a[j]
+   |                 ^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_64.dfy(104,17): Error: index out of range
+    |
+104 |       if a[i] <= a[smallestChild] {
+    |                   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 2 errors

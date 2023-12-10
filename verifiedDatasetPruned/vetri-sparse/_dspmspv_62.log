@@ -1,0 +1,37 @@
+datset/vetri-sparse/_dspmspv_62.dfy(91,41): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+91 |     invariant forall i :: 0 <= i < n ==> y[X_crd1[i]] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], pV_end)
+   |                                          ^
+
+datset/vetri-sparse/_dspmspv_62.dfy(92,14): Error: this loop invariant could not be proved on entry
+   |
+92 |     invariant forall i :: n <= i < X_crd1.Length ==> y[X_crd1[i]] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_dspmspv_62.dfy(92,14): Related message: loop invariant violation
+   |
+92 |     invariant forall i :: n <= i < X_crd1.Length ==> y[X_crd1[i]] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_dspmspv_62.dfy(92,53): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+92 |     invariant forall i :: n <= i < X_crd1.Length ==> y[X_crd1[i]] == 0
+   |                                                      ^
+
+datset/vetri-sparse/_dspmspv_62.dfy(93,14): Error: this loop invariant could not be proved on entry
+   |
+93 |     invariant forall i :: 0 <= i < y.Length ==> notin(i, X_crd1) ==> y[i] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_dspmspv_62.dfy(93,14): Related message: loop invariant violation
+   |
+93 |     invariant forall i :: 0 <= i < y.Length ==> notin(i, X_crd1) ==> y[i] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_dspmspv_62.dfy(93,35): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+93 |     invariant forall i :: 0 <= i < y.Length ==> notin(i, X_crd1) ==> y[i] == 0
+   |                                    ^
+
+
+Dafny program verifier finished with 7 verified, 5 errors

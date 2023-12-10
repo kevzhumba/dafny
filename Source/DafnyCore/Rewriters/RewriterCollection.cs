@@ -51,7 +51,7 @@ public static class RewriterCollection {
     foreach (var plugin in reporter.Options.Plugins) {
       result.AddRange(plugin.GetRewriters(reporter));
     }
-    result.Add(new PerturbationRewriter(reporter));
+    // result.Add(new PerturbationRewriter(reporter));
     return result;
   }
 }

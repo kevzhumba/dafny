@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_MatrixFun_137.dfy(90,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+90 |   while i >= m.Length0 {
+   |   ^^^^^
+
+datset/from dafny main repo/dafny1/_MatrixFun_137.dfy(93,14): Error: index 0 out of range
+   |
+93 |       print m[i, j];
+   |               ^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

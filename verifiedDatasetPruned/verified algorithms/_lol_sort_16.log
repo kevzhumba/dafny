@@ -1,0 +1,17 @@
+datset/verified algorithms/_lol_sort_16.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/verified algorithms/_lol_sort_16.dfy(28,10): Related location: this is the postcondition that could not be proved
+   |
+28 |   ensures sorted(a[..])
+   |           ^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_16.dfy(21,2): Related location
+   |
+21 |   forall i, j | 0 <= i <= j < |a| :: 
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

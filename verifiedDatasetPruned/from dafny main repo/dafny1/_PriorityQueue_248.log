@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_248.dfy(198,2): Error: a postcondition could not be proved on this return path
+    |
+198 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_248.dfy(197,12): Related location: this is the postcondition that could not be proved
+    |
+197 |     ensures Valid()
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_248.dfy(124,4): Related location
+    |
+124 |     forall j :: 
+    |     ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error

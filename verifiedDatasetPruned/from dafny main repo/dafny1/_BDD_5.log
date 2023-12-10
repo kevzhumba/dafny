@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny1/_BDD_5.dfy(80,15): Error: assertion might not hold
+   |
+80 |         assert s[n - i..] == [s[n - i]] + s[n - i + 1..];
+   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BDD_5.dfy(80,30): Error: index out of range
+   |
+80 |         assert s[n - i..] == [s[n - i]] + s[n - i + 1..];
+   |                                ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BDD_5.dfy(80,42): Error: lower bound out of range
+   |
+80 |         assert s[n - i..] == [s[n - i]] + s[n - i + 1..];
+   |                                            ^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 3 errors

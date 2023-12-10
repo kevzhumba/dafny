@@ -1,0 +1,33 @@
+Not legacy result
+smallTest/_smallTestFib_21.dfy(26,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+26 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+smallTest/_smallTestFib_21.dfy(26,18): Related message: loop invariant violation
+   |
+26 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+smallTest/_smallTestFib_21.dfy(27,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+27 |     invariant a == fib(i - 1)
+   |               ^^^^^^^^^^^^^^^
+
+smallTest/_smallTestFib_21.dfy(27,14): Related message: loop invariant violation
+   |
+27 |     invariant a == fib(i - 1)
+   |               ^^^^^^^^^^^^^^^
+
+smallTest/_smallTestFib_21.dfy(28,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_21.dfy(28,14): Related message: loop invariant violation
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 3 errors

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading;
+using DAST;
 using Microsoft.Boogie;
 using Microsoft.Dafny.Compilers;
 
@@ -65,18 +66,20 @@ public class ProgramResolver {
       rewriter.PreResolve(Program);
     }
 
+    if (Options.GeneratePerturbed) {
+      foreach (var decl in sortedDecls) {
+        if (decl is LiteralModuleDecl l) {
+          PerturbationRewriter.TransformProgram(Program, l.ModuleDef);
+        }
+      }
+    }
+
+
     foreach (var decl in sortedDecls) {
       cancellationToken.ThrowIfCancellationRequested();
       var moduleResolutionResult = ResolveModuleDeclaration(compilation, decl);
       ProcessDeclarationResolutionResult(moduleDeclarationPointers, decl, moduleResolutionResult);
     }
-
-    //
-    var pr = new Printer(Program.Options.OutputWriter, Program.Options, Program.Options.PrintMode);
-    pr.PrintProgram(Program, true);
-
-    //TODO Should do our thing here
-
 
     if (Reporter.ErrorCount != startingErrorCount) {
       return;

@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_SchorrWaite_143.dfy(132,2): Error: decreases expression might not decrease
+    |
+132 |   while true
+    |   ^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_143.dfy(156,8): Error: target object might be null
+    |
+156 |       p.children := p.children[p.childrenVisited := t];
+    |         ^^^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

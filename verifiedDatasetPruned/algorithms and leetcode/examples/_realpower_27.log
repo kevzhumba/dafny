@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/examples/_realpower_27.dfy(60,22): Error: this invariant could not be proved to be maintained by the loop
+   |
+60 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+datset/algorithms and leetcode/examples/_realpower_27.dfy(60,22): Related message: loop invariant violation
+   |
+60 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

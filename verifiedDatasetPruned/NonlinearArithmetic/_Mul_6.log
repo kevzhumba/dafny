@@ -1,0 +1,12 @@
+datset/NonlinearArithmetic/_Mul_6.dfy(13,14): Error: a postcondition could not be proved on this return path
+   |
+13 |     if x <= 0 {
+   |               ^
+
+datset/NonlinearArithmetic/_Mul_6.dfy(8,12): Related location: this is the postcondition that could not be proved
+  |
+8 |     ensures x * y == MulRecursive(x, y)
+  |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 53 verified, 1 error

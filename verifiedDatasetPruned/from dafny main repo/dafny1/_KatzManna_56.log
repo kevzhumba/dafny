@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_KatzManna_56.dfy(60,14): Error: this loop invariant could not be proved on entry
+   |
+60 |     invariant 1 <= a <= M
+   |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_KatzManna_56.dfy(60,14): Related message: loop invariant violation
+   |
+60 |     invariant 1 <= a <= M
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

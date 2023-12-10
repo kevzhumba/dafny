@@ -1,0 +1,32 @@
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(239,4): Error: a postcondition could not be proved on this return path
+    |
+239 |     forall x: int, y: int {:trigger (x - y) % n} | true
+    |     ^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(219,12): Related location: this is the postcondition that could not be proved
+    |
+219 |     ensures ModAuto(n)
+    |             ^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(207,5): Related location
+    |
+207 |     (forall x: int {:trigger x % n % n} :: 
+    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(239,4): Error: a postcondition could not be proved on this return path
+    |
+239 |     forall x: int, y: int {:trigger (x - y) % n} | true
+    |     ^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(219,12): Related location: this is the postcondition that could not be proved
+    |
+219 |     ensures ModAuto(n)
+    |             ^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_124.dfy(209,5): Related location
+    |
+209 |     (forall x: int {:trigger x % n} :: 
+    |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 2 errors

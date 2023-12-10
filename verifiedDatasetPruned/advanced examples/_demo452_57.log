@@ -1,0 +1,42 @@
+datset/advanced examples/_demo452_57.dfy(10,0): Error: a postcondition could not be proved on this return path
+   |
+10 | {
+   | ^
+
+datset/advanced examples/_demo452_57.dfy(6,10): Related location: this is the postcondition that could not be proved
+  |
+6 |   ensures 0 <= lo <= hi <= a.Length
+  |           ^^^^^^^
+
+datset/advanced examples/_demo452_57.dfy(10,0): Error: a postcondition could not be proved on this return path
+   |
+10 | {
+   | ^
+
+datset/advanced examples/_demo452_57.dfy(6,15): Related location: this is the postcondition that could not be proved
+  |
+6 |   ensures 0 <= lo <= hi <= a.Length
+  |                ^^^^^^^^
+
+datset/advanced examples/_demo452_57.dfy(10,0): Error: a postcondition could not be proved on this return path
+   |
+10 | {
+   | ^
+
+datset/advanced examples/_demo452_57.dfy(6,21): Related location: this is the postcondition that could not be proved
+  |
+6 |   ensures 0 <= lo <= hi <= a.Length
+  |                      ^^^^^^^^^^^^^^
+
+datset/advanced examples/_demo452_57.dfy(36,0): Error: out-parameter 'hi', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+36 | }
+   | ^
+
+datset/advanced examples/_demo452_57.dfy(36,0): Error: out-parameter 'lo', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+36 | }
+   | ^
+
+
+Dafny program verifier finished with 2 verified, 5 errors

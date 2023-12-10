@@ -1,0 +1,12 @@
+datset/vetri-sparse/_spmspv_11.dfy(41,0): Error: a postcondition could not be proved on this return path
+   |
+41 | {
+   | ^
+
+datset/vetri-sparse/_spmspv_11.dfy(40,10): Related location: this is the postcondition that could not be proved
+   |
+40 |   ensures forall i :: 0 <= i < y.Length ==> y[i] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], v_crd.Length)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

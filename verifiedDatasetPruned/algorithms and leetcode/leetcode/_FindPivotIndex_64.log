@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_64.dfy(97,19): Error: this invariant could not be proved to be maintained by the loop
+   |
+97 |     invariant 0 <= i <= |nums|
+   |                    ^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_64.dfy(97,19): Related message: loop invariant violation
+   |
+97 |     invariant 0 <= i <= |nums|
+   |                    ^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_64.dfy(98,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+98 |     invariant forall k: nat :: k < i ==> sum(nums[0 .. k]) != sum(nums[k + 1..])
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_64.dfy(98,14): Related message: loop invariant violation
+   |
+98 |     invariant forall k: nat :: k < i ==> sum(nums[0 .. k]) != sum(nums[k + 1..])
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

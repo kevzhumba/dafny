@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_MinWindowMax_164.dfy(54,14): Error: this loop invariant could not be proved on entry
+   |
+54 |     invariant m == Max(a, start, W)
+   |               ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_164.dfy(54,14): Related message: loop invariant violation
+   |
+54 |     invariant m == Max(a, start, W)
+   |               ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

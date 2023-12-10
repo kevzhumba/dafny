@@ -1,0 +1,13 @@
+Not legacy result
+smallTest/_smallTestFib_3.dfy(25,18): Error: this loop invariant could not be proved on entry
+   |
+25 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+smallTest/_smallTestFib_3.dfy(25,18): Related message: loop invariant violation
+   |
+25 |     invariant 0 < i <= n
+   |                   ^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

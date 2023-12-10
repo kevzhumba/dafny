@@ -1,0 +1,27 @@
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_43.dfy(61,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+61 |     invariant lower - 1 <= upper < |people|
+   |               ^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_43.dfy(61,14): Related message: loop invariant violation
+   |
+61 |     invariant lower - 1 <= upper < |people|
+   |               ^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_43.dfy(78,13): Error: lower bound out of range
+   |
+78 |       assert people[upper + 1..] == [people[upper + 1]] + gu;
+   |                    ^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_43.dfy(78,13): Error: assertion might not hold
+   |
+78 |       assert people[upper + 1..] == [people[upper + 1]] + gu;
+   |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_BoatsToSavePeople_43.dfy(78,37): Error: index out of range
+   |
+78 |       assert people[upper + 1..] == [people[upper + 1]] + gu;
+   |                                            ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 4 errors

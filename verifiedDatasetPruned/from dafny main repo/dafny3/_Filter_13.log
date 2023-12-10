@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny3/_Filter_13.dfy(55,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+55 |   while n != 0
+   |   ^^^^^
+
+
+Dafny program verifier finished with 27 verified, 1 error

@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_143.dfy(173,9): Error: index out of range
+    |
+173 |       if a[i / 2] <= a[i] {
+    |           ^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error

@@ -1,0 +1,12 @@
+datset/NonlinearArithmetic/Internals/_ModInternals_74.dfy(127,14): Error: possible division by zero
+    |
+127 |     var zm := (x - n) / n / (x / n) + 1;
+    |                           ^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_74.dfy(129,14): Error: possible violation of postcondition of forall statement
+    |
+129 |       ensures 0 == n * zm + (x - n) % n - x % n
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 2 errors

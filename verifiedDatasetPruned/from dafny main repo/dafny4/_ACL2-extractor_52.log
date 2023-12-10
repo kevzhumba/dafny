@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_ACL2-extractor_52.dfy(287,4): Error: a postcondition could not be proved on this return path
+    |
+287 |     case {:split false} Cons(x, rest) =>
+    |     ^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_52.dfy(280,10): Related location: this is the postcondition that could not be proved
+    |
+280 |   ensures nth(i, append(xs, ys)) == nth(i - length(xs), ys)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error

@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Primes_83.dfy(216,2): Error: decreases expression might not decrease
+    |
+216 |   while true
+    |   ^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_83.dfy(217,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+217 |     invariant s' != {} && s' <= s
+    |               ^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_83.dfy(217,14): Related message: loop invariant violation
+    |
+217 |     invariant s' != {} && s' <= s
+    |               ^^^^^^^^
+
+
+Dafny program verifier finished with 14 verified, 2 errors

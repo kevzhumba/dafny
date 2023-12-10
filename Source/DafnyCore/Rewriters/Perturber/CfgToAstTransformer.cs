@@ -29,7 +29,11 @@ public class CfgToAstTransformer {
     if (cfgNode is ForNode f) {
       return CfgToAst(f, slice);
     }
-    //in this case, our node is a normal statement node. Just return the statement.
+
+    if (cfgNode is MatchNode m) {
+      return CfgToAst(m, slice);
+    }
+    //in this case, our node is a normal statement node or nop node. Just return the statement.
     return cfgNode.getStmt();
   }
 
@@ -49,7 +53,6 @@ public class CfgToAstTransformer {
   }
 
   public static IfStmt CfgToAst(IfNode ifNode, ISet<CFGNode> slice) {
-    Console.WriteLine(ifNode);
     List<Statement> elseStatements = new List<Statement>();
     foreach (var elsNode in ifNode.els) {
       if (slice.Contains(elsNode)) {
@@ -61,8 +64,28 @@ public class CfgToAstTransformer {
     var thnStatement = CfgToAstForNodeList(ifNode.thn, slice);
     var elsStatement = (elseStatements.Count == 0)
       ? null
-      : ((elseStatements.Count > 1) ? new BlockStmt(RangeToken.NoToken, elseStatements) : elseStatements[0]);
+      : ((elseStatements[0] is IfStmt) ? elseStatements[0] : new BlockStmt(RangeToken.NoToken, elseStatements));
     return ifNode.constructFromThis(thnStatement, elsStatement);
+  }
+
+  public static NestedMatchStmt CfgToAst(MatchNode matchNode, ISet<CFGNode> slice) {
+    List<NestedMatchCaseStmt> list = new List<NestedMatchCaseStmt>();
+    foreach (var node in matchNode.body) {
+      list.Add(CfgToAst((CaseNode)node, slice));
+    }
+    return matchNode.constructFromThis(list);
+  }
+
+  public static NestedMatchCaseStmt CfgToAst(CaseNode caseNode, ISet<CFGNode> slice) {
+    List<Statement> caseStatements = new List<Statement>();
+    foreach (var node in caseNode.body) {
+      if (slice.Contains(node)) {
+        caseStatements.Add(CfgToAstForStatement(node, slice));
+      }
+    }
+
+    return caseNode.constructFromThis(caseStatements);
+
   }
 
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfgForStatement(Statement stmt) {
@@ -77,6 +100,8 @@ public class CfgToAstTransformer {
     } else if (stmt is ReturnStmt r) {
       var node = new NormalStmtNode(stmt);
       return (node, new HashSet<CFGNode>(), new HashSet<CFGNode> { node }, new List<CFGNode> { node });
+    } else if (stmt is NestedMatchStmt n) {
+      return AstToCfg(n);
     } else {
       var endNodes = new HashSet<CFGNode>();
       var node = new NormalStmtNode(stmt);
@@ -99,6 +124,9 @@ public class CfgToAstTransformer {
     for (int i = 0; i < blockStmt.Body.Count; i++) {
       var currStmt = stmts[i];
       var (stmtHead, stmtEndNodes, nodes, stmtTopLevelNode) = AstToCfgForStatement(currStmt); //toplevelnode is a singleton
+      if (stmtHead is NopNode) { //if its a nop skip it
+        continue;
+      }
       topLevelNodes.AddRange(stmtTopLevelNode);
       if (i == 0) {
         head = stmtHead;
@@ -116,6 +144,10 @@ public class CfgToAstTransformer {
       }
     }
     previousEndNodes.ForEach(a => endNodes.Add(a));
+    if (head == null) {
+      CFGNode nop = new NopNode();
+      return (nop, new HashSet<CFGNode> { nop }, new HashSet<CFGNode> { nop }, new List<CFGNode> { nop });
+    }
     return (head, endNodes, allNodes, topLevelNodes);
   }
 
@@ -162,6 +194,7 @@ public class CfgToAstTransformer {
     head.addSuccessor(bodyHead);
     var resultEndNodes = new HashSet<CFGNode>();
     resultEndNodes.Add(head);
+    resultEndNodes.Add(head);
     foreach (var node in bodyEndNodes) {
       if (node.getStmt() is BreakStmt b) {
         if (b.IsContinue) {
@@ -205,6 +238,36 @@ public class CfgToAstTransformer {
     return (head, resultEndNodes, allNodes, new List<CFGNode> { head });
   }
 
+  public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(NestedMatchStmt stmt) {
+    var head = new MatchNode(stmt);
+    var allNodes = new HashSet<CFGNode> { head };
+    var endNodes = new HashSet<CFGNode>();
+    stmt.Cases.ForEach(c => {
+      var (caseHead, caseEndNodes, caseNodes, caseNodeList) = AstToCfg(c);
+      caseNodes.ForEach(caseNode => caseNode.parentBranchNodes.Add(head));
+      head.addSuccessor(caseHead);
+      allNodes.UnionWith(caseNodes);
+      if (head.body == null) {
+        head.body = new List<CFGNode>();
+      }
+      head.body.AddRange(caseNodeList);
+      endNodes.UnionWith(caseEndNodes);
+    });
+    return (head, endNodes, allNodes, new List<CFGNode> { head });
+  }
+
+  public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(NestedMatchCaseStmt stmt) {
+    var head = new CaseNode(stmt);
+    var allNodes = new HashSet<CFGNode> { head };
+    var fakeBlock = new BlockStmt(RangeToken.NoToken, stmt.Body);
+    var (bodyHead, bodyEndNodes, bodyNodes, listTopLevelNodes) = AstToCfg(fakeBlock);
+    bodyNodes.ForEach(b => b.parentBranchNodes.Add(head));
+    head.addSuccessor(bodyHead);
+    allNodes.UnionWith(bodyNodes);
+    head.body = listTopLevelNodes;
+    return (head, bodyEndNodes, allNodes, new List<CFGNode> { head });
+
+  }
 
   public abstract class CFGNode {
     public IList<CFGNode> parentBranchNodes = new List<CFGNode>(); //first branches in the list are iner branches, last ones are outer
@@ -268,6 +331,7 @@ public class CfgToAstTransformer {
     }
   }
 
+
   public class ForNode : CFGNode {
     public readonly ForLoopStmt Stmt;
 
@@ -309,6 +373,62 @@ public class CfgToAstTransformer {
 
   }
 
+  public class CaseNode : CFGNode {
+    public List<CFGNode> body;
+    public readonly NestedMatchCaseStmt CaseStmt;
+
+    public override Statement getStmt() {
+      return null;
+    }
+
+    public CaseNode(NestedMatchCaseStmt caseStmt) {
+      CaseStmt = new NestedMatchCaseStmt(caseStmt.RangeToken, caseStmt.Pat, new List<Statement>());
+    }
+
+    public NestedMatchCaseStmt constructFromThis(List<Statement> body) {
+      return new NestedMatchCaseStmt(
+        CaseStmt.RangeToken,
+        CaseStmt.Pat,
+        body);
+    }
+
+  }
+  public class MatchNode : CFGNode {
+    public readonly NestedMatchStmt Stmt;
+
+    public List<CFGNode> body;
+
+    public override Statement getStmt() {
+      return Stmt;
+    }
+
+    public MatchNode(NestedMatchStmt stmt) {
+      Stmt = new NestedMatchStmt(
+        stmt.RangeToken,
+        stmt.Source,
+        new List<NestedMatchCaseStmt>(),
+        stmt.UsesOptionalBraces,
+        stmt.Attributes
+      );
+    }
+
+    public NestedMatchStmt constructFromThis(List<NestedMatchCaseStmt> cases) {
+      return new NestedMatchStmt(
+        Stmt.RangeToken,
+        Stmt.Source,
+        cases,
+        Stmt.UsesOptionalBraces,
+        Stmt.Attributes
+      );
+    }
+
+
+    public override string ToString() {
+      return "match " + Stmt.Source;
+    }
+
+  }
+
   public class NormalStmtNode : CFGNode {
     public readonly Statement Stmt;
 
@@ -343,4 +463,13 @@ public class CfgToAstTransformer {
       return "Exit";
     }
   }
+
+  public class NopNode : CFGNode {
+    public override Statement getStmt() {
+      return new BlockStmt(RangeToken.NoToken, new List<Statement>()); //nop statement
+    }
+
+  }
+
+
 }

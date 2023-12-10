@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_StoreAndRetrieve_27.dfy(80,6): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+80 |       while i < |arr|
+   |       ^^^^^
+
+
+Dafny program verifier finished with 25 verified, 1 error

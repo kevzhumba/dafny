@@ -1,0 +1,47 @@
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(182,2): Error: a postcondition could not be proved on this return path
+    |
+182 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(178,34): Related location: this is the postcondition that could not be proved
+    |
+178 |     ensures node != null ==> node.Valid()
+    |                                   ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(137,6): Related location
+    |
+137 |       Contents == left.Contents + {data}) &&
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(182,2): Error: a postcondition could not be proved on this return path
+    |
+182 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(178,34): Related location: this is the postcondition that could not be proved
+    |
+178 |     ensures node != null ==> node.Valid()
+    |                                   ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(144,6): Related location
+    |
+144 |       Contents == left.Contents + {data} + right.Contents)
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(182,2): Error: a postcondition could not be proved on this return path
+    |
+182 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(180,50): Related location: this is the postcondition that could not be proved
+    |
+180 |     ensures node != null ==> node.Repr <= Repr && node.Contents == old(Contents) - {x}
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_76.dfy(185,15): Error: target object might be null
+    |
+185 |       var t := left.Remove(x);
+    |                ^^^^
+
+
+Dafny program verifier finished with 18 verified, 4 errors

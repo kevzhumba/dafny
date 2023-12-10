@@ -1,0 +1,47 @@
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(31,0): Error: a postcondition could not be proved on this return path
+   |
+31 | {
+   | ^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(26,10): Related location: this is the postcondition that could not be proved
+   |
+26 |   ensures relationOnASet(R1, S1)
+   |           ^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(6,2): Related location
+  |
+6 |   forall ts :: 
+  |   ^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(31,0): Error: a postcondition could not be proved on this return path
+   |
+31 | {
+   | ^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(27,10): Related location: this is the postcondition that could not be proved
+   |
+27 |   ensures relationOnASet(R2, S2)
+   |           ^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(6,2): Related location
+  |
+6 |   forall ts :: 
+  |   ^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(32,0): Error: out-parameter 'R2', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+32 | }
+   | ^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(32,0): Error: out-parameter 'S1', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+32 | }
+   | ^
+
+datset/algorithms and leetcode/math/_transitiveContra_0.dfy(32,0): Error: out-parameter 'S2', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+32 | }
+   | ^
+
+
+Dafny program verifier finished with 3 verified, 5 errors

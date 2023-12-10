@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_BinaryTree_9.dfy(47,2): Error: a postcondition could not be proved on this return path
+   |
+47 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_9.dfy(46,12): Related location: this is the postcondition that could not be proved
+   |
+46 |     ensures Contents == old(Contents) + {x}
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

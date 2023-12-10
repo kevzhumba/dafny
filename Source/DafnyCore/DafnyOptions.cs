@@ -281,6 +281,7 @@ namespace Microsoft.Dafny {
     public bool DisallowConstructorCaseWithoutParentheses = false;
     public bool PrintFunctionCallGraph = false;
     public bool WarnShadowing = false;
+    public bool GeneratePerturbed = false;
     public FunctionSyntaxOptions FunctionSyntax = FunctionSyntaxOptions.Version4;
     public QuantifierSyntaxOptions QuantifierSyntax = QuantifierSyntaxOptions.Version4;
     public int DefiniteAssignmentLevel = 1; // [0..5] 2 and 3 have the same effect, 4 turns off an array initialisation check and field initialization check, unless --enforce-determinism is used.
@@ -415,6 +416,9 @@ namespace Microsoft.Dafny {
     protected bool ParseDafnySpecificOption(string name, Bpl.CommandLineParseState ps) {
       var args = ps.args; // convenient synonym
       switch (name) {
+        case "perturb":
+          GeneratePerturbed = true;
+          return true;
 
         case "view":
           if (ps.ConfirmArgumentCount(1)) {

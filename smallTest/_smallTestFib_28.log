@@ -1,0 +1,28 @@
+Not legacy result
+smallTest/_smallTestFib_28.dfy(27,14): Error: this loop invariant could not be proved on entry
+   |
+27 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_28.dfy(27,14): Related message: loop invariant violation
+   |
+27 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_28.dfy(27,14): Error: variable 'b', which is subject to definite-assignment rules, might be uninitialized here
+   |
+27 |     invariant b == fib(i)
+   |               ^
+
+smallTest/_smallTestFib_28.dfy(30,12): Error: variable 'b', which is subject to definite-assignment rules, might be uninitialized here
+   |
+30 |     a, b := b, a + b;
+   |             ^
+
+smallTest/_smallTestFib_28.dfy(33,0): Error: out-parameter 'b', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+33 | }
+   | ^
+
+
+Dafny program verifier finished with 1 verified, 4 errors

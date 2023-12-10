@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_353.dfy(832,13): Error: assertion might not hold
+    |
+832 |       assert |path| - 1 == dim;
+    |                         ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_353.dfy(855,41): Error: the calculation step between the previous line and this line could not be proved
+    |
+855 |         leftDiameter.0 + rightDiameter.0 + 2;
+    |                                          ^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_353.dfy(870,11): Error: assertion might not hold
+    |
+870 |     assert dim == leftDiameter.0 + 1;
+    |                ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 78 verified, 3 errors

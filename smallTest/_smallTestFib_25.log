@@ -1,0 +1,8 @@
+Not legacy result
+smallTest/_smallTestFib_25.dfy(25,2): Error: decreases expression might not decrease
+   |
+25 |   while i < n
+   |   ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

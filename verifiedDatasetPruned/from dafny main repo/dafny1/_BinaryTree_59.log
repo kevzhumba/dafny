@@ -1,0 +1,72 @@
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(90,20): Error: a postcondition could not be proved on this return path
+   |
+90 |     if root != null {
+   |                     ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(87,12): Related location: this is the postcondition that could not be proved
+   |
+87 |     ensures Valid() && fresh(Repr - old(Repr))
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(17,6): Related location
+   |
+17 |       root in Repr &&
+   |       ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(90,20): Error: a postcondition could not be proved on this return path
+   |
+90 |     if root != null {
+   |                     ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(87,12): Related location: this is the postcondition that could not be proved
+   |
+87 |     ensures Valid() && fresh(Repr - old(Repr))
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(18,6): Related location
+   |
+18 |       root.Repr <= Repr &&
+   |       ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(90,20): Error: a postcondition could not be proved on this return path
+   |
+90 |     if root != null {
+   |                     ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(87,12): Related location: this is the postcondition that could not be proved
+   |
+87 |     ensures Valid() && fresh(Repr - old(Repr))
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(21,6): Related location
+   |
+21 |       Contents == root.Contents)
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(90,20): Error: a postcondition could not be proved on this return path
+   |
+90 |     if root != null {
+   |                     ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(88,12): Related location: this is the postcondition that could not be proved
+   |
+88 |     ensures Contents == old(Contents) - {x}
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(90,20): Error: a postcondition could not be proved on this return path
+   |
+90 |     if root != null {
+   |                     ^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(87,12): Related location: this is the postcondition that could not be proved
+   |
+87 |     ensures Valid() && fresh(Repr - old(Repr))
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_BinaryTree_59.dfy(15,6): Related location
+   |
+15 |       Contents == {}) &&
+   |       ^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 5 errors

@@ -1,0 +1,18 @@
+Not legacy result
+smallTest/_smallTestFib_17.dfy(28,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_17.dfy(28,14): Related message: loop invariant violation
+   |
+28 |     invariant b == fib(i)
+   |               ^^^^^^^^^^^
+
+smallTest/_smallTestFib_17.dfy(31,15): Error: possible division by zero
+   |
+31 |     a, b := b, a / b;
+   |                  ^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

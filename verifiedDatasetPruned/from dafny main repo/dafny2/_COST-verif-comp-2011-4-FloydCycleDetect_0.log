@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_0.dfy(51,21): Error: this loop invariant could not be proved on entry
+   |
+51 |       invariant 0 <= t < h && Nexxxt(t, S) == tortoise && Nexxxt(h, S) == hare
+   |                      ^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_0.dfy(51,21): Related message: loop invariant violation
+   |
+51 |       invariant 0 <= t < h && Nexxxt(t, S) == tortoise && Nexxxt(h, S) == hare
+   |                      ^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

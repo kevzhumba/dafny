@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_Queue_12.dfy(51,2): Error: a postcondition could not be proved on this return path
+   |
+51 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_Queue_12.dfy(50,12): Related location: this is the postcondition that could not be proved
+   |
+50 |     ensures contents == old(contents)[1..] + old(contents)[..1]
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error
