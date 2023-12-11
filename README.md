@@ -1,3 +1,14 @@
+# Perturbation Project
+The perturbation project files are held in this [folder](https://github.com/kevzhumba/dafny/tree/master/Source/DafnyCore/Rewriters/Perturber). 
+## Build
+To build the project, run `make exe`. The resulting executable is stored in `./Scripts/`
+## Running the Project
+In order to run the perturber, use the Dafny compiler as normal, but add the `--perturbed` flag. This will generate perturbed versions of the input program and store them in the same directory as the input program. For example, the command we use is 
+`./Scripts/dafny verify --perturbed <dafny_file>`
+## The Dataset
+The dataset we built is formatted as a csv stored [here](https://github.com/kevzhumba/dafny/blob/master/dataset.csv)
+
+
 [![Build and Test](https://github.com/dafny-lang/dafny/workflows/Build%20and%20Test/badge.svg)](https://github.com/dafny-lang/dafny/actions?query=workflow%3A%22Build+and+Test%22) [![Gitter](https://badges.gitter.im/dafny-lang/community.svg)](https://gitter.im/dafny-lang/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 Dafny is a **verification-ready programming language**. As you type in your program, Dafny's verifier constantly looks over your shoulder, flags any errors, shows you counterexamples, and congratulates you when your code matches your specifications. When you're done, Dafny can **compile your code to C#, Go, Python, Java, or JavaScript** (more to come!), so it can integrate with your existing workflow.
