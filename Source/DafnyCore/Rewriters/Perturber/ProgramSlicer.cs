@@ -9,6 +9,10 @@ namespace Microsoft.Dafny.Perturber;
 public class ProgramSlicer {
 
 
+  /**
+   * Algorithm to compute the program slice with respect to some set of variables and relevant node.
+   * Algorithm taken from Weiser, basic worklist algorithm.
+   */
   public static Dictionary<String, ISet<CfgToAstTransformer.CFGNode>> computeProgramSlice(
     ISet<CfgToAstTransformer.CFGNode> nodes, ISet<String> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
     Dictionary<String, ISet<CfgToAstTransformer.CFGNode>> resultDict =
@@ -42,6 +46,9 @@ public class ProgramSlicer {
   }
 
 
+  /**
+   * Computes directly dependent statements. Does not take into account dependencies based on control flow.
+   */
   public static (Dictionary<CfgToAstTransformer.CFGNode, ISet<String>>, ISet<CfgToAstTransformer.CFGNode>) computeDirectlyDependentSlice(
     ISet<CfgToAstTransformer.CFGNode> nodes, ISet<String> initialVars, List<Formal> outs, CfgToAstTransformer.CFGNode startingNode) {
     Dictionary<CfgToAstTransformer.CFGNode, ISet<String>> result = new Dictionary<CfgToAstTransformer.CFGNode, ISet<String>>();
@@ -103,6 +110,11 @@ public class ProgramSlicer {
     return result;
   }
 
+  /*
+   * Gets all defined variables for a node. Return statements define the
+   * out variables. This is an underapproximation of the defined variables, as
+   * procedure calls can define/change variables.
+  */
   public static HashSet<String> Defined(CfgToAstTransformer.CFGNode node, List<Formal> outs) {
     var result = new HashSet<String>();
     if (node is CfgToAstTransformer.CaseNode caseNode) {
@@ -111,7 +123,7 @@ public class ProgramSlicer {
     var stmt = node.getStmt();
     if (stmt is ConcreteUpdateStatement c) { //need to add handling for method calls 
       c.Lhss.ForEach(e => {
-        GetAllVariables(e).ForEach(i => result.Add(i));
+        result.UnionWith(GetAllVariables(e));
       });
     } else if (stmt is VarDeclStmt v) {
       v.Locals.ForEach(local => result.Add(local.Name));
@@ -126,6 +138,9 @@ public class ProgramSlicer {
     return result;
   }
 
+  /**
+   * The variables that a statement uses.
+   */
   public static HashSet<String> Used(Statement stmt) { //this relies on the fact that for the control flow we set the ast nodes to null
     HashSet<String> result = new HashSet<String>();
     if (stmt == null) {
@@ -136,28 +151,31 @@ public class ProgramSlicer {
     if (stmt is ConcreteUpdateStatement c) {
       c.Lhss.ForEach(e => {
         if (!(e is NameSegment)) {
-          GetAllVariables(e).ForEach(i => result.Add(i));
+          result.UnionWith(GetAllVariables(e));
         }
       }); //this should add everything but normal var assingment which is good?
       //add rhs
       if (c is AssignOrReturnStmt ar) {
-        ar.Rhss.ForEach(e => GetAllVariables(e).ForEach(i => result.Add(i)));
+        ar.Rhss.ForEach(e => result.UnionWith(GetAllVariables(e)));
       } else if (c is UpdateStmt u) {
-        u.Rhss.ForEach(e => GetAllVariables(e).ForEach(i => result.Add(i)));
+        u.Rhss.ForEach(e => result.UnionWith(GetAllVariables(e)));
       } else if (c is AssignSuchThatStmt a) {
-        GetAllVariables(a.Expr).ForEach(i => result.Add(i));
+        result.UnionWith(GetAllVariables(a.Expr));
       }
 
     } else if (stmt is VarDeclStmt v) {
       if (v.Update != null) {
-        Used(v.Update).ForEach(ivar => result.Add(ivar)); //here all the LHS will be local variables. 
+        result.UnionWith(Used(v.Update));
       }
     } else {
-      stmt.SubExpressions.ForEach(se => GetAllVariables(se).ForEach(var => result.Add(var))); //this should get al uses
+      stmt.SubExpressions.ForEach(se => result.UnionWith(GetAllVariables(se))); //this should get al uses
     }
     return result;
   }
 
+  /**
+   * Gets all variables in an expression
+   */
   public static HashSet<String> GetAllVariables(Expression expression) {
     var result = new HashSet<String>();
     if (expression is NameSegment n) {
@@ -166,7 +184,7 @@ public class ProgramSlicer {
     }
     var subExprs = expression.SubExpressions;
     foreach (var subExpr in subExprs) {
-      GetAllVariables(subExpr).ForEach(g => result.Add(g));
+      result.UnionWith(GetAllVariables(subExpr));
     }
     return result;
   }

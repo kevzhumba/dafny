@@ -7,6 +7,9 @@ namespace Microsoft.Dafny.Perturber;
 
 public class CfgToAstTransformer {
 
+  /**
+   * Transforms a list of CFG nodes into a block statement, only if the slice contains the node.
+   */
   public static BlockStmt CfgToAstForNodeList(List<CFGNode> nodes, ISet<CFGNode> slice) {
     List<Statement> statements = new List<Statement>();
     foreach (var node in nodes) {
@@ -17,6 +20,9 @@ public class CfgToAstTransformer {
     return new BlockStmt(RangeToken.NoToken, statements);
   }
 
+  /**
+   * Transforms a cfg node into a statement. Slice is only used to pass in as an argument.
+   */
   public static Statement CfgToAstForStatement(CFGNode cfgNode, ISet<CFGNode> slice) {
     if (cfgNode is IfNode i) {
       return CfgToAst(i, slice);
@@ -37,10 +43,18 @@ public class CfgToAstTransformer {
     return cfgNode.getStmt();
   }
 
+  /**
+   * Transforms a for loop node into a statement. Ignores any statements int the body
+   * that are not in the slice.
+   */
   public static ForLoopStmt CfgToAst(ForNode forNode, ISet<CFGNode> slice) {
     return forNode.constructFromThis(CfgToAstForNodeList(forNode.body, slice));
   }
 
+  /**
+   * Transforms a while loop node into a statement. Ignores any statements int the body
+   * that are not in the slice.
+   */
   public static WhileStmt CfgToAst(WhileNode whileNode, ISet<CFGNode> slice) {
     List<Statement> statements = new List<Statement>();
     foreach (var node in whileNode.body) {
@@ -52,6 +66,10 @@ public class CfgToAstTransformer {
     return whileNode.constructFromThis(CfgToAstForNodeList(whileNode.body, slice));
   }
 
+  /**
+   * Transforms an if node into a statement. Ignores any statements in the bodies
+   * that are not in the slice.
+   */
   public static IfStmt CfgToAst(IfNode ifNode, ISet<CFGNode> slice) {
     List<Statement> elseStatements = new List<Statement>();
     foreach (var elsNode in ifNode.els) {
@@ -68,6 +86,10 @@ public class CfgToAstTransformer {
     return ifNode.constructFromThis(thnStatement, elsStatement);
   }
 
+  /**
+   * Transforms a match statement node into a statement. Ignores any statements in the body
+   * that are not in the slice.
+   */
   public static NestedMatchStmt CfgToAst(MatchNode matchNode, ISet<CFGNode> slice) {
     List<NestedMatchCaseStmt> list = new List<NestedMatchCaseStmt>();
     foreach (var node in matchNode.body) {
@@ -88,6 +110,13 @@ public class CfgToAstTransformer {
 
   }
 
+  /**
+   * Transforms a statement into a control flow graph. The CFG representation is very rough.
+   * Returns the head of the sub graph for the statement, the set of exit nodes of the sub graph,
+   * the set of nodes, and a list of child nodes. The child nodes are used to reconstruct the AST from the CFG,
+   * whic is needed later.
+   * 
+   */
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfgForStatement(Statement stmt) {
     if (stmt is BlockStmt b) {
       return AstToCfg(b);
@@ -112,7 +141,7 @@ public class CfgToAstTransformer {
   }
 
   /**
-   * The ends of this is break statements or the ends of last statement in the block. Return statements should always be connected to the exit node
+   * Transforms block statements into a subgraph.
    */
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(BlockStmt blockStmt) {
     CFGNode head = null;
@@ -131,7 +160,7 @@ public class CfgToAstTransformer {
       if (i == 0) {
         head = stmtHead;
       }
-      nodes.ForEach(a => allNodes.Add(a));
+      allNodes.UnionWith(nodes);
 
       foreach (var endNode in previousEndNodes) {
         endNode.addSuccessor(stmtHead);
@@ -143,7 +172,7 @@ public class CfgToAstTransformer {
         previousEndNodes = new HashSet<CFGNode>();
       }
     }
-    previousEndNodes.ForEach(a => endNodes.Add(a));
+    endNodes.UnionWith(previousEndNodes);
     if (head == null) {
       CFGNode nop = new NopNode();
       return (nop, new HashSet<CFGNode> { nop }, new HashSet<CFGNode> { nop }, new List<CFGNode> { nop });
@@ -152,7 +181,7 @@ public class CfgToAstTransformer {
   }
 
   /**
-   * The ends of this is the ends of each branch, unless its a return 
+   * Tranforms an if statement into a sub graph.
    */
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(IfStmt ifStmt) {
     var head = new IfNode(ifStmt);
@@ -161,7 +190,7 @@ public class CfgToAstTransformer {
     var (thenHead, thenEndNodes, thenNodes, listTopLevelNodesThn) = AstToCfg(ifStmt.Thn);
     head.thn = listTopLevelNodesThn;
     head.addSuccessor(thenHead);
-    thenEndNodes.ForEach(a => resultEndNodes.Add(a));
+    resultEndNodes.UnionWith(thenEndNodes);
     thenNodes.ForEach(a => {
       allNodes.Add(a);
       a.parentBranchNodes.Add(head);
@@ -170,7 +199,7 @@ public class CfgToAstTransformer {
       var (elseHead, elseEndNodes, elseNodes, listTopLevelNodesEls) = AstToCfgForStatement(ifStmt.Els);
       head.els = listTopLevelNodesEls;
       head.addSuccessor(elseHead);
-      elseEndNodes.ForEach(a => resultEndNodes.Add(a));
+      resultEndNodes.UnionWith(elseEndNodes);
       elseNodes.ForEach(a => {
         allNodes.Add(a);
         a.parentBranchNodes.Add(head);
@@ -182,6 +211,10 @@ public class CfgToAstTransformer {
     return (head, resultEndNodes, allNodes, new List<CFGNode> { head });
   }
 
+
+  /**
+   * Transforms a while statement into a subgraph.
+   */
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(WhileStmt whileStmt) {
     var head = new WhileNode(whileStmt);
     var allNodes = new HashSet<CFGNode> { head };
@@ -210,7 +243,9 @@ public class CfgToAstTransformer {
     return (head, resultEndNodes, allNodes, new List<CFGNode> { head });
   }
 
-
+  /**
+   * Transforms a for loop statement into a subgraph.
+   */
   public static (CFGNode, ISet<CFGNode>, ISet<CFGNode>, List<CFGNode>) AstToCfg(ForLoopStmt stmt) {
     var head = new ForNode(stmt);
     var allNodes = new HashSet<CFGNode> { head };

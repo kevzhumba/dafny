@@ -5,6 +5,9 @@ namespace Microsoft.Dafny.Perturber;
 
 public class CfgUtil {
 
+  /**
+   * Visits every node starting at the head of the graph, filling in any missing predecessor and successor information
+   */
   public static ISet<CfgToAstTransformer.CFGNode> DFS(CfgToAstTransformer.CFGNode head, CfgToAstTransformer.CFGNode entry, CfgToAstTransformer.CFGNode exit) {
     Stack<CfgToAstTransformer.CFGNode> stack = new Stack<CfgToAstTransformer.CFGNode>();
     ISet<CfgToAstTransformer.CFGNode> visited = new HashSet<CfgToAstTransformer.CFGNode>();
@@ -31,6 +34,9 @@ public class CfgUtil {
     return visited;
   }
 
+  /**
+   * Prints a dot representation of the control flow graph.
+   */
   public static void PrintDotGraph(ISet<CfgToAstTransformer.CFGNode> nodes) {
     Dictionary<CfgToAstTransformer.CFGNode, int> map = new Dictionary<CfgToAstTransformer.CFGNode, int>();
     Console.WriteLine("digraph G {");

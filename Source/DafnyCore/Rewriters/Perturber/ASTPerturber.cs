@@ -7,7 +7,12 @@ using Microsoft.Boogie;
 
 namespace Microsoft.Dafny.Perturber;
 
+
 public class ASTPerturber {
+  /**
+   * Transforms a literal expression. Currently either flips booleans or adds/subtracts 1
+   * from numbers
+   */
   public static ISet<Expression> TransformLiteral(LiteralExpr literal) {
     var result = new HashSet<Expression>();
     if (literal.Value is bool b) {
@@ -21,8 +26,12 @@ public class ASTPerturber {
   }
 
 
+
   //Expression Transformations
 
+  /**
+   * Transforms binary expressions.
+   */
   public static ISet<Expression> TransformBinaryExpression(BinaryExpr expr) {
     var result = new HashSet<Expression>();
     var booleanOps = ImmutableHashSet.Create(
@@ -92,22 +101,26 @@ public class ASTPerturber {
   }
 
   /**
-   * Transforms an expression and returns a set of possible expressions.
-   * The returned set of expressions should be their own object
+   * Transforms an expression and returns a set of possible expressions by
+   * recursively transforming subexpressions.
    */
   public static ISet<Expression> TransformExpression(Expression expression) {
     var result = new HashSet<Expression>();
     if (expression is BinaryExpr b) {
-      TransformBinaryExpression(b).ForEach(a => result.Add(a));
+      return TransformBinaryExpression(b);
     } else if (expression is LiteralExpr l) {
-      TransformLiteral(l).ForEach(a => result.Add(a));
+      return TransformLiteral(l);
     } else if (expression is ParensExpression p) {
-      TransformExpression(p.ResolvedExpression).ForEach(e => result.Add(new ParensExpression(p.Tok, e)));
+      return TransformExpression(p.ResolvedExpression).Select(e => (Expression)new ParensExpression(p.Tok, e)).ToHashSet();
     }
     return result;
   }
 
   //Statement transformations
+  /**
+   * Transforms an update statement. If it is a multiple assignment,
+   * it transforms each assignment one by one.
+   */
   public static ISet<Statement> TransformUpdateStatement(UpdateStmt assign) {
     var result = new HashSet<Statement>();
     assign.Rhss.Select((value, index) => new { value, index }).ForEach(
@@ -127,6 +140,10 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms a variabl declaration, in the case where it assigns
+   * the variable as well
+   */
   public static ISet<Statement> TransformVarDeclStatement(VarDeclStmt varDecl, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedUpdates = TransformStatement(varDecl.Update, outs);
@@ -139,6 +156,10 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Tarnsforms if statements by transforming the guard, transforming
+   * the then branch, and transforming the else branch, each in isolation.
+   */
   public static ISet<Statement> TransformIfStmt(IfStmt ifStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedGuard = TransformExpression(ifStmt.Guard);
@@ -150,6 +171,11 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms while statements by transforming the guard and the body in
+   * isolation. Also program slices the loop body with respect to
+    * the variables in invariants
+   */
   public static ISet<Statement> TransformWhileStmt(WhileStmt whileStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedGuard = TransformExpression(whileStmt.Guard);
@@ -162,6 +188,11 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms for loops by transforming the guard and the body in
+   * isolation. Also program slices the loop body with respect to
+   * the variables in invariants
+   */
   public static ISet<Statement> TransformForLoopStmt(ForLoopStmt forLoopStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     var transformedStart = TransformExpression(forLoopStmt.Start);
@@ -170,6 +201,7 @@ public class ASTPerturber {
     var slicingVars = forLoopStmt.Invariants.SelectMany(i => ProgramSlicer.GetAllVariables(i.E)).ToHashSet();
     slicingVars.UnionWith(forLoopStmt.Decreases.Expressions.SelectMany(i => ProgramSlicer.GetAllVariables(i)));
     transformedBody.UnionWith(TransformBlockStatementWithSlicing(forLoopStmt.Body, slicingVars, outs));
+    //TODO refactor this
     transformedStart.ForEach(g => result.Add(
       new ForLoopStmt(
         forLoopStmt.RangeToken,
@@ -221,6 +253,11 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms block statments by transforming each statement one at a time.
+   * Also deletes each statement one at a time, as long as its not a declaration.
+   * 
+   */
   public static ISet<Statement> TransformBlockStmt(BlockStmt blockStmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     //allow perturbing one at a time
@@ -251,6 +288,9 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms match statements by transforming each ones body.
+   */
   public static ISet<Statement> TransformNestedMatchStmt(NestedMatchStmt nestedMatchStmt, List<Formal> outs) {
     var cases = nestedMatchStmt.Cases;
     var transformedCases =
@@ -270,7 +310,9 @@ public class ASTPerturber {
        ;
   }
 
-
+  /**
+   * Transforms each statement. 
+   */
   public static ISet<Statement> TransformStatement(Statement stmt, List<Formal> outs) {
     var result = new HashSet<Statement>();
     if (stmt is UpdateStmt update) {
@@ -298,6 +340,10 @@ public class ASTPerturber {
     return result;
   }
 
+  /**
+   * Transforms a block statement by slicing with respect to a set of slicing variables.
+   * By default, the slicing is done with respect to the exit node of the block statement.
+   */
   public static ISet<Statement> TransformBlockStatementWithSlicing(BlockStmt stmt, ISet<String> slicingVars, List<Formal> outs) {
     var (head, endNodes, _, topLevelNodes) = CfgToAstTransformer.AstToCfgForStatement(stmt);
     var exit = new CfgToAstTransformer.ExitNode();

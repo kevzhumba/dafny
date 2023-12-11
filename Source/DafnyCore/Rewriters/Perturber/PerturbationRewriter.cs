@@ -19,6 +19,10 @@ public class PerturbationRewriter : IRewriter {
   public PerturbationRewriter(ErrorReporter reporter) : base(reporter) {
     Contract.Requires(reporter != null);
   }
+  /**
+   * Perturbs the module definition and then prints the result program to file. The program is mutably modified,
+   * printed, and then changed back to the original input.
+   */
   public static void TransformProgram(Program program, ModuleDefinition moduleDefinition) {
     var programPath = Path.GetFullPath(program.FullName); //read includes statements
     var fullDfyFile = File.ReadAllText(programPath);
@@ -74,32 +78,9 @@ public class PerturbationRewriter : IRewriter {
   }
 
 
-  internal override void PostResolveIntermediate(ModuleDefinition moduleDefinition) {
-    // var declarations = moduleDefinition.TopLevelDecls;
-    // foreach (var decl in declarations) {
-    //   if (decl is TopLevelDeclWithMembers tld) {
-    //     foreach (MemberDecl member in tld.Members) {
-    //       if (member is Method method) {
-    //         TransformMethod(method);
-    //       }
-    //     }
-    //   }
-    // }
-  }
-
-  private void TransformMethod(Method method) {
-    if (method.Body == null || method.Body.Body.Count == 0) {
-      return;
-    }
-    Console.WriteLine(method.Name);
-    var perturbed = ASTPerturber.TransformStatement(method.Body, method.Outs);
-    var slicingVars = method.Ens.SelectMany(e => ProgramSlicer.GetAllVariables(e.E)).ToHashSet();
-    perturbed.UnionWith(ASTPerturber.TransformBlockStatementWithSlicing(method.Body, slicingVars, method.Outs));
-    perturbed.Select(a => a.ToString()).Distinct().ForEach(Console.WriteLine);
-
-    // RemoveInvariants(method);
-  }
-
+  /**
+   * Method to remove any loop invariants. Keeping it here for now for future transformations.
+   */
   private void RemoveInvariants(Method method) {
     var block = method.Body.Body;
     var result = new List<Statement>();
@@ -126,27 +107,4 @@ public class PerturbationRewriter : IRewriter {
     method.Body = new BlockStmt(method.Body.RangeToken, result);
   }
 
-  //Program Slicing Functionality
-  private static void ProgramDependenceSlicing(Method method) {
-    var postConds = method.Ens;
-    var varsInPostconds = new HashSet<String>();
-    foreach (var postCond in postConds) {
-      var variablesInPostCond = ProgramSlicer.GetAllVariables(postCond.E);
-      variablesInPostCond.ForEach(a => varsInPostconds.Add(a));
-      // Console.WriteLine(expression);
-    }
-    var (head, endNodes, _, topLevelNodes) = CfgToAstTransformer.AstToCfgForStatement(method.Body);
-    var exit = new CfgToAstTransformer.ExitNode();
-    var entry = new CfgToAstTransformer.EntryNode();
-    endNodes.ForEach(a => a.addSuccessor(exit));
-    var nodes = CfgUtil.DFS(head, entry, exit);
-    CfgUtil.PrintDotGraph(nodes);
-    var slicesForVar = ProgramSlicer.computeProgramSlice(nodes, varsInPostconds, method.Outs, exit);
-
-    foreach (var kv in slicesForVar) {
-      Console.WriteLine(kv.Key);
-      kv.Value.ForEach(Console.WriteLine);
-      Console.WriteLine(CfgToAstTransformer.CfgToAstForNodeList(topLevelNodes, kv.Value));
-    }
-  }
 }
