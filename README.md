@@ -6,7 +6,21 @@ To build the project, run `make exe`. The resulting executable is stored in `./S
 In order to run the perturber, use the Dafny compiler as normal, but add the `--perturbed` flag. This will generate perturbed versions of the input program and store them in the same directory as the input program. For example, the command we use is 
 `./Scripts/dafny verify --perturbed <dafny_file>`
 ## The Dataset
-The dataset we built is formatted as a csv stored [here](https://github.com/kevzhumba/dafny/blob/master/dataset.csv)
+The dataset we built is formatted as a csv stored [here](https://github.com/kevzhumba/dafny/blob/master/dataset.csv). The CSV has three columns: `incorrect_program`, `verifier_output`, and `correct_program`. 
+The perturbed programs, verifier output, and corresponding correct programs are stored [here](https://github.com/kevzhumba/dafny/tree/master/verifiedDatasetPruned). 
+We did not verify each perturbed program, so the complete set of perturbed programs we generated are stored [here]()
+The correct programs were taken from other Dafny repos, mainly from the [libraries repo](https://github.com/dafny-lang/libraries) and this [formal verification dataset](http://https://github.com/kyrolloszakaria/Program-Verification-Dataset). 
+The python scripts used to generate and process the perturbed programs are stored [here](https://github.com/kevzhumba/dafny/tree/master/pythonScripts)
+## The Model
+We finetuned the [OpenLlama3bv2](https://huggingface.co/openlm-research/open_llama_3b_v2) model using a portion of the data from our dataset. The jupyter notebook for finetuning can be found [here](https://github.com/kevzhumba/dafny/blob/master/Untitled.ipynb).
+The notebook takes portions of other finetuning scripts from tutorials for single gpu from [here](https://www.storminthecastle.com/posts/finetune_redpajama/) and [here](https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms). 
+The jupyter notebook for playing with the finetuned model can be found [here]()
+## TODOs/Future work
+- better testing infrastructure (we tested using the small programs in the smallTest folder)
+- better program slicing
+- verify all the perturbed programs
+- finetune larger model on larger dataset
+  
 
 
 [![Build and Test](https://github.com/dafny-lang/dafny/workflows/Build%20and%20Test/badge.svg)](https://github.com/dafny-lang/dafny/actions?query=workflow%3A%22Build+and+Test%22) [![Gitter](https://badges.gitter.im/dafny-lang/community.svg)](https://gitter.im/dafny-lang/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
