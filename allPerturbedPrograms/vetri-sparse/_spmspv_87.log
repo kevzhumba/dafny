@@ -1,0 +1,12 @@
+datset/vetri-sparse/_spmspv_87.dfy(107,8): Error: a precondition for this call could not be proved
+    |
+107 |   var y := SpMSpV(X_val, X_crd, X_pos, v_val, v_crd);
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_87.dfy(37,11): Related location: this is the precondition that could not be proved
+   |
+37 |   requires forall i :: 0 <= i < X_pos.Length ==> 0 <= X_pos[i] <= X_val.Length
+   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

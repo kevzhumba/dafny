@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny3/_CalcExample_0.dfy(19,0): Error: a postcondition could not be proved on this return path
+   |
+19 | {
+   | ^
+
+datset/from dafny main repo/dafny3/_CalcExample_0.dfy(18,10): Related location: this is the postcondition that could not be proved
+   |
+18 |   ensures f(a, f(b, c)) <= x
+   |           ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

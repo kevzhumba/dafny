@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny4/_ACL2-extractor_41.dfy(224,8): Error: a precondition for this call could not be proved
+    |
+224 |         NthRev(i, xs.tail);
+    |         ^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_41.dfy(208,16): Related location: this is the precondition that could not be proved
+    |
+208 |   requires 0 <= i < length(xs) == length(rev(xs))
+    |                 ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_41.dfy(224,8): Error: a precondition for this call could not be proved
+    |
+224 |         NthRev(i, xs.tail);
+    |         ^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_41.dfy(208,20): Related location: this is the precondition that could not be proved
+    |
+208 |   requires 0 <= i < length(xs) == length(rev(xs))
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_41.dfy(231,11): Error: assertion might not hold
+    |
+231 |     assert i == length(rev(xs.tail));
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 3 errors

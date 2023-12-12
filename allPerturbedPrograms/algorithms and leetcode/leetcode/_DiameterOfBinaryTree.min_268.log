@@ -1,0 +1,32 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_268.dfy(560,6): Error: a postcondition could not be proved on this return path
+    |
+560 |       return (-1, -1);
+    |       ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_268.dfy(555,69): Related location: this is the postcondition that could not be proved
+    |
+555 |     ensures root != Nil && root.left == Nil && root.right == Nil ==> heightDim == (0, 0)
+    |                                                                      ^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_268.dfy(560,6): Error: a postcondition could not be proved on this return path
+    |
+560 |       return (-1, -1);
+    |       ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_268.dfy(556,12): Related location: this is the postcondition that could not be proved
+    |
+556 |     ensures heightDim.0 == TreeHeight(root)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_268.dfy(562,7): Error: destructor 'left' can only be applied to datatype values constructed by 'Node'
+    |
+562 |     if root.left == Nil && root.right == Nil {
+    |             ^^^^
+
+
+Dafny program verifier finished with 25 verified, 3 errors

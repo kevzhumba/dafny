@@ -1,0 +1,12 @@
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_23.dfy(29,20): Error: this invariant could not be proved to be maintained by the loop
+   |
+29 |     invariant count <= |P| - 1
+   |                     ^^
+
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_23.dfy(29,20): Related message: loop invariant violation
+   |
+29 |     invariant count <= |P| - 1
+   |                     ^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

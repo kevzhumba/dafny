@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/lib/_seq_157.dfy(407,2): Error: a postcondition could not be proved on this return path
+    |
+407 |   {
+    |   ^
+
+datset/algorithms and leetcode/lib/_seq_157.dfy(406,12): Related location: this is the postcondition that could not be proved
+    |
+406 |     ensures exists item :: multiset(list)[item] > 1
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 51 verified, 1 error

@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/lib/_seq_59.dfy(126,6): Error: the calculation step between the previous line and this line could not be proved
+    |
+126 |       ys;
+    |       ^^
+
+datset/algorithms and leetcode/lib/_seq_59.dfy(127,13): Error: the calculation step between the previous line and this line could not be proved
+    |
+127 |       reverse(reverse(xs) + yss);
+    |              ^
+
+
+Dafny program verifier finished with 51 verified, 2 errors

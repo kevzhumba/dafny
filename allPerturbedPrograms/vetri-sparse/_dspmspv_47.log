@@ -1,0 +1,17 @@
+datset/vetri-sparse/_dspmspv_47.dfy(99,4): Error: decreases expression might not decrease
+   |
+99 |     while kX < pX_end && kV < pV_end
+   |     ^^^^^
+
+datset/vetri-sparse/_dspmspv_47.dfy(105,16): Error: this invariant could not be proved to be maintained by the loop
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_47.dfy(105,16): Related message: loop invariant violation
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 2 errors

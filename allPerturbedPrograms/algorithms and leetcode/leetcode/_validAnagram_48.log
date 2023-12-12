@@ -1,0 +1,17 @@
+datset/algorithms and leetcode/leetcode/_validAnagram_48.dfy(20,0): Error: a postcondition could not be proved on this return path
+   |
+20 | {
+   | ^
+
+datset/algorithms and leetcode/leetcode/_validAnagram_48.dfy(19,10): Related location: this is the postcondition that could not be proved
+   |
+19 |   ensures s == t <==> equal
+   |           ^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_validAnagram_48.dfy(53,0): Error: out-parameter 'equal', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+53 | }
+   | ^
+
+
+Dafny program verifier finished with 2 verified, 2 errors

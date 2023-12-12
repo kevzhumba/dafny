@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny0/_fun-with-slices_2.dfy(14,4): Error: index out of range
+   |
+14 |     a[i] := s[i - index];
+   |      ^^^
+
+datset/from dafny main repo/dafny0/_fun-with-slices_2.dfy(14,12): Error: index out of range
+   |
+14 |     a[i] := s[i - index];
+   |              ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

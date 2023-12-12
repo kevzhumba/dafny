@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny0/_MoForallCompilation_61.dfy(55,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+55 |   while i < m.Length0 {
+   |   ^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

@@ -1,0 +1,62 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(24,0): Error: a postcondition could not be proved on this return path
+   |
+24 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(23,10): Related location: this is the postcondition that could not be proved
+   |
+23 |   ensures p != q && IsDuplicate(a, p) && IsDuplicate(a, q)
+   |           ^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(24,0): Error: a postcondition could not be proved on this return path
+   |
+24 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(23,20): Related location: this is the postcondition that could not be proved
+   |
+23 |   ensures p != q && IsDuplicate(a, p) && IsDuplicate(a, q)
+   |                     ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(7,2): Related location
+  |
+7 |   IsPrefixDuplicate(a, a.Length, p)
+  |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(14,2): Related location
+   |
+14 |   exists i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(24,0): Error: a postcondition could not be proved on this return path
+   |
+24 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(23,41): Related location: this is the postcondition that could not be proved
+   |
+23 |   ensures p != q && IsDuplicate(a, p) && IsDuplicate(a, q)
+   |                                          ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(7,2): Related location
+  |
+7 |   IsPrefixDuplicate(a, a.Length, p)
+  |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(14,2): Related location
+   |
+14 |   exists i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(25,0): Error: out-parameter 'p', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+25 | }
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_36.dfy(25,0): Error: out-parameter 'q', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+25 | }
+   | ^
+
+
+Dafny program verifier finished with 3 verified, 5 errors

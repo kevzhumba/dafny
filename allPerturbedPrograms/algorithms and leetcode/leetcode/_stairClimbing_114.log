@@ -1,0 +1,17 @@
+datset/algorithms and leetcode/leetcode/_stairClimbing_114.dfy(210,4): Error: a postcondition could not be proved on this return path
+    |
+210 |     return steps[n];
+    |     ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_114.dfy(197,10): Related location: this is the postcondition that could not be proved
+    |
+197 |   ensures exists ss: set<seq<Steps>> :: count == |ss| && allEndAtN(ss, n)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_114.dfy(215,9): Error: assertion might not hold
+    |
+215 |   assert forall k: nat :: k < 3 ==> exists ss: set<seq<Steps>> :: steps[k] == |ss| && allEndAtN(ss, k);
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 2 errors

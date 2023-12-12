@@ -1,0 +1,12 @@
+datset/verified algorithms/_prod_machine_11.dfy(53,16): Error: a postcondition could not be proved on this return path
+   |
+53 |       if pc > 0 {
+   |                 ^
+
+datset/verified algorithms/_prod_machine_11.dfy(51,14): Related location: this is the postcondition that could not be proved
+   |
+51 |       ensures forall i | 0 <= i < pc :: impl.outputs_[i] == Word(spec.outputs_[i])
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 6 verified, 1 error

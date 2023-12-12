@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_169.dfy(186,2): Error: a postcondition could not be proved on this return path
+    |
+186 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_169.dfy(185,12): Related location: this is the postcondition that could not be proved
+    |
+185 |     ensures n == old(n) - 1
+    |             ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error

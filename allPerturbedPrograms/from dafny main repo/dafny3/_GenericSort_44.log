@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny3/_GenericSort_44.dfy(70,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+70 |     while i < a.Length
+   |     ^^^^^
+
+
+Dafny program verifier finished with 31 verified, 1 error

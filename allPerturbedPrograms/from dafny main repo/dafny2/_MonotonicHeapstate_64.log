@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_MonotonicHeapstate_64.dfy(185,15): Error: possible division by zero
+    |
+185 |           r := x / y;
+    |                  ^^^
+
+
+Dafny program verifier finished with 29 verified, 1 error

@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_NumberRepresentations_153.dfy(263,4): Error: a precondition for this call could not be proved
+    |
+263 |     UniqueRepresentation(arest, brest, lowDigit, base);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_153.dfy(242,27): Related location: this is the precondition that could not be proved
+    |
+242 |   requires a == trim(a) && b == trim(b)
+    |                            ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

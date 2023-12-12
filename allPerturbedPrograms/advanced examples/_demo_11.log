@@ -1,0 +1,17 @@
+datset/advanced examples/_demo_11.dfy(16,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+16 |     invariant forall x | 0 <= x < i :: a[x] < 0
+   |               ^^^^^^
+
+datset/advanced examples/_demo_11.dfy(16,14): Related message: loop invariant violation
+   |
+16 |     invariant forall x | 0 <= x < i :: a[x] < 0
+   |               ^^^^^^
+
+datset/advanced examples/_demo_11.dfy(28,13): Error: assertion might not hold
+   |
+28 |       assert a[i] > 0;
+   |                   ^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

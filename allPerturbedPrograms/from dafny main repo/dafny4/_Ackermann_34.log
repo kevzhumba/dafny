@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny4/_Ackermann_34.dfy(117,4): Warning: /!\ No terms found to trigger on.
+    |
+117 |     forall n | true {
+    |     ^^^^^^
+
+datset/from dafny main repo/dafny4/_Ackermann_34.dfy(127,9): Error: a postcondition could not be proved on this return path
+    |
+127 |   } else {
+    |          ^
+
+datset/from dafny main repo/dafny4/_Ackermann_34.dfy(124,10): Related location: this is the postcondition that could not be proved
+    |
+124 |   ensures FunctionMonotonic(A(m))
+    |           ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Ackermann_34.dfy(83,2): Related location
+   |
+83 |   forall n, n' :: 
+   |   ^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 13 verified, 1 error

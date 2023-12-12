@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_NumberRepresentations_122.dfy(209,2): Error: a postcondition could not be proved on this return path
+    |
+209 |   if |digits| != 0 && digits[last] != 0 {
+    |   ^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_122.dfy(206,10): Related location: this is the postcondition that could not be proved
+    |
+206 |   ensures eval(digits, base) == eval(trim(digits), base)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_122.dfy(210,11): Error: assertion might not hold
+    |
+210 |     assert digits == digits[..last] + [0];
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 2 errors

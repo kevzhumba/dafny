@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny3/_InfiniteTrees_4.dfy(23,35): Error: value does not satisfy the subset constraints of 'nat'
+   |
+23 |     assert Tail(s, n) == Tail(s, n - 1).tail;
+   |                                    ^
+
+datset/from dafny main repo/dafny3/_InfiniteTrees_4.dfy(23,25): Error: destructor 'tail' can only be applied to datatype values constructed by 'Cons'
+   |
+23 |     assert Tail(s, n) == Tail(s, n - 1).tail;
+   |                                         ^^^^
+
+
+Dafny program verifier finished with 47 verified, 2 errors

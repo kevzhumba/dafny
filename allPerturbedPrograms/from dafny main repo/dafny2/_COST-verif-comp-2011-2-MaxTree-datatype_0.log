@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(16,0): Error: a postcondition could not be proved on this return path
+   |
+16 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(15,10): Related location: this is the postcondition that could not be proved
+   |
+15 |   ensures Contains(t, result) && forall v :: Contains(t, v) ==> v <= result
+   |           ^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(10,4): Related location
+   |
+10 |     x == v || Contains(left, v) || Contains(right, v)
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(16,0): Error: a postcondition could not be proved on this return path
+   |
+16 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(15,33): Related location: this is the postcondition that could not be proved
+   |
+15 |   ensures Contains(t, result) && forall v :: Contains(t, v) ==> v <= result
+   |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-datatype_0.dfy(20,0): Error: out-parameter 'result', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+20 | }
+   | ^
+
+
+Dafny program verifier finished with 2 verified, 3 errors

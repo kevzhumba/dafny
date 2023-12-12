@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_Circ_5.dfy(71,0): Error: a postcondition could not be proved on this return path
+   |
+71 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Circ_5.dfy(70,10): Related location: this is the postcondition that could not be proved
+   |
+70 |   ensures f(morse()) == morse()
+   |           ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

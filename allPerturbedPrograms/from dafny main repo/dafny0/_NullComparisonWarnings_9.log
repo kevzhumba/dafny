@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny0/_NullComparisonWarnings_9.dfy(17,11): Error: value does not satisfy the subset constraints of 'nat'
+   |
+17 |     n := n - 2;
+   |            ^
+
+
+Dafny program verifier finished with 3 verified, 1 error

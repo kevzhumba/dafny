@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny0/_MoForallCompilation_72.dfy(70,0): Error: a postcondition could not be proved on this return path
+   |
+70 | {
+   | ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_72.dfy(68,10): Related location: this is the postcondition that could not be proved
+   |
+68 |   ensures fresh(m0) && fresh(m1) && fresh(m2)
+   |           ^^^^^^^^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_72.dfy(71,0): Error: out-parameter 'm0', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+71 | }
+   | ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_72.dfy(71,0): Error: out-parameter 'm1', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+71 | }
+   | ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_72.dfy(71,0): Error: out-parameter 'm2', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+71 | }
+   | ^
+
+
+Dafny program verifier finished with 17 verified, 4 errors

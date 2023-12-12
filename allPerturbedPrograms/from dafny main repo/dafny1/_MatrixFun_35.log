@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_MatrixFun_35.dfy(9,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+  |
+9 |   while a < m.Length0
+  |   ^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

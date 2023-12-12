@@ -1,0 +1,37 @@
+datset/vetri-sparse/_dspmspv_4.dfy(91,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+91 |     invariant n <= X_crd1.Length
+   |                 ^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(91,16): Related message: loop invariant violation
+   |
+91 |     invariant n <= X_crd1.Length
+   |                 ^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(97,14): Error: index out of range
+   |
+97 |     pX_end := X_pos[n + 1];
+   |                    ^^^^^^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(105,16): Error: this loop invariant could not be proved on entry
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(105,16): Related message: loop invariant violation
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(105,16): Error: index out of range
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                  ^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_4.dfy(105,18): Error: index out of range
+    |
+105 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                         ^^^
+
+
+Dafny program verifier finished with 7 verified, 5 errors

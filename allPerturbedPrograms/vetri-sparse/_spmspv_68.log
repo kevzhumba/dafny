@@ -1,0 +1,32 @@
+datset/vetri-sparse/_spmspv_68.dfy(49,19): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+49 |     invariant n <= y.Length
+   |                    ^
+
+datset/vetri-sparse/_spmspv_68.dfy(51,14): Error: this loop invariant could not be proved on entry
+   |
+51 |     invariant forall i :: n <= i < y.Length ==> y[i] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_spmspv_68.dfy(51,14): Related message: loop invariant violation
+   |
+51 |     invariant forall i :: n <= i < y.Length ==> y[i] == 0
+   |               ^^^^^^
+
+datset/vetri-sparse/_spmspv_68.dfy(61,43): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+61 |       invariant forall i :: 0 <= i < n ==> y[i] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], pV_end)
+   |                                            ^
+
+datset/vetri-sparse/_spmspv_68.dfy(62,16): Error: variable 'y', which is subject to definite-assignment rules, might be uninitialized here
+   |
+62 |       invariant y[n] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, pX_end, pV_end)
+   |                 ^
+
+datset/vetri-sparse/_spmspv_68.dfy(80,0): Error: out-parameter 'y', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+80 | }
+   | ^
+
+
+Dafny program verifier finished with 3 verified, 5 errors

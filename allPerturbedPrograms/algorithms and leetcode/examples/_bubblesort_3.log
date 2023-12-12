@@ -1,0 +1,12 @@
+datset/algorithms and leetcode/examples/_bubblesort_3.dfy(38,14): Error: this loop invariant could not be proved on entry
+   |
+38 |     invariant 0 <= i < a.Length
+   |               ^^^^^^
+
+datset/algorithms and leetcode/examples/_bubblesort_3.dfy(38,14): Related message: loop invariant violation
+   |
+38 |     invariant 0 <= i < a.Length
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

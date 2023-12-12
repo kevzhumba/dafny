@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny0/_MoForallCompilation_120.dfy(187,6): Error: target object might be null
+    |
+187 |       next.StillValidAfterValChanges();
+    |       ^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

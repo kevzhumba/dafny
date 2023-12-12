@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(107,0): Error: a postcondition could not be proved on this return path
+    |
+107 | {
+    | ^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(105,50): Related location: this is the postcondition that could not be proved
+    |
+105 |   ensures IsSkewNumber(digits, lowDigit, base) && eval(digits, base) == n
+    |                                                   ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(107,0): Error: a postcondition could not be proved on this return path
+    |
+107 | {
+    | ^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(105,10): Related location: this is the postcondition that could not be proved
+    |
+105 |   ensures IsSkewNumber(digits, lowDigit, base) && eval(digits, base) == n
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(31,2): Related location
+   |
+31 |   forall i :: 
+   |   ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_54.dfy(115,0): Error: out-parameter 'digits', which is subject to definite-assignment rules, might be uninitialized at this return point
+    |
+115 | }
+    | ^
+
+
+Dafny program verifier finished with 38 verified, 3 errors

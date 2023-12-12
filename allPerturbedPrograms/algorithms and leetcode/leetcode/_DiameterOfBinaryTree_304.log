@@ -1,0 +1,32 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_304.dfy(749,0): Error: a postcondition could not be proved on this return path
+    |
+749 | {
+    | ^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_304.dfy(747,10): Related location: this is the postcondition that could not be proved
+    |
+747 |   ensures isPath([root] + path)
+    |           ^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_304.dfy(89,195): Related location
+   |
+89 |     match paths[0] { case Nil => false case Node(val, left, right) => (left == paths[1] || right == paths[1] || (paths[1] != Nil && (paths[0] == paths[1].left || paths[0] == paths[1].right))) && isPath(paths[1..]) }
+   |                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_304.dfy(749,0): Error: a postcondition could not be proved on this return path
+    |
+749 | {
+    | ^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_304.dfy(748,10): Related location: this is the postcondition that could not be proved
+    |
+748 |   ensures exists apath: seq<Tree> :: isPath(apath) && validPath(apath, root)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 78 verified, 2 errors

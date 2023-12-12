@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_188.dfy(200,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+200 |     while 2 / i <= n
+    |     ^^^^^
+
+
+Dafny program verifier finished with 21 verified, 1 error

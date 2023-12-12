@@ -1,0 +1,77 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_192.dfy(293,15): Error: assertion might not hold
+    |
+293 |         assert isPath(path[..i + 1], start, path[i], root);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(112,8): Related location
+    |
+112 |         isTreePath(path,start, end) && isValidPath(path, root) && distinct(path)
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(54,125): Related location
+   |
+54 |             case Node(val, left, right) => path[0] == start && path[|path|-1] == end && isParentOrChild(path[0], path[1]) && isTreePath(path[1..], path[1], end)
+   |                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_192.dfy(294,15): Error: assertion might not hold
+    |
+294 |         assert isPath(path[i..], root, end, root);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(112,8): Related location
+    |
+112 |         isTreePath(path,start, end) && isValidPath(path, root) && distinct(path)
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(54,88): Related location
+   |
+54 |             case Node(val, left, right) => path[0] == start && path[|path|-1] == end && isParentOrChild(path[0], path[1]) && isTreePath(path[1..], path[1], end)
+   |                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(48,20): Related location
+   |
+48 |         a != Nil && b != Nil && (isChild(a, b) || isChild(b, a))
+   |                     ^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_192.dfy(294,15): Error: assertion might not hold
+    |
+294 |         assert isPath(path[i..], root, end, root);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(112,8): Related location
+    |
+112 |         isTreePath(path,start, end) && isValidPath(path, root) && distinct(path)
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(54,88): Related location
+   |
+54 |             case Node(val, left, right) => path[0] == start && path[|path|-1] == end && isParentOrChild(path[0], path[1]) && isTreePath(path[1..], path[1], end)
+   |                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(48,33): Related location
+   |
+48 |         a != Nil && b != Nil && (isChild(a, b) || isChild(b, a))
+   |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_192.dfy(294,15): Error: assertion might not hold
+    |
+294 |         assert isPath(path[i..], root, end, root);
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(112,8): Related location
+    |
+112 |         isTreePath(path,start, end) && isValidPath(path, root) && distinct(path)
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(54,125): Related location
+   |
+54 |             case Node(val, left, right) => path[0] == start && path[|path|-1] == end && isParentOrChild(path[0], path[1]) && isTreePath(path[1..], path[1], end)
+   |                                                                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 4 errors

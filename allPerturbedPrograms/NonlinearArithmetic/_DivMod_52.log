@@ -1,0 +1,24 @@
+datset/NonlinearArithmetic/_DivMod_52.dfy(1464,4): Warning: For expression "d * k > 0":
+   /!\ No trigger covering all quantified variables found.
+     |
+1464 |     forall x: int, k: int, d: int | 1 < d && 0 < k
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_52.dfy(1505,4): Warning: For expression "0 < a * b":
+   /!\ No trigger covering all quantified variables found.
+     |
+1505 |     forall x: int, a: int, b: int | 0 < a && 0 < b
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_52.dfy(237,2): Error: a postcondition could not be proved on this return path
+    |
+237 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_DivMod_52.dfy(236,12): Related location: this is the postcondition that could not be proved
+    |
+236 |     ensures forall x: int, d: int {:trigger x / d} :: 0 <= x < d ==> x / d == 0
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 242 verified, 1 error

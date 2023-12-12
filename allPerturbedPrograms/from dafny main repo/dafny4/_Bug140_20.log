@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny4/_Bug140_20.dfy(65,6): Error: target object might be null
+   |
+65 |       next.Print();
+   |       ^^^^
+
+
+Dafny program verifier finished with 7 verified, 1 error

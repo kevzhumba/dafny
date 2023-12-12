@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_TuringFactorial_17.dfy(18,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+18 |   while r < n
+   |   ^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

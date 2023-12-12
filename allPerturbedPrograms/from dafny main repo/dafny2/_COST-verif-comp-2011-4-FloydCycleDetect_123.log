@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_123.dfy(123,6): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+123 |       while i < catchup
+    |       ^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

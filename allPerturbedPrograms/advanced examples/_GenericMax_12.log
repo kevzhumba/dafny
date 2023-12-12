@@ -1,0 +1,7 @@
+datset/advanced examples/_GenericMax_12.dfy(13,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+13 |   while i < a.Length
+   |   ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny4/_Primes_14.dfy(30,0): Error: a postcondition could not be proved on this return path
+   |
+30 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Primes_14.dfy(29,10): Related location: this is the postcondition that could not be proved
+   |
+29 |   ensures exists p :: IsPrime(p) && p !in s
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 14 verified, 1 error

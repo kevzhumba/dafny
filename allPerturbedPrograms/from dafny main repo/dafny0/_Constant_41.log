@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny0/_Constant_41.dfy(88,2): Error: a postcondition could not be proved on this return path
+   |
+88 |   {
+   |   ^
+
+datset/from dafny main repo/dafny0/_Constant_41.dfy(87,12): Related location: this is the postcondition that could not be proved
+   |
+87 |     ensures q == 63
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny0/_Constant_41.dfy(89,2): Error: out-parameter 'q', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+89 |   }
+   |   ^
+
+
+Dafny program verifier finished with 16 verified, 2 errors

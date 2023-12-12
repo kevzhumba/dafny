@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_MinWindowMax_144.dfy(74,4): Error: a precondition for this call could not be proved
+   |
+74 |     Bound(b, k, l, n, W);
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_144.dfy(134,11): Related location: this is the precondition that could not be proved
+    |
+134 |   requires forall i :: k <= i < l ==> n - W <= b[i] < n
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

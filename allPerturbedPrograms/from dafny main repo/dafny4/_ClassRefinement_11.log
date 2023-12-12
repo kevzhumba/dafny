@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny4/_ClassRefinement_11.dfy(43,4): Error: a postcondition could not be proved on this return path
+   |
+43 |     {
+   |     ^
+
+datset/from dafny main repo/dafny4/_ClassRefinement_11.dfy(41,14): Related location: this is the postcondition that could not be proved
+   |
+41 |       ensures N == old(N) + 1
+   |               ^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ClassRefinement_11.dfy(98,6): Error: assertion might not hold
+   |
+98 |       assert ...;
+   |       ^^^^^^
+
+datset/from dafny main repo/dafny4/_ClassRefinement_11.dfy[M1](46,13): Related location
+   |
+46 |       assume Valid();
+   |                   ^^
+
+
+Dafny program verifier finished with 10 verified, 2 errors

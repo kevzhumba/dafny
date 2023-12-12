@@ -1,0 +1,37 @@
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(195,0): Error: a postcondition could not be proved on this return path
+    |
+195 | {
+    | ^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(194,10): Related location: this is the postcondition that could not be proved
+    |
+194 |   ensures k == K
+    |           ^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(200,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+200 |     invariant HasMajority(a, lo, |a|, K)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(16,2): Related location
+   |
+16 |   2 * Count(a, s, t, x) > t - s
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(200,14): Related message: loop invariant violation
+    |
+200 |     invariant HasMajority(a, lo, |a|, K)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(16,2): Related location
+   |
+16 |   2 * Count(a, s, t, x) > t - s
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_308.dfy(210,22): Error: index out of range
+    |
+210 |       k, lo, up, c := a[up], up, up + 1, 1;
+    |                        ^^^^
+
+
+Dafny program verifier finished with 15 verified, 3 errors

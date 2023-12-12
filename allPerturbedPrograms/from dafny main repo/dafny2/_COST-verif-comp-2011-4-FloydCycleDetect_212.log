@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_212.dfy(221,12): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+221 |             while nn < n
+    |             ^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_212.dfy(223,24): Error: this invariant could not be proved to be maintained by the loop
+    |
+223 |               invariant Nexxxt(kn, S).Nexxxt(nn, S) == Nexxxt(kn, S)
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_212.dfy(223,24): Related message: loop invariant violation
+    |
+223 |               invariant Nexxxt(kn, S).Nexxxt(nn, S) == Nexxxt(kn, S)
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_212.dfy(228,20): Error: possible division by zero
+    |
+228 |               nn := (nn + 1) / ln;
+    |                              ^^^^
+
+
+Dafny program verifier finished with 22 verified, 3 errors

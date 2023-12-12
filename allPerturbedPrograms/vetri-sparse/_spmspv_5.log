@@ -1,0 +1,22 @@
+datset/vetri-sparse/_spmspv_5.dfy(50,16): Error: this loop invariant could not be proved on entry
+   |
+50 |     invariant n <= y.Length
+   |                 ^^
+
+datset/vetri-sparse/_spmspv_5.dfy(50,16): Related message: loop invariant violation
+   |
+50 |     invariant n <= y.Length
+   |                 ^^
+
+datset/vetri-sparse/_spmspv_5.dfy(51,14): Error: this loop invariant could not be proved on entry
+   |
+51 |     invariant forall i :: 0 <= i < n ==> y[i] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], v_val.Length)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_5.dfy(51,14): Related message: loop invariant violation
+   |
+51 |     invariant forall i :: 0 <= i < n ==> y[i] == sum(X_val, X_crd, v_val, v_crd, X_pos[i], 0, X_pos[i + 1], v_val.Length)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

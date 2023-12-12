@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_MatrixFun_66.dfy(37,2): Error: decreases expression might not decrease
+   |
+37 |   while a != N
+   |   ^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

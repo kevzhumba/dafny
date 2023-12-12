@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_Intervals_37.dfy(52,26): Error: this loop invariant could not be proved on entry
+   |
+52 |       invariant 0 <= i <= j < thresholds.Length
+   |                           ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Intervals_37.dfy(52,26): Related message: loop invariant violation
+   |
+52 |       invariant 0 <= i <= j < thresholds.Length
+   |                           ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

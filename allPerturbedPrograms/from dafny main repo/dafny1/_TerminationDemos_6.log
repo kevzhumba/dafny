@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_TerminationDemos_6.dfy(8,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+  |
+8 |     while i > n {
+  |     ^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

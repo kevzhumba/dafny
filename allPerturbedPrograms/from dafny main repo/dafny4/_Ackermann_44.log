@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Ackermann_44.dfy(117,4): Warning: /!\ No terms found to trigger on.
+    |
+117 |     forall n | true {
+    |     ^^^^^^
+
+datset/from dafny main repo/dafny4/_Ackermann_44.dfy(129,4): Warning: /!\ No terms found to trigger on.
+    |
+129 |     forall n, n' | n <= n' {
+    |     ^^^^^^
+
+datset/from dafny main repo/dafny4/_Ackermann_44.dfy(153,13): Error: the calculation step between the previous line and this line could not be proved
+    |
+153 |         A(m')(n);
+    |              ^
+
+
+Dafny program verifier finished with 13 verified, 1 error

@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(15,8): Error: a precondition for this call could not be proved
+   |
+15 |   var k := a.Get(570);
+   |            ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(78,18): Related location: this is the precondition that could not be proved
+   |
+78 |     requires 0 <= i < |Contents|
+   |                   ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(19,2): Error: a precondition for this call could not be proved
+   |
+19 |   k := a.Get(1000);
+   |        ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(78,18): Related location: this is the precondition that could not be proved
+   |
+78 |     requires 0 <= i < |Contents|
+   |                   ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(26,2): Error: a precondition for this call could not be proved
+   |
+26 |   k := a.Get(66000);
+   |        ^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_9.dfy(78,18): Related location: this is the precondition that could not be proved
+   |
+78 |     requires 0 <= i < |Contents|
+   |                   ^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 3 errors

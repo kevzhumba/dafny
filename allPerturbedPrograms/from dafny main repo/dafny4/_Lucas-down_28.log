@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Lucas-down_28.dfy(98,22): Error: a postcondition could not be proved on this return path
+   |
+98 |   if m != 0 && n == 0 {
+   |                       ^
+
+datset/from dafny main repo/dafny4/_Lucas-down_28.dfy(96,10): Related location: this is the postcondition that could not be proved
+   |
+96 |   ensures BitSet(m) <= BitSet(n) <==> !EVEN(binom(n, m))
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Lucas-down_28.dfy(124,8): Error: cannot prove termination; try supplying a decreases clause
+    |
+124 |         Lucas_Theorem'(m', n');
+    |         ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 2 errors

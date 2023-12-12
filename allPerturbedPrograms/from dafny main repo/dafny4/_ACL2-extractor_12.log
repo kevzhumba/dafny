@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_ACL2-extractor_12.dfy(137,6): Error: a postcondition could not be proved on this return path
+    |
+137 |       forall i | 0 <= i < length(xs.tail) {
+    |       ^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_12.dfy(131,10): Related location: this is the postcondition that could not be proved
+    |
+131 |   ensures xs == ys
+    |           ^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_12.dfy(140,45): Error: the calculation step between the previous line and this line could not be proved
+    |
+140 |           nth(i + 1, Cons(xs.head, xs.tail)) == nth(i + 1, Cons(ys.head, ys.tail));
+    |                                              ^^
+
+
+Dafny program verifier finished with 21 verified, 2 errors

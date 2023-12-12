@@ -1,0 +1,17 @@
+datset/algorithms and leetcode/examples/_simpleMultiplication_16.dfy(7,0): Error: a postcondition could not be proved on this return path
+  |
+7 | {
+  | ^
+
+datset/algorithms and leetcode/examples/_simpleMultiplication_16.dfy(6,10): Related location: this is the postcondition that could not be proved
+  |
+6 |   ensures z == x * y
+  |           ^^^^^^^^^^
+
+datset/algorithms and leetcode/examples/_simpleMultiplication_16.dfy(8,0): Error: out-parameter 'z', which is subject to definite-assignment rules, might be uninitialized at this return point
+  |
+8 | }
+  | ^
+
+
+Dafny program verifier finished with 2 verified, 2 errors

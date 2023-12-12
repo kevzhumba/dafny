@@ -1,0 +1,42 @@
+datset/vetri-sparse/_spmv_2.dfy(28,0): Error: a postcondition could not be proved on this return path
+   |
+28 | {
+   | ^
+
+datset/vetri-sparse/_spmv_2.dfy(26,10): Related location: this is the postcondition that could not be proved
+   |
+26 |   ensures y.Length + 1 == X_pos.Length
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_2.dfy(34,49): Error: function precondition could not be proved
+   |
+34 |     invariant forall i :: 0 <= i < n ==> y[i] == sum(X_val, X_crd, v, X_pos[i], X_pos[i + 1])
+   |                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_2.dfy(6,11): Related location
+  |
+6 |   requires k <= X_val.Length
+  |            ^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_2.dfy(34,80): Error: index out of range
+   |
+34 |     invariant forall i :: 0 <= i < n ==> y[i] == sum(X_val, X_crd, v, X_pos[i], X_pos[i + 1])
+   |                                                                                      ^^^^^^^
+
+datset/vetri-sparse/_spmv_2.dfy(39,18): Error: this loop invariant could not be proved on entry
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                   ^^
+
+datset/vetri-sparse/_spmv_2.dfy(39,18): Related message: loop invariant violation
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                   ^^
+
+datset/vetri-sparse/_spmv_2.dfy(39,21): Error: index out of range
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                           ^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 5 errors

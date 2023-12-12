@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_Classics_33.dfy(42,29): Error: this loop invariant could not be proved on entry
+   |
+42 |     invariant 0 <= m <= f <= n < N
+   |                              ^^^^^
+
+datset/from dafny main repo/dafny2/_Classics_33.dfy(42,29): Related message: loop invariant violation
+   |
+42 |     invariant 0 <= m <= f <= n < N
+   |                              ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

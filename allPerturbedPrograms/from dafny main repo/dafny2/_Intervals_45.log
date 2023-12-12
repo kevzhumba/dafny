@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_Intervals_45.dfy(57,18): Error: assertion might not hold
+   |
+57 |       assert i <= mid < j;
+   |                   ^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

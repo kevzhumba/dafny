@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_TerminationDemos_18.dfy(60,13): Error: value does not satisfy the subset constraints of 'nat'
+   |
+60 |       r := n - 1;
+   |              ^
+
+
+Dafny program verifier finished with 11 verified, 1 error

@@ -1,0 +1,17 @@
+datset/advanced examples/_ArrayMap_2.dfy(12,2): Error: a postcondition could not be proved on this return path
+   |
+12 |   while i == a.Length
+   |   ^^^^^
+
+datset/advanced examples/_ArrayMap_2.dfy(9,10): Related location: this is the postcondition that could not be proved
+  |
+9 |   ensures forall j :: 0 <= j < a.Length ==> a[j] == f(j)
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_ArrayMap_2.dfy(16,4): Error: index out of range
+   |
+16 |     a[i] := f(i);
+   |      ^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

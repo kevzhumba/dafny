@@ -1,0 +1,37 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(58,2): Error: a postcondition could not be proved on this return path
+   |
+58 |   {
+   |   ^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(55,12): Related location: this is the postcondition that could not be proved
+   |
+55 |     ensures forall x :: x in Contents ==> x <= mx
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(61,15): Error: variable 'mx', which is subject to definite-assignment rules, might be uninitialized here
+   |
+61 |       mx := if mx < m then m else mx;
+   |                ^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(65,15): Error: variable 'mx', which is subject to definite-assignment rules, might be uninitialized here
+   |
+65 |       mx := if mx < m then m else mx;
+   |                ^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(67,4): Error: a precondition for this call could not be proved
+   |
+67 |     exists_intro(x reads this => x in Contents && x == mx, mx);
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(48,13): Related location: this is the precondition that could not be proved
+   |
+48 |     requires P(x)
+   |              ^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-2-MaxTree-class_27.dfy(67,55): Error: variable 'mx', which is subject to definite-assignment rules, might be uninitialized here
+   |
+67 |     exists_intro(x reads this => x in Contents && x == mx, mx);
+   |                                                        ^^
+
+
+Dafny program verifier finished with 8 verified, 5 errors

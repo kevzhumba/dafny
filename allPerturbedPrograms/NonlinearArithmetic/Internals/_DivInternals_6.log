@@ -1,0 +1,12 @@
+datset/NonlinearArithmetic/Internals/_DivInternals_6.dfy(35,2): Error: a postcondition could not be proved on this return path
+   |
+35 |   {
+   |   ^
+
+datset/NonlinearArithmetic/Internals/_DivInternals_6.dfy(32,12): Related location: this is the postcondition that could not be proved
+   |
+32 |     ensures forall x: int {:trigger x / n} :: 0 <= x < n <==> x / n == 0
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 10 verified, 1 error

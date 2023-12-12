@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_ExtensibleArray_72.dfy(108,2): Error: a postcondition could not be proved on this return path
+    |
+108 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_72.dfy(107,12): Related location: this is the postcondition that could not be proved
+    |
+107 |     ensures Contents == old(Contents)[i := t]
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

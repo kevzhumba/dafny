@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny1/_SeparationLogicList_73.dfy(125,2): Error: a postcondition could not be proved on this return path
+    |
+125 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_73.dfy(124,12): Related location: this is the postcondition that could not be proved
+    |
+124 |     ensures IsList() && Contents == [x] + old(Contents) && fresh(Repr - old(Repr))
+    |             ^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_73.dfy(106,4): Related location
+    |
+106 |     Contents == head.TailContents
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_73.dfy(125,2): Error: a postcondition could not be proved on this return path
+    |
+125 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_73.dfy(124,24): Related location: this is the postcondition that could not be proved
+    |
+124 |     ensures IsList() && Contents == [x] + old(Contents) && fresh(Repr - old(Repr))
+    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 12 verified, 2 errors

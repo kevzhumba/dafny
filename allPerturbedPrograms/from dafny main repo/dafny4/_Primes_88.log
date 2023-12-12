@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Primes_88.dfy(237,11): Error: assertion might not hold
+    |
+237 |     assert a * b == a;
+    |                  ^^^^
+
+datset/from dafny main repo/dafny4/_Primes_88.dfy(240,4): Error: a precondition for this call could not be proved
+    |
+240 |     MulPos(a, b - 1);
+    |     ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_88.dfy(233,21): Related location: this is the precondition that could not be proved
+    |
+233 |   requires 1 <= a && 1 <= b
+    |                      ^^^^^^
+
+
+Dafny program verifier finished with 14 verified, 2 errors

@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny3/_CachedContainer_10.dfy(51,4): Error: a postcondition could not be proved on this return path
+   |
+51 |     {
+   |     ^
+
+datset/from dafny main repo/dafny3/_CachedContainer_10.dfy(24,14): Related location: this is the postcondition that could not be proved
+   |
+24 |       ensures Contents == old(Contents) - {t}
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_CachedContainer_10.dfy(126,6): Error: assertion might not hold
+    |
+126 |       assert ...;
+    |       ^^^^^^
+
+datset/from dafny main repo/dafny3/_CachedContainer_10.dfy[M2](54,13): Related location
+   |
+54 |       assume Valid'();
+   |                    ^^
+
+
+Dafny program verifier finished with 38 verified, 2 errors

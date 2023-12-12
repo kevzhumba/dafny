@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_SumOfCubes_64.dfy(107,2): Error: a postcondition could not be proved on this return path
+    |
+107 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_SumOfCubes_64.dfy(106,12): Related location: this is the postcondition that could not be proved
+    |
+106 |     ensures SumEmUp(n, m) == SumEmDown(n, m)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 16 verified, 1 error

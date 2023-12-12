@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_Cubes_31.dfy(15,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+15 |     invariant c == n * n * n
+   |                 ^^
+
+datset/from dafny main repo/dafny1/_Cubes_31.dfy(15,16): Related message: loop invariant violation
+   |
+15 |     invariant c == n * n * n
+   |                 ^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

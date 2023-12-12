@@ -1,0 +1,37 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(202,16): Error: this invariant could not be proved to be maintained by the loop
+    |
+202 |       invariant forall j :: 2 <= j <= n && j / 2 != i ==> a[j / 2] <= a[j]
+    |                 ^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(202,16): Related message: loop invariant violation
+    |
+202 |       invariant forall j :: 2 <= j <= n && j / 2 != i ==> a[j / 2] <= a[j]
+    |                 ^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(211,17): Error: index out of range
+    |
+211 |       if a[i] <= a[smallestChild] {
+    |                   ^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(212,8): Error: a postcondition could not be proved on this return path
+    |
+212 |         return;
+    |         ^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(197,12): Related location: this is the postcondition that could not be proved
+    |
+197 |     ensures Valid()
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(124,4): Related location
+    |
+124 |     forall j :: 
+    |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_225.dfy(216,32): Error: assertion might not hold
+    |
+216 |       assert 1 <= i / 2 / 2 ==> a[i / 2 / 2] <= a[i];
+    |                                 ^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 4 errors

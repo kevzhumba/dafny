@@ -1,0 +1,27 @@
+datset/from dafny main repo/dafny2/_MajorityVote_28.dfy(27,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+27 |     invariant 2 * Count(a, s, |a|, K) > |a| - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_28.dfy(27,14): Related message: loop invariant violation
+   |
+27 |     invariant 2 * Count(a, s, |a|, K) > |a| - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_28.dfy(28,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+28 |     invariant 2 * Count(a, s, n, k) > n - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_28.dfy(28,14): Related message: loop invariant violation
+   |
+28 |     invariant 2 * Count(a, s, n, k) > n - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_28.dfy(39,20): Error: index out of range
+   |
+39 |       k, n, c, s := a[n], n + 1, 1, n;
+   |                      ^^^
+
+
+Dafny program verifier finished with 15 verified, 3 errors

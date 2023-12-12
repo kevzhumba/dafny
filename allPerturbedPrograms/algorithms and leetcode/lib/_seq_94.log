@@ -1,0 +1,17 @@
+datset/algorithms and leetcode/lib/_seq_94.dfy(306,2): Error: a postcondition could not be proved on this return path
+    |
+306 |   {
+    |   ^
+
+datset/algorithms and leetcode/lib/_seq_94.dfy(305,12): Related location: this is the postcondition that could not be proved
+    |
+305 |     ensures distinct(xs + ys)
+    |             ^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/_seq_94.dfy(294,4): Related location
+    |
+294 |     forall x, y :: 
+    |     ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 51 verified, 1 error

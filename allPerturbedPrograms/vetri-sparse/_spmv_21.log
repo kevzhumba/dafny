@@ -1,0 +1,12 @@
+datset/vetri-sparse/_spmv_21.dfy(42,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+42 |       invariant y[n] + sum(X_val, X_crd, v, k, X_pos[n + 1]) == sum(X_val, X_crd, v, X_pos[n], X_pos[n + 1])
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_21.dfy(42,16): Related message: loop invariant violation
+   |
+42 |       invariant y[n] + sum(X_val, X_crd, v, k, X_pos[n + 1]) == sum(X_val, X_crd, v, X_pos[n], X_pos[n + 1])
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny4/_Bug170_4.dfy(50,2): Error: a postcondition could not be proved on this return path
+   |
+50 |   {
+   |   ^
+
+datset/from dafny main repo/dafny4/_Bug170_4.dfy(49,12): Related location: this is the postcondition that could not be proved
+   |
+49 |     ensures A(x)
+   |             ^^^^
+
+datset/from dafny main repo/dafny4/_Bug170_4.dfy(38,21): Related location
+   |
+38 |   greatest predicate A(x: int)
+   |                      ^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

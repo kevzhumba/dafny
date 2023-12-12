@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_56.dfy(113,16): Error: this loop invariant could not be proved on entry
+    |
+113 |       invariant forall n :: n in S && n.marked ==> var pth := n.pathFromRoot; old(allocated(pth)) && old(ReachableVia(root, pth, n, S))
+    |                 ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_56.dfy(113,16): Related message: loop invariant violation
+    |
+113 |       invariant forall n :: n in S && n.marked ==> var pth := n.pathFromRoot; old(allocated(pth)) && old(ReachableVia(root, pth, n, S))
+    |                 ^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

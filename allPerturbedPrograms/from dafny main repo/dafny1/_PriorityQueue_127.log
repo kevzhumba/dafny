@@ -1,0 +1,32 @@
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(142,2): Error: a postcondition could not be proved on this return path
+    |
+142 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(140,12): Related location: this is the postcondition that could not be proved
+    |
+140 |     ensures Valid() && fresh(Repr)
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(123,4): Related location
+    |
+123 |     MostlyValid() &&
+    |     ^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(134,4): Related location
+    |
+134 |     a.Length == N + 1 &&
+    |     ^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(142,2): Error: a postcondition could not be proved on this return path
+    |
+142 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_127.dfy(141,12): Related location: this is the postcondition that could not be proved
+    |
+141 |     ensures N == capacity
+    |             ^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 2 errors

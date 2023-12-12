@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny0/_NoTypeArgs_3.dfy(7,9): Error: variable 'l', which is subject to definite-assignment rules, might be uninitialized here
+  |
+7 |   assert l.hd == 5;
+  |          ^
+
+datset/from dafny main repo/dafny0/_NoTypeArgs_3.dfy(7,9): Error: destructor 'hd' can only be applied to datatype values constructed by 'Cons'
+  |
+7 |   assert l.hd == 5;
+  |            ^^
+
+datset/from dafny main repo/dafny0/_NoTypeArgs_3.dfy(7,9): Error: assertion might not hold
+  |
+7 |   assert l.hd == 5;
+  |               ^^^^
+
+
+Dafny program verifier finished with 7 verified, 3 errors

@@ -1,0 +1,17 @@
+datset/Unicode/_UnicodeEncodingForm_11.dfy(97,2): Error: a postcondition could not be proved on this return path
+   |
+97 |   {
+   |   ^
+
+datset/Unicode/_UnicodeEncodingForm_11.dfy(96,12): Related location: this is the postcondition that could not be proved
+   |
+96 |     ensures IsWellFormedCodeUnitSequence(m)
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/Unicode/_UnicodeEncodingForm_11.dfy(92,4): Related location
+   |
+92 |     PartitionCodeUnitSequenceChecked(s).Some?
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

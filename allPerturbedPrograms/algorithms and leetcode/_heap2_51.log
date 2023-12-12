@@ -1,0 +1,17 @@
+datset/algorithms and leetcode/_heap2_51.dfy(70,59): Error: index out of range
+   |
+70 |       if 2 * idx + 2 < this.arr.Length || this.arr[nidx] < this.arr[2 * idx + 2] {
+   |                                                                    ^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/_heap2_51.dfy(80,63): Error: possible violation of postcondition of forall statement
+   |
+80 |           ensures i != nidx && 2 * i + 1 < this.arr.Length ==> this.arr[i] >= this.arr[2 * i + 1]
+   |                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/_heap2_51.dfy(89,63): Error: possible violation of postcondition of forall statement
+   |
+89 |           ensures i != nidx && 2 * i + 2 < this.arr.Length ==> this.arr[i] >= this.arr[2 * i + 2]
+   |                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 3 errors

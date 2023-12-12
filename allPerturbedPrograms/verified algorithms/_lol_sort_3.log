@@ -1,0 +1,32 @@
+datset/verified algorithms/_lol_sort_3.dfy(32,14): Error: this loop invariant could not be proved on entry
+   |
+32 |     invariant sorted(a[..i])
+   |               ^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_3.dfy(21,2): Related location
+   |
+21 |   forall i, j | 0 <= i <= j < |a| :: 
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_3.dfy(32,14): Related message: loop invariant violation
+   |
+32 |     invariant sorted(a[..i])
+   |               ^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_3.dfy(21,2): Related location
+   |
+21 |   forall i, j | 0 <= i <= j < |a| :: 
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/verified algorithms/_lol_sort_3.dfy(32,21): Error: upper bound below lower bound or above length of array
+   |
+32 |     invariant sorted(a[..i])
+   |                       ^^^^^
+
+datset/verified algorithms/_lol_sort_3.dfy(40,9): Error: index out of range
+   |
+40 |       if a[i] < a[j] {
+   |           ^^^
+
+
+Dafny program verifier finished with 5 verified, 3 errors

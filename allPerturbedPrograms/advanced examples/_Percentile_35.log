@@ -1,0 +1,47 @@
+datset/advanced examples/_Percentile_35.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/advanced examples/_Percentile_35.dfy(26,10): Related location: this is the postcondition that could not be proved
+   |
+26 |   ensures -1 <= i < A.Length
+   |           ^^^^^^^
+
+datset/advanced examples/_Percentile_35.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/advanced examples/_Percentile_35.dfy(26,16): Related location: this is the postcondition that could not be proved
+   |
+26 |   ensures -1 <= i < A.Length
+   |                 ^^^^^^^^^^^^
+
+datset/advanced examples/_Percentile_35.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/advanced examples/_Percentile_35.dfy(27,10): Related location: this is the postcondition that could not be proved
+   |
+27 |   ensures SumUpto(A, i) <= p / 100.0 * total
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_Percentile_35.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/advanced examples/_Percentile_35.dfy(28,31): Related location: this is the postcondition that could not be proved
+   |
+28 |   ensures i + 1 < A.Length ==> SumUpto(A, i + 1) > p / 100.0 * total
+   |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_Percentile_35.dfy(30,0): Error: out-parameter 'i', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+30 | }
+   | ^
+
+
+Dafny program verifier finished with 9 verified, 5 errors

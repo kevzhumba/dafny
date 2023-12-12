@@ -1,0 +1,37 @@
+datset/from dafny main repo/dafny4/_Primes_31.dfy(48,0): Error: a postcondition could not be proved on this return path
+   |
+48 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(47,23): Related location: this is the postcondition that could not be proved
+   |
+47 |   ensures bound < p && IsPrime(p)
+   |                        ^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(6,2): Related location
+  |
+6 |   2 <= n &&
+  |   ^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(48,0): Error: a postcondition could not be proved on this return path
+   |
+48 | {
+   | ^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(47,23): Related location: this is the postcondition that could not be proved
+   |
+47 |   ensures bound < p && IsPrime(p)
+   |                        ^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(7,2): Related location
+  |
+7 |   forall m :: 
+  |   ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_31.dfy(55,13): Error: assertion might not hold
+   |
+55 |       assert p in s;
+   |                ^^^^
+
+
+Dafny program verifier finished with 14 verified, 3 errors

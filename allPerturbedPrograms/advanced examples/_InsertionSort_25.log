@@ -1,0 +1,7 @@
+datset/advanced examples/_InsertionSort_25.dfy(26,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+26 |     while down >= 0 && a[down + 1] < a[down]
+   |     ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

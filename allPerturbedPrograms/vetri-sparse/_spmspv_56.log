@@ -1,0 +1,7 @@
+datset/vetri-sparse/_spmspv_56.dfy(49,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+49 |   while n < N
+   |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

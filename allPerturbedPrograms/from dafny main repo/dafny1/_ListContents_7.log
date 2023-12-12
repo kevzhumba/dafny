@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny1/_ListContents_7.dfy(36,2): Error: a postcondition could not be proved on this return path
+   |
+36 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_ListContents_7.dfy(34,12): Related location: this is the postcondition that could not be proved
+   |
+34 |     ensures Valid() && fresh(Repr - succ.Repr)
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_7.dfy(13,4): Related location
+   |
+13 |     this in Repr &&
+   |     ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

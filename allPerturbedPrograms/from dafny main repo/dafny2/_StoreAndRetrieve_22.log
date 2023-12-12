@@ -1,0 +1,22 @@
+datset/from dafny main repo/dafny2/_StoreAndRetrieve_22.dfy(81,20): Error: this loop invariant could not be proved on entry
+   |
+81 |         invariant i < |arr|
+   |                     ^
+
+datset/from dafny main repo/dafny2/_StoreAndRetrieve_22.dfy(81,20): Related message: loop invariant violation
+   |
+81 |         invariant i < |arr|
+   |                     ^
+
+datset/from dafny main repo/dafny2/_StoreAndRetrieve_22.dfy(82,18): Error: this loop invariant could not be proved on entry
+   |
+82 |         invariant forall j :: 0 <= j < i ==> !matchCriterion(arr[j])
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny2/_StoreAndRetrieve_22.dfy(82,18): Related message: loop invariant violation
+   |
+82 |         invariant forall j :: 0 <= j < i ==> !matchCriterion(arr[j])
+   |                   ^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 2 errors

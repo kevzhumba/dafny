@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_MajorityVote_58.dfy(29,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+29 |     invariant c == Count(a, s, n, k)
+   |               ^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_58.dfy(29,14): Related message: loop invariant violation
+   |
+29 |     invariant c == Count(a, s, n, k)
+   |               ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

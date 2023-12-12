@@ -1,0 +1,42 @@
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy(45,34): Error: this invariant could not be proved to be maintained by the loop
+   |
+45 |       invariant t.childrenVisited <= |t.children|
+   |                                   ^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy(45,34): Related message: loop invariant violation
+   |
+45 |       invariant t.childrenVisited <= |t.children|
+   |                                   ^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy(92,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy(92,16): Related message: loop invariant violation
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy[M2](92,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy[M2](92,16): Related message: loop invariant violation
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy[M2][M3](92,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite-stages_28.dfy[M2][M3](92,16): Related message: loop invariant violation
+   |
+92 |       invariant forall n :: n in stackNodes || n == t ==> n.marked && forall j :: 0 <= j < n.childrenVisited ==> n.children[j] == null || n.children[j].marked
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 6 verified, 4 errors

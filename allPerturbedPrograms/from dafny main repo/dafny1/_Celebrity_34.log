@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny1/_Celebrity_34.dfy(54,2): Error: decreases expression might not decrease
+   |
+54 |   while R != {}
+   |   ^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

@@ -1,0 +1,12 @@
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_181.dfy(204,21): Error: this invariant could not be proved to be maintained by the loop
+    |
+204 |       invariant 0 <= kn <= n
+    |                      ^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_181.dfy(204,21): Related message: loop invariant violation
+    |
+204 |       invariant 0 <= kn <= n
+    |                      ^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

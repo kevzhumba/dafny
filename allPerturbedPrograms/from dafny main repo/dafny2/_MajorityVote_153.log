@@ -1,0 +1,17 @@
+datset/from dafny main repo/dafny2/_MajorityVote_153.dfy(63,0): Error: a postcondition could not be proved on this return path
+   |
+63 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_MajorityVote_153.dfy(62,24): Related location: this is the postcondition that could not be proved
+   |
+62 |   ensures hasWinner ==> k == K
+   |                         ^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_153.dfy(64,0): Error: out-parameter 'k', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+64 | }
+   | ^
+
+
+Dafny program verifier finished with 15 verified, 2 errors

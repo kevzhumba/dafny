@@ -1,0 +1,22 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_46.dfy(365,0): Error: a postcondition could not be proved on this return path
+    |
+365 | {
+    | ^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_46.dfy(364,10): Related location: this is the postcondition that could not be proved
+    |
+364 |   ensures isDescTreePath(reverse(path), end, start)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_46.dfy(169,149): Related location
+    |
+169 |     match path[0] { case Nil => false case Node(val, left, right) => end != Nil && path[|path| - 1] == end && path[0] == start && path[1] != Nil && ((left == path[1] && isDescTreePath(path[1..], left, end)) || (right == path[1] && isDescTreePath(path[1..], right, end))) }
+    |                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 78 verified, 1 error

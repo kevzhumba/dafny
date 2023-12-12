@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny2/_MajorityVote_285.dfy(228,13): Error: assertion might not hold
+    |
+228 |       assert 2 * Count(a, lo, up, k) == up - lo;
+    |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

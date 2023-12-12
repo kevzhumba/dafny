@@ -1,0 +1,7 @@
+datset/from dafny main repo/dafny0/_ArrayElementInitCompile_100.dfy(131,11): Error: assertion might not hold
+    |
+131 |     assert arr[13] == 'E';
+    |                    ^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

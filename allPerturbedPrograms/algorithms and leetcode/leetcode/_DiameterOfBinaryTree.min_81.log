@@ -1,0 +1,32 @@
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_81.dfy(104,10): Error: a precondition for this call could not be proved
+    |
+104 |           TreePathSplit(path, start, end);
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(353,17): Related location: this is the precondition that could not be proved
+    |
+353 |         requires isTreePathAlt(path, start, end)
+    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(59,181): Related location
+   |
+59 |         if |path| == 0 then false else if |path| == 1 then start != Nil && start == end && path[0] == start else path[0] == start && start != Nil && end == path[|path|-1] == end && forall i :: 0 <= i < |path| - 1 ==> isParentOrChild(path[i], path[i+1])
+   |                                                                                                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_81.dfy(123,14): Error: a precondition for this call could not be proved
+    |
+123 |               nonAscendingContra(path[|path| - 2], start, path[|path| - 2], path[..|path| - 1]);
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_81.dfy(85,13): Related location: this is the precondition that could not be proved
+   |
+85 |     requires root != Nil
+   |              ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 2 errors
