@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny0/_TypeMembers_81.dfy(179,6): Error: decreases clause might not decrease
-    |
-179 |       z := RecursiveZero(0);
-    |            ^^^^^^^^^^^^^^^^^
-
-
-Dafny program verifier finished with 29 verified, 1 error

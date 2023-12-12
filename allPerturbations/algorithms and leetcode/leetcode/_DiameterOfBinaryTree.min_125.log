@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_125.dfy(179,6): Error: a precondition for this call could not be proved
+    |
+179 |       TreeSetChildInTreeSet(root.right, path[i]);
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(530,17): Related location: this is the precondition that could not be proved
+    |
+530 |         requires child != Nil && child in TreeSet(root)
+    |                  ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 1 error

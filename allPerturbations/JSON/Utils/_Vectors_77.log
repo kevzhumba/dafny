@@ -1,0 +1,48 @@
+Not legacy result
+datset/JSON/Utils/_Vectors_77.dfy(184,8): Error: a postcondition could not be proved on this return path
+    |
+184 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_77.dfy(181,18): Related location: this is the postcondition that could not be proved
+    |
+181 |           ensures Valid?()
+    |                   ^^^^^^^^
+
+datset/JSON/Utils/_Vectors_77.dfy(36,10): Related location
+   |
+36 |           size <= capacity &&
+   |           ^^^^^^^^^^^^^^^^
+
+datset/JSON/Utils/_Vectors_77.dfy(184,8): Error: a postcondition could not be proved on this return path
+    |
+184 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_77.dfy(181,18): Related location: this is the postcondition that could not be proved
+    |
+181 |           ensures Valid?()
+    |                   ^^^^^^^^
+
+datset/JSON/Utils/_Vectors_77.dfy(37,10): Related location
+   |
+37 |           size as int == |items| &&
+   |           ^^^^^^^^^^^^^^^^^^^^^
+
+datset/JSON/Utils/_Vectors_77.dfy(184,8): Error: a postcondition could not be proved on this return path
+    |
+184 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_77.dfy(182,18): Related location: this is the postcondition that could not be proved
+    |
+182 |           ensures size == old(size) + 1
+    |                   ^^^^^^^^^^^^^^^^^^^^^
+
+datset/JSON/Utils/_Vectors_77.dfy(186,23): Error: result of operation might violate newtype constraint for 'uint32'
+    |
+186 |           size := size + 2;
+    |                        ^
+
+
+Dafny program verifier finished with 22 verified, 4 errors

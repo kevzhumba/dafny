@@ -1,0 +1,48 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(46,2): Error: a postcondition could not be proved on this return path
+   |
+46 |   {
+   |   ^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(43,12): Related location: this is the postcondition that could not be proved
+   |
+43 |     ensures 0 <= r <= thresholds.Length
+   |             ^^^^^^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(46,2): Error: a postcondition could not be proved on this return path
+   |
+46 |   {
+   |   ^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(43,17): Related location: this is the postcondition that could not be proved
+   |
+43 |     ensures 0 <= r <= thresholds.Length
+   |                  ^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(46,2): Error: a postcondition could not be proved on this return path
+   |
+46 |   {
+   |   ^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(44,12): Related location: this is the postcondition that could not be proved
+   |
+44 |     ensures forall m :: 0 <= m < r ==> thresholds[m] < k
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(46,2): Error: a postcondition could not be proved on this return path
+   |
+46 |   {
+   |   ^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(45,38): Related location: this is the postcondition that could not be proved
+   |
+45 |     ensures r < thresholds.Length ==> k <= thresholds[r]
+   |                                       ^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Intervals_63.dfy(64,2): Error: out-parameter 'r', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+64 |   }
+   |   ^
+
+
+Dafny program verifier finished with 4 verified, 5 errors

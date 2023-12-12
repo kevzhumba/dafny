@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_Bug116_3.dfy(16,19): Error: possible division by zero
-   |
-16 |   var procedure := params / final;
-   |                           ^^^^^^^
-
-
-Dafny program verifier finished with 2 verified, 1 error

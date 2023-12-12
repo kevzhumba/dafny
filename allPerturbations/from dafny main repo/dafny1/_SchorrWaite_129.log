@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_SchorrWaite_129.dfy(132,2): Error: decreases expression might not decrease
+    |
+132 |   while true
+    |   ^^^^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

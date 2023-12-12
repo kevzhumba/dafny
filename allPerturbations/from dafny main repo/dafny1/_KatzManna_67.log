@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_KatzManna_67.dfy(71,45): Error: possible division by zero
+   |
+71 |         X[b - 1, c - 1] := X[b - 1, c - 1] - X[b - 1, a - 1] / X[a - 1, a - 1] / X[a - 1, c - 1];
+   |                                                                                ^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

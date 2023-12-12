@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_NumberRepresentations_165.dfy(362,17): Error: assertion might not hold
-    |
-362 |           assert |a| == 1;
-    |                      ^^^^
-
-
-Dafny program verifier finished with 38 verified, 1 error

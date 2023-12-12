@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_Bug68_11.dfy(29,9): Error: assertion might not hold
-   |
-29 |   assert map[2 := 20, 1 := 10] in m;
-   |                                ^^^^
-
-
-Dafny program verifier finished with 7 verified, 1 error

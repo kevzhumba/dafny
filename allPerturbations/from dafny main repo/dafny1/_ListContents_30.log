@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ListContents_30.dfy(70,4): Error: decreases expression might not decrease
+   |
+70 |     while current != null
+   |     ^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_30.dfy(73,108): Error: this invariant could not be proved to be maintained by the loop
+   |
+73 |       invariant current != null ==> current.Valid() && current in old(Repr) && current.Repr <= old(Repr) && current.Repr !! reverse.Repr
+   |                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_30.dfy(73,108): Related message: loop invariant violation
+   |
+73 |       invariant current != null ==> current.Valid() && current in old(Repr) && current.Repr <= old(Repr) && current.Repr !! reverse.Repr
+   |                                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

@@ -1,0 +1,58 @@
+
+// validAnagram.dfy
+
+method toMultiset(s: string) returns (mset: multiset<char>)
+  ensures multiset(s) == mset
+{
+  mset := multiset{};
+  for i := 0 to |s|
+    invariant mset == multiset(s[0 .. i])
+  {
+    assert s == s[0 .. i] + [s[i]] + s[i + 1..];
+    mset := mset + multiset{s[i]};
+  }
+  assert s == s[0 .. |s|];
+  return mset;
+}
+
+method msetEqual(s: multiset<char>, t: multiset<char>) returns (equal: bool)
+  ensures s == t <==> equal
+{
+  ghost var sremoved: multiset<char> := multiset{};
+  var scopy := s;
+  while scopy != multiset{}
+    invariant s - sremoved == scopy
+    invariant sremoved !! scopy
+    invariant sremoved <= s
+    invariant forall x :: x in sremoved ==> x in s && x in t && t[x] == s[x]
+  {
+    var x :| x in scopy;
+    if !(x in t && s[x] == t[x]) {
+      return false;
+    }
+    var removed := multiset{};
+    sremoved := sremoved + removed[x := s[x]];
+    scopy := scopy - removed[x := s[x]];
+  }
+  ghost var tremoved: multiset<char> := multiset{};
+  var tcopy := t;
+  while tcopy != multiset{}
+    invariant t - tremoved == tcopy
+    invariant tremoved !! tcopy
+    invariant tremoved <= t
+    invariant forall x :: x in tremoved ==> x in s && x in t && t[x] == s[x]
+  {
+    var x :| x in tcopy;
+    var removed := multiset{};
+    tcopy := tcopy - removed[x := s[x]];
+  }
+  return true;
+}
+
+method isAnagram(s: string, t: string) returns (equal: bool)
+  ensures (multiset(s) == multiset(t)) == equal
+{
+  var smset := toMultiset(s);
+  var tmset := toMultiset(t);
+  equal := msetEqual(smset, tmset);
+}

@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_114.dfy(125,50): Error: this invariant could not be proved to be maintained by the loop
+    |
+125 |         invariant t == a + i && h == 1 + 2 * t && t <= vt
+    |                                                   ^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_114.dfy(125,50): Related message: loop invariant violation
+    |
+125 |         invariant t == a + i && h == 1 + 2 * t && t <= vt
+    |                                                   ^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_114.dfy(126,18): Error: this invariant could not be proved to be maintained by the loop
+    |
+126 |         invariant Nexxxt(t, S) == Nexxxt(vt, S) == Nexxxt(h + catchup - i, S)
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_114.dfy(126,18): Related message: loop invariant violation
+    |
+126 |         invariant Nexxxt(t, S) == Nexxxt(vt, S) == Nexxxt(h + catchup - i, S)
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 2 errors

@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/lib/_seq_166.dfy(453,13): Error: assertion might not hold
-    |
-453 |       assert multiset(list) == multiset(list[..i]) + multiset(list[i + 1..]) + multiset{x};
-    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Dafny program verifier finished with 51 verified, 1 error

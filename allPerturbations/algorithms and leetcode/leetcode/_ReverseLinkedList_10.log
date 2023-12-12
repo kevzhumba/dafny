@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_ReverseLinkedList_10.dfy(132,14): Error: a postcondition could not be proved on this return path
+    |
+132 |   if xs != [] {
+    |               ^
+
+datset/algorithms and leetcode/leetcode/_ReverseLinkedList_10.dfy(130,10): Related location: this is the postcondition that could not be proved
+    |
+130 |   ensures multiset(xs) == multiset(reverse(xs))
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_ReverseLinkedList_10.dfy(134,13): Error: index out of range
+    |
+134 |     var x := xs[0];
+    |                ^^^
+
+
+Dafny program verifier finished with 29 verified, 2 errors

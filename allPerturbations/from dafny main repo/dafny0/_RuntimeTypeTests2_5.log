@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_RuntimeTypeTests2_5.dfy(20,0): Error: out-parameter 'x', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+20 | }
+   | ^
+
+
+Dafny program verifier finished with 1 verified, 1 error

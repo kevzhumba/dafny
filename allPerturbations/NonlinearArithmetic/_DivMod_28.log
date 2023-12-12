@@ -1,0 +1,25 @@
+Not legacy result
+datset/NonlinearArithmetic/_DivMod_28.dfy(1466,4): Warning: For expression "d * k > 0":
+   /!\ No trigger covering all quantified variables found.
+     |
+1466 |     forall x: int, k: int, d: int | 1 < d && 0 < k
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_28.dfy(1507,4): Warning: For expression "0 < a * b":
+   /!\ No trigger covering all quantified variables found.
+     |
+1507 |     forall x: int, a: int, b: int | 0 < a && 0 < b
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_28.dfy(87,2): Error: a postcondition could not be proved on this return path
+   |
+87 |   {
+   |   ^
+
+datset/NonlinearArithmetic/_DivMod_28.dfy(86,12): Related location: this is the postcondition that could not be proved
+   |
+86 |     ensures x / d > 0
+   |             ^^^^^^^^^
+
+
+Dafny program verifier finished with 242 verified, 1 error

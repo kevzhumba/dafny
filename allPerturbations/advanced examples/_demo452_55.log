@@ -1,0 +1,13 @@
+Not legacy result
+datset/advanced examples/_demo452_55.dfy(14,2): Error: a postcondition could not be proved on this return path
+   |
+14 |   return i, k;
+   |   ^^^^^^
+
+datset/advanced examples/_demo452_55.dfy(8,10): Related location: this is the postcondition that could not be proved
+  |
+8 |   ensures forall i | lo <= i < hi :: a[i] == 0
+  |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

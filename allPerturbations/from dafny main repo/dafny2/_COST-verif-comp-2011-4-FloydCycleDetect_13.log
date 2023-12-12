@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_13.dfy(59,13): Error: assertion might not hold
+   |
+59 |       assert Nexxxt(t + 1, S) != null;
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_13.dfy(60,57): Error: target object might be null
+   |
+60 |       tortoise, t, hare, h := tortoise.next, t + 1, hare.next.next, h + 2;
+   |                                                          ^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_13.dfy(60,62): Error: target object might be null
+   |
+60 |       tortoise, t, hare, h := tortoise.next, t + 1, hare.next.next, h + 2;
+   |                                                               ^^^^
+
+
+Dafny program verifier finished with 22 verified, 3 errors

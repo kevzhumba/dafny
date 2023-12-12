@@ -1,0 +1,23 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_10.dfy(44,9): Error: a postcondition could not be proved on this return path
+   |
+44 |   } else {
+   |          ^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_10.dfy(40,10): Related location: this is the postcondition that could not be proved
+   |
+40 |   ensures sum(nums) == sumUp(nums)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_10.dfy(49,15): Error: assertion might not hold
+   |
+49 |         assert nums[..] == nums[0 .. ln] + [nums[ln]];
+   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_10.dfy(49,44): Error: index out of range
+   |
+49 |         assert nums[..] == nums[0 .. ln] + [nums[ln]];
+   |                                                 ^^^^
+
+
+Dafny program verifier finished with 5 verified, 3 errors

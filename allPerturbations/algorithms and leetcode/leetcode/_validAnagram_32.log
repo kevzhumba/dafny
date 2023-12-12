@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_validAnagram_32.dfy(40,27): Error: this invariant could not be proved to be maintained by the loop
+   |
+40 |     invariant t - tremoved == tcopy
+   |                            ^^
+
+datset/algorithms and leetcode/leetcode/_validAnagram_32.dfy(40,27): Related message: loop invariant violation
+   |
+40 |     invariant t - tremoved == tcopy
+   |                            ^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

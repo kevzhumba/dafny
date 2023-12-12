@@ -1,0 +1,13 @@
+Not legacy result
+datset/NonlinearArithmetic/_Mul_29.dfy(203,2): Error: a postcondition could not be proved on this return path
+    |
+203 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_Mul_29.dfy(202,12): Related location: this is the postcondition that could not be proved
+    |
+202 |     ensures x * y <= (XBound - 1) * (YBound - 1)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 53 verified, 1 error

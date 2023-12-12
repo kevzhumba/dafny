@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_MoForallCompilation_86.dfy(126,2): Error: a postcondition could not be proved on this return path
+    |
+126 |   {
+    |   ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_86.dfy(125,12): Related location: this is the postcondition that could not be proved
+    |
+125 |     ensures Valid() && fresh(Repr - if next == null then {} else next.Repr)
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_86.dfy(112,4): Related location
+    |
+112 |     this in Repr &&
+    |     ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

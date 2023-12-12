@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny1/_SumOfCubes_16.dfy(39,4): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-39 |     while k < m
-   |     ^^^^^
-
-
-Dafny program verifier finished with 16 verified, 1 error

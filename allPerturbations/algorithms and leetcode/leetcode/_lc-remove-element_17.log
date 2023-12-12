@@ -1,0 +1,8 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_lc-remove-element_17.dfy(10,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+10 |   while i <= end
+   |   ^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

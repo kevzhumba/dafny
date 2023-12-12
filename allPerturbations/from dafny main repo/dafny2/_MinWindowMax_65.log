@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_MinWindowMax_65.dfy(54,14): Error: this loop invariant could not be proved on entry
+   |
+54 |     invariant 0 <= start <= a.Length - W
+   |               ^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MinWindowMax_65.dfy(54,14): Related message: loop invariant violation
+   |
+54 |     invariant 0 <= start <= a.Length - W
+   |               ^^^^^^^^^^
+
+
+Dafny program verifier finished with 11 verified, 1 error

@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/leetcode/_validAnagram_42.dfy(39,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-39 |   while tcopy != multiset{}
-   |   ^^^^^
-
-
-Dafny program verifier finished with 2 verified, 1 error

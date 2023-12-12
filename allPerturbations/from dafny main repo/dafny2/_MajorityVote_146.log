@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_MajorityVote_146.dfy(80,20): Error: index out of range
+   |
+80 |       k, n, c, s := a[n], n + 1, 1, n;
+   |                      ^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

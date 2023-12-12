@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_MoForallCompilation_76.dfy(70,0): Error: a postcondition could not be proved on this return path
+   |
+70 | {
+   | ^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_76.dfy(69,33): Related location: this is the postcondition that could not be proved
+   |
+69 |   ensures MatrixEqual(m0, m1) && MatrixEqual(m0, m2)
+   |                                  ^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny0/_MoForallCompilation_76.dfy(85,2): Related location
+   |
+85 |   forall i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

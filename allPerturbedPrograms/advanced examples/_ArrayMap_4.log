@@ -1,7 +1,0 @@
-datset/advanced examples/_ArrayMap_4.dfy(16,4): Error: index out of range
-   |
-16 |     a[i] := f(i);
-   |      ^^^
-
-
-Dafny program verifier finished with 1 verified, 1 error

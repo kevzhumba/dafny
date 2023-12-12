@@ -1,7 +1,0 @@
-datset/advanced examples/_OneHundredPrisonersAndALightbulb_70.dfy(50,9): Error: assertion might not hold
-   |
-50 |   assert P <= I;
-   |            ^^^^
-
-
-Dafny program verifier finished with 1 verified, 1 error

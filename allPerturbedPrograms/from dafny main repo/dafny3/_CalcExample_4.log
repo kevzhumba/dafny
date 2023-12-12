@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny3/_CalcExample_4.dfy(63,12): Error: assertion might not hold
-   |
-63 |   assert 5: f(x, c) <= x by {
-   |                     ^^^^
-
-
-Dafny program verifier finished with 1 verified, 1 error

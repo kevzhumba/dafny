@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Classics_4.dfy(24,21): Error: this loop invariant could not be proved on entry
+   |
+24 |       invariant 1 <= s <= r + 1
+   |                      ^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Classics_4.dfy(24,21): Related message: loop invariant violation
+   |
+24 |       invariant 1 <= s <= r + 1
+   |                      ^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Classics_4.dfy(25,16): Error: this loop invariant could not be proved on entry
+   |
+25 |       invariant u == s * Factorial(r)
+   |                 ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Classics_4.dfy(25,16): Related message: loop invariant violation
+   |
+25 |       invariant u == s * Factorial(r)
+   |                 ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

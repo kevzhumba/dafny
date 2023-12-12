@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SegmentSum_15.dfy(16,0): Error: a postcondition could not be proved on this return path
+   |
+16 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_SegmentSum_15.dfy(15,10): Related location: this is the postcondition that could not be proved
+   |
+15 |   ensures forall p, q :: 0 <= p <= q <= |a| ==> Sum(a, p, q) <= Sum(a, k, m)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SegmentSum_15.dfy(27,16): Error: index out of range
+   |
+27 |     t, n := t + a[n], n + 1;
+   |                  ^^^
+
+
+Dafny program verifier finished with 2 verified, 2 errors

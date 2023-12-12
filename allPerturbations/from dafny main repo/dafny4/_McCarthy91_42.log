@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_McCarthy91_42.dfy(19,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+19 |   while n < |s| {
+   |   ^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

@@ -1,0 +1,8 @@
+Not legacy result
+datset/vetri-sparse/_dspmspv_50.dfy(90,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+90 |   while n < pX_end1
+   |   ^^^^^
+
+
+Dafny program verifier finished with 7 verified, 1 error

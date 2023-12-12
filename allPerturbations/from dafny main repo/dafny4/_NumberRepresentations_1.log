@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_NumberRepresentations_1.dfy(21,9): Error: assertion might not hold
+   |
+21 |   assert eval([1, 3], oct) == eval([5, 2], dec);
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

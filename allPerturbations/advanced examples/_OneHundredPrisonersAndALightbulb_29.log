@@ -1,0 +1,23 @@
+Not legacy result
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_29.dfy(30,28): Error: this invariant could not be proved to be maintained by the loop
+   |
+30 |     invariant count > 0 ==> Special in I
+   |                             ^^^^^^^^^^^^
+
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_29.dfy(30,28): Related message: loop invariant violation
+   |
+30 |     invariant count > 0 ==> Special in I
+   |                             ^^^^^^^^^^^^
+
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_29.dfy(31,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+31 |     invariant Special !in S && S < P && S <= I <= P
+   |               ^^^^^^^^^^^^^
+
+datset/advanced examples/_OneHundredPrisonersAndALightbulb_29.dfy(31,14): Related message: loop invariant violation
+   |
+31 |     invariant Special !in S && S < P && S <= I <= P
+   |               ^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 2 errors

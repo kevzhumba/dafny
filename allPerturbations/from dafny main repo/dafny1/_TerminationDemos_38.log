@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_TerminationDemos_38.dfy(99,4): Error: variable 'list', which is subject to definite-assignment rules, might be uninitialized here
+   |
+99 |     list.data := x;
+   |     ^^^^
+
+datset/from dafny main repo/dafny1/_TerminationDemos_38.dfy(99,9): Error: assignment might update an object not in the enclosing context's modifies clause
+   |
+99 |     list.data := x;
+   |          ^^^^
+
+
+Dafny program verifier finished with 11 verified, 2 errors

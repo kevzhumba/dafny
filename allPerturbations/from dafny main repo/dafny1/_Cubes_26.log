@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_Cubes_26.dfy(12,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+12 |   while n < a.Length
+   |   ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

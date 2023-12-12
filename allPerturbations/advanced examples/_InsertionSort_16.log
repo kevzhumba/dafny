@@ -1,0 +1,28 @@
+Not legacy result
+datset/advanced examples/_InsertionSort_16.dfy(22,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+22 |     invariant sorted(a, 0, up)
+   |               ^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_16.dfy(9,2): Related location
+  |
+9 |   forall j, k :: 
+  |   ^^^^^^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_16.dfy(22,14): Related message: loop invariant violation
+   |
+22 |     invariant sorted(a, 0, up)
+   |               ^^^^^^^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_16.dfy(9,2): Related location
+  |
+9 |   forall j, k :: 
+  |   ^^^^^^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_16.dfy(26,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+26 |     while down <= 0 && a[down + 1] < a[down]
+   |     ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-imperative_111.dfy(75,0): Error: a postcondition could not be proved on this return path
+   |
+75 | {
+   | ^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-imperative_111.dfy(73,10): Related location: this is the postcondition that could not be proved
+   |
+73 |   ensures forall i :: 0 <= i < a.Length ==> a[i] != s
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 1 error

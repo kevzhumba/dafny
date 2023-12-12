@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-imperative_15.dfy(38,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+38 |   while e[s] <== s < N
+   |   ^^^^^
+
+
+Dafny program verifier finished with 7 verified, 1 error

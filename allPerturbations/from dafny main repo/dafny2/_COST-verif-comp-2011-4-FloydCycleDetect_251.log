@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_251.dfy(203,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+203 |     while kn < n
+    |     ^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

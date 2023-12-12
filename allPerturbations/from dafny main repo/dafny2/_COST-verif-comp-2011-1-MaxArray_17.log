@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-1-MaxArray_17.dfy(12,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+12 |   while x != y
+   |   ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_Primes_39.dfy(78,11): Error: assertion might not hold
+   |
+78 |     assert s == s' + {a};
+   |              ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_Primes_39.dfy(79,4): Error: cannot prove termination; try supplying a decreases clause
+   |
+79 |     product_property(s');
+   |     ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 14 verified, 2 errors

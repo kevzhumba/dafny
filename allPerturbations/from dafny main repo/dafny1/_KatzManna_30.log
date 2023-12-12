@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_KatzManna_30.dfy(9,2): Error: decreases expression might not decrease
+  |
+9 |   while true
+  |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

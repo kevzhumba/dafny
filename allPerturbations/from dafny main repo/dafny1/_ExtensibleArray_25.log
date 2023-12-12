@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArray_25.dfy(10,27): Error: this invariant could not be proved to be maintained by the loop
+   |
+10 |     invariant |a.Contents| == n
+   |                            ^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_25.dfy(10,27): Related message: loop invariant violation
+   |
+10 |     invariant |a.Contents| == n
+   |                            ^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

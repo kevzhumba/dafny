@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Classics_64.dfy(56,48): Error: this invariant could not be proved to be maintained by the loop
+   |
+56 |       invariant (i == m && j == n && r == A[f]) || (m < i && j < n)
+   |                                                 ^^
+
+datset/from dafny main repo/dafny2/_Classics_64.dfy(56,48): Related message: loop invariant violation
+   |
+56 |       invariant (i == m && j == n && r == A[f]) || (m < i && j < n)
+   |                                                 ^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_MajorityVote_225.dfy(107,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+107 |   while up < |a|
+    |   ^^^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

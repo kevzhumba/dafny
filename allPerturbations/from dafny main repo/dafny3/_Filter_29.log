@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_Filter_29.dfy(73,0): Error: a postcondition could not be proved on this return path
+   |
+73 | {
+   | ^
+
+datset/from dafny main repo/dafny3/_Filter_29.dfy(72,10): Related location: this is the postcondition that could not be proved
+   |
+72 |   ensures P(x)
+   |           ^^^^
+
+
+Dafny program verifier finished with 27 verified, 1 error

@@ -1,0 +1,8 @@
+Not legacy result
+datset/advanced examples/_ArrayMap_9.dfy(12,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+12 |   while i < a.Length
+   |   ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

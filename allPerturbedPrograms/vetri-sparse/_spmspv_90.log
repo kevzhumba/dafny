@@ -1,7 +1,0 @@
-datset/vetri-sparse/_spmspv_90.dfy(110,10): Error: index out of range
-    |
-110 |     print y[i];
-    |            ^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

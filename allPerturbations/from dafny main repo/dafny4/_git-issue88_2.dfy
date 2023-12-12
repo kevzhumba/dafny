@@ -1,0 +1,22 @@
+
+// git-issue88.dfy
+
+method M2()
+{
+}
+
+method M1()
+{
+  var g: Line := new int[9];
+  g[0] := 1;
+}
+
+method Main()
+{
+  M2();
+  M1();
+}
+
+type Grid = array2<int>
+
+type Line = array<int>

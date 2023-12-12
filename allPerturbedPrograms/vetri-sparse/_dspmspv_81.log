@@ -1,7 +1,0 @@
-datset/vetri-sparse/_dspmspv_81.dfy(138,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-    |
-138 |   while i < 8 {
-    |   ^^^^^
-
-
-Dafny program verifier finished with 7 verified, 1 error

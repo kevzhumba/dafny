@@ -1,0 +1,13 @@
+Not legacy result
+datset/NonlinearArithmetic/Internals/_MulInternals_22.dfy(121,4): Error: a precondition for this call could not be proved
+    |
+121 |     LemmaMulInduction(f);
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_MulInternals_22.dfy(26,13): Related location: this is the precondition that could not be proved
+   |
+26 |     requires forall i {:trigger f(i), f(i + 1)} :: i >= 0 && f(i) ==> f(i + 1)
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

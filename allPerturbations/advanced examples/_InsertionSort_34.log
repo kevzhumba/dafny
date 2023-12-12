@@ -1,0 +1,8 @@
+Not legacy result
+datset/advanced examples/_InsertionSort_34.dfy(20,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+20 |   while up < a.Length
+   |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

@@ -1,7 +1,0 @@
-datset/vetri-sparse/_dspmspv_1.dfy(83,16): Error: value does not satisfy the subset constraints of 'nat'
-   |
-83 |   var n: nat := -1;
-   |                 ^
-
-
-Dafny program verifier finished with 7 verified, 1 error

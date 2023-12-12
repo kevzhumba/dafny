@@ -1,7 +1,0 @@
-datset/vetri-sparse/_spmv_94.dfy(76,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-76 |   while i < 8 {
-   |   ^^^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

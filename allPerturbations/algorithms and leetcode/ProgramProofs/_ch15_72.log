@@ -1,0 +1,8 @@
+Not legacy result
+datset/algorithms and leetcode/ProgramProofs/_ch15_72.dfy(88,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+88 |   while m < n
+   |   ^^^^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

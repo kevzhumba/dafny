@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny3/_GenericSort_56.dfy(150,11): Error: assertion might not hold
-    |
-150 |     assert a[..] == [I.T.Int(6), I.T.Int(1), I.T.Int(0), I.T.Int(4)];
-    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Dafny program verifier finished with 31 verified, 1 error

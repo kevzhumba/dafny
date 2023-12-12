@@ -1,0 +1,23 @@
+Not legacy result
+datset/algorithms and leetcode/examples/_realExponent_36.dfy(58,22): Error: this loop invariant could not be proved on entry
+   |
+58 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+datset/algorithms and leetcode/examples/_realExponent_36.dfy(58,22): Related message: loop invariant violation
+   |
+58 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+datset/algorithms and leetcode/examples/_realExponent_36.dfy(58,22): Error: this invariant could not be proved to be maintained by the loop
+   |
+58 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+datset/algorithms and leetcode/examples/_realExponent_36.dfy(58,22): Related message: loop invariant violation
+   |
+58 |     invariant product == power(i as real, alpha)
+   |                       ^^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

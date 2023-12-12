@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_KatzManna_89.dfy(59,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+59 |   while a != M
+   |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/examples/_bubblesort_55.dfy(40,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+40 |     invariant n <= SumRange(i + 1, a.Length)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/examples/_bubblesort_55.dfy(40,14): Related message: loop invariant violation
+   |
+40 |     invariant n <= SumRange(i + 1, a.Length)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

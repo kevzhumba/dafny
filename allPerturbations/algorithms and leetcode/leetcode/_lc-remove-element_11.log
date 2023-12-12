@@ -1,0 +1,8 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_lc-remove-element_11.dfy(15,7): Error: index out of range
+   |
+15 |     if nums[i] == val {
+   |            ^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

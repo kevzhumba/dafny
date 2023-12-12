@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_19.dfy(8,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+  |
+8 |   while n < 256 * 256 + 600
+  |   ^^^^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

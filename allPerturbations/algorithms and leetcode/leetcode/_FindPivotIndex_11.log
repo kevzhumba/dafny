@@ -1,0 +1,33 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(44,9): Error: a postcondition could not be proved on this return path
+   |
+44 |   } else {
+   |          ^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(40,10): Related location: this is the postcondition that could not be proved
+   |
+40 |   ensures sum(nums) == sumUp(nums)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(49,15): Error: assertion might not hold
+   |
+49 |         assert nums[..] == nums[0 .. ln] + [nums[ln]];
+   |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(49,27): Error: upper bound below lower bound or above length of sequence
+   |
+49 |         assert nums[..] == nums[0 .. ln] + [nums[ln]];
+   |                                ^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(49,44): Error: index out of range
+   |
+49 |         assert nums[..] == nums[0 .. ln] + [nums[ln]];
+   |                                                 ^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_11.dfy(50,19): Error: upper bound below lower bound or above length of sequence
+   |
+50 |         sumUpLemma(nums[0 .. ln], [nums[ln]]);
+   |                        ^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 5 errors

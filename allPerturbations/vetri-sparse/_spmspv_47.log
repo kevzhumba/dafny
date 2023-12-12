@@ -1,0 +1,18 @@
+Not legacy result
+datset/vetri-sparse/_spmspv_47.dfy(63,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+63 |       invariant y[n] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, pX_end, pV_end)
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_47.dfy(63,16): Related message: loop invariant violation
+   |
+63 |       invariant y[n] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, pX_end, pV_end)
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmspv_47.dfy(67,20): Error: variable 'kX0', which is subject to definite-assignment rules, might be uninitialized here
+   |
+67 |       k := min(kV0, kX0);
+   |                     ^^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

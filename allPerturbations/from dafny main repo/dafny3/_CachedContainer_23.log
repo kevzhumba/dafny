@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_CachedContainer_23.dfy(86,20): Error: this invariant could not be proved to be maintained by the loop
+   |
+86 |         invariant j <= |elems|
+   |                     ^^
+
+datset/from dafny main repo/dafny3/_CachedContainer_23.dfy(86,20): Related message: loop invariant violation
+   |
+86 |         invariant j <= |elems|
+   |                     ^^
+
+datset/from dafny main repo/dafny3/_CachedContainer_23.dfy(87,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+87 |         invariant forall i :: 0 <= i < j ==> elems[i] != t
+   |                   ^^^^^^
+
+datset/from dafny main repo/dafny3/_CachedContainer_23.dfy(87,18): Related message: loop invariant violation
+   |
+87 |         invariant forall i :: 0 <= i < j ==> elems[i] != t
+   |                   ^^^^^^
+
+
+Dafny program verifier finished with 39 verified, 2 errors

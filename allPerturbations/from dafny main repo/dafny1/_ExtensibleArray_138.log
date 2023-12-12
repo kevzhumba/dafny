@@ -1,0 +1,28 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArray_138.dfy(124,2): Error: a postcondition could not be proved on this return path
+    |
+124 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_138.dfy(121,12): Related location: this is the postcondition that could not be proved
+    |
+121 |     ensures Valid() && fresh(Repr - old(Repr))
+    |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_138.dfy(67,4): Related location
+   |
+67 |     length == |Contents| &&
+   |     ^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_138.dfy(124,2): Error: a postcondition could not be proved on this return path
+    |
+124 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_138.dfy(122,12): Related location: this is the postcondition that could not be proved
+    |
+122 |     ensures Contents == old(Contents) + [t]
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 2 errors

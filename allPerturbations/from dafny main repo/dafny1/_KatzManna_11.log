@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_KatzManna_11.dfy(12,37): Error: this invariant could not be proved to be maintained by the loop
+   |
+12 |     invariant (y1 <= 111 && y2 >= 1) || (y1 == x && y2 == 1)
+   |                                      ^^
+
+datset/from dafny main repo/dafny1/_KatzManna_11.dfy(12,37): Related message: loop invariant violation
+   |
+12 |     invariant (y1 <= 111 && y2 >= 1) || (y1 == x && y2 == 1)
+   |                                      ^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

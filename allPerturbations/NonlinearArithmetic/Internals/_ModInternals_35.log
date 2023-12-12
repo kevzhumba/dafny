@@ -1,0 +1,18 @@
+Not legacy result
+datset/NonlinearArithmetic/Internals/_ModInternals_35.dfy(89,14): Error: possible violation of postcondition of forall statement
+   |
+89 |       ensures 0 == n * zm + (x - n) % n - x % n
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_35.dfy(96,4): Error: a postcondition could not be proved on this return path
+   |
+96 |     if zm < 0 {
+   |     ^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_35.dfy(83,12): Related location: this is the postcondition that could not be proved
+   |
+83 |     ensures (x - n) / n == x / n - 1
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 2 errors

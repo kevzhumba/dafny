@@ -1,0 +1,8 @@
+Not legacy result
+datset/vetri-sparse/_dspmspv_49.dfy(121,11): Error: value does not satisfy the subset constraints of 'nat'
+    |
+121 |     n := n - 1;
+    |            ^
+
+
+Dafny program verifier finished with 7 verified, 1 error

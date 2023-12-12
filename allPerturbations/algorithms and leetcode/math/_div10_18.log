@@ -1,0 +1,28 @@
+Not legacy result
+datset/algorithms and leetcode/math/_div10_18.dfy(8,7): Error: shift amount must not exceed the width of the result (16)
+  |
+8 |   q := n >> 1 + n >> 2;
+  |          ^^^^^^^^
+
+datset/algorithms and leetcode/math/_div10_18.dfy(8,14): Error: when converting shift amount to a bit vector, the value to be converted might not fit in bv5
+  |
+8 |   q := n >> 1 + n >> 2;
+  |               ^
+
+datset/algorithms and leetcode/math/_div10_18.dfy(11,12): Error: shift amount must not exceed the width of the result (16)
+   |
+11 |   r := n - (q << 2 + q) << 1;
+   |               ^^^^^^^^
+
+datset/algorithms and leetcode/math/_div10_18.dfy(12,2): Error: a postcondition could not be proved on this return path
+   |
+12 |   return q + if r > 9 then 1 else 0;
+   |   ^^^^^^
+
+datset/algorithms and leetcode/math/_div10_18.dfy(5,10): Related location: this is the postcondition that could not be proved
+  |
+5 |   ensures r == n / 10
+  |           ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 4 errors

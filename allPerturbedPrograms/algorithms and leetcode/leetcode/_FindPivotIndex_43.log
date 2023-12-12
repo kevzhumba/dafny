@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/leetcode/_FindPivotIndex_43.dfy(75,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-75 |   while i < |nums| + 1
-   |   ^^^^^
-
-
-Dafny program verifier finished with 5 verified, 1 error

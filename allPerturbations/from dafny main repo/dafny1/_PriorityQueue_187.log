@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_PriorityQueue_187.dfy(200,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+    |
+200 |     while 2 - i <= n
+    |     ^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_187.dfy(211,17): Error: index out of range
+    |
+211 |       if a[i] <= a[smallestChild] {
+    |                   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 2 errors

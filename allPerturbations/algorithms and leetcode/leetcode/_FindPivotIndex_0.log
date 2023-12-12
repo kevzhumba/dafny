@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_0.dfy(24,11): Error: assertion might not hold
+   |
+24 |     assert a + b == b;
+   |                  ^^^^
+
+datset/algorithms and leetcode/leetcode/_FindPivotIndex_0.dfy(26,15): Error: lower bound out of range
+   |
+26 |     sumUpLemma(a[1..], b);
+   |                 ^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

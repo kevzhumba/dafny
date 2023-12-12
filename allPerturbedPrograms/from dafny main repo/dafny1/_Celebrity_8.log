@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny1/_Celebrity_8.dfy(31,2): Error: decreases expression might not decrease
-   |
-31 |   while Q != {x}
-   |   ^^^^^
-
-
-Dafny program verifier finished with 4 verified, 1 error

@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_UnionFind_49.dfy(259,10): Error: a precondition for this call could not be proved
+    |
+259 |           JoinMaintainsReaches0(r1, r0, old(Collect()), Collect());
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_UnionFind_49.dfy(324,67): Related location: this is the precondition that could not be proved
+    |
+324 |       requires r0 in C && r1 in C && C[r0].Root? && C[r1].Root? && C[r0].depth < C[r1].depth
+    |                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_UnionFind_49.dfy(270,10): Error: a precondition for this call could not be proved
+    |
+270 |           JoinMaintainsReaches1(r0, r1, old(Collect()), Collect());
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_UnionFind_49.dfy(278,67): Related location: this is the precondition that could not be proved
+    |
+278 |       requires r0 in C && r1 in C && C[r0].Root? && C[r1].Root? && C[r0].depth == C[r1].depth && r0 != r1
+    |                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 89 verified, 2 errors

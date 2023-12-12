@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/examples/_bubblesort_13.dfy(60,12): Error: the calculation step between the previous line and this line could not be proved
-   |
-60 |     SumRange(1, a.Length);
-   |             ^
-
-
-Dafny program verifier finished with 5 verified, 1 error

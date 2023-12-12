@@ -1,0 +1,8 @@
+Not legacy result
+datset/vetri-sparse/_concurrent_poc_6_8.dfy(50,39): Error: value does not satisfy the subset constraints of 'nat'
+   |
+50 |       sum_exept(s1[1..], s2[1..], x, j - 1);
+   |                                        ^
+
+
+Dafny program verifier finished with 17 verified, 1 error

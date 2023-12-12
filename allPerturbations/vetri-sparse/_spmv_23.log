@@ -1,0 +1,13 @@
+Not legacy result
+datset/vetri-sparse/_spmv_23.dfy(38,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+38 |     while k < X_pos[n + 1]
+   |     ^^^^^
+
+datset/vetri-sparse/_spmv_23.dfy(45,13): Error: value does not satisfy the subset constraints of 'nat'
+   |
+45 |       k := k - 1;
+   |              ^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

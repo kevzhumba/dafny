@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny0/_SharedDestructorsCompile_38.dfy(46,7): Error: source of datatype update must be constructed by 'CC'
-   |
-46 |   s := d.(c := 3.4);
-   |          ^^^^^^^^^^
-
-
-Dafny program verifier finished with 2 verified, 1 error

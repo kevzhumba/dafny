@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ListContents_27.dfy(71,24): Error: this invariant could not be proved to be maintained by the loop
+   |
+71 |       invariant reverse.Valid() && reverse.Repr <= old(Repr)
+   |                         ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_27.dfy(17,6): Related location
+   |
+17 |       next in Repr &&
+   |       ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_27.dfy(71,24): Related message: loop invariant violation
+   |
+71 |       invariant reverse.Valid() && reverse.Repr <= old(Repr)
+   |                         ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ListContents_27.dfy(17,6): Related location
+   |
+17 |       next in Repr &&
+   |       ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 1 error

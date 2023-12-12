@@ -1,0 +1,13 @@
+Not legacy result
+datset/Collections/Maps/_Maps_3.dfy(91,2): Error: a postcondition could not be proved on this return path
+   |
+91 |   {
+   |   ^
+
+datset/Collections/Maps/_Maps_3.dfy(90,12): Related location: this is the postcondition that could not be proved
+   |
+90 |     ensures Injective(Invert(m))
+   |             ^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 12 verified, 1 error

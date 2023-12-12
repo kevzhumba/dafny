@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_KozenSilva_12.dfy(142,14): Error: a postcondition could not be proved on this return path
+    |
+142 |   if u.ValCl? {
+    |               ^
+
+datset/from dafny main repo/dafny4/_KozenSilva_12.dfy(140,10): Related location: this is the postcondition that could not be proved
+    |
+140 |   ensures ValBelow(u, w)
+    |           ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_KozenSilva_12.dfy(126,2): Related location
+    |
+126 |   (u.ValConst? && v.ValConst? && u == v) || (u.ValCl? && v.ValCl? && u.cl.abs == v.cl.abs && ClEnvBelow(u.cl.env, v.cl.env))
+    |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 24 verified, 1 error

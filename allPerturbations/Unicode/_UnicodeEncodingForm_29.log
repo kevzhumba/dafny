@@ -1,0 +1,8 @@
+Not legacy result
+datset/Unicode/_UnicodeEncodingForm_29.dfy(130,11): Error: assertion might not hold
+    |
+130 |     assert s + t == Seq.Flatten(partsST);
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

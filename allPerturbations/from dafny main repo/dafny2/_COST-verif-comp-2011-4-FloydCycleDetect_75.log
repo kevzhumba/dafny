@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_75.dfy(125,32): Error: this loop invariant could not be proved on entry
+    |
+125 |         invariant t == a + i && h == 1 + 2 * t && t <= vt
+    |                                 ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_75.dfy(125,32): Related message: loop invariant violation
+    |
+125 |         invariant t == a + i && h == 1 + 2 * t && t <= vt
+    |                                 ^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

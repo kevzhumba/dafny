@@ -1,0 +1,8 @@
+Not legacy result
+datset/advanced examples/_Array2dAs1d_18.dfy(19,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+19 |     while j < cols {
+   |     ^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

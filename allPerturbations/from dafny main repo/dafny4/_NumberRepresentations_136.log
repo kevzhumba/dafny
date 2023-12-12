@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_NumberRepresentations_136.dfy(218,0): Error: a postcondition could not be proved on this return path
+    |
+218 | {
+    | ^
+
+datset/from dafny main repo/dafny4/_NumberRepresentations_136.dfy(217,10): Related location: this is the postcondition that could not be proved
+    |
+217 |   ensures eval(digits, base) == eval(digits + [0], base)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

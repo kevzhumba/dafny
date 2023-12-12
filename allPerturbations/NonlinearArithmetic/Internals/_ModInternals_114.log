@@ -1,0 +1,8 @@
+Not legacy result
+datset/NonlinearArithmetic/Internals/_ModInternals_114.dfy(194,13): Error: assertion might not hold
+    |
+194 |       assert q * n + r == (q + 1) * n - n + r;
+    |                        ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 1 error

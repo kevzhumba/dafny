@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/projects/_matchDomain_44.dfy(61,2): Error: a precondition for this call could not be proved
+   |
+61 |   PrefixesEqual(allowedDomain, domain);
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/projects/_matchDomain_44.dfy(13,11): Related location: this is the precondition that could not be proved
+   |
+13 |   requires TokensEqual(reverse(left), reverse(right))
+   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/projects/_matchDomain_44.dfy(6,2): Related location
+  |
+6 |   |left| == |right| &&
+  |   ^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

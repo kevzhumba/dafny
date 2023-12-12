@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_SumOfCubes_32.dfy(62,2): Error: a postcondition could not be proved on this return path
+   |
+62 |   {
+   |   ^
+
+datset/from dafny main repo/dafny1/_SumOfCubes_32.dfy(61,12): Related location: this is the postcondition that could not be proved
+   |
+61 |     ensures r == GSum(k)
+   |             ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SumOfCubes_32.dfy(63,2): Error: out-parameter 'r', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+63 |   }
+   |   ^
+
+
+Dafny program verifier finished with 16 verified, 2 errors

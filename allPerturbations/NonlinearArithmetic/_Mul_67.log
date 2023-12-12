@@ -1,0 +1,13 @@
+Not legacy result
+datset/NonlinearArithmetic/_Mul_67.dfy(460,2): Error: a postcondition could not be proved on this return path
+    |
+460 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_Mul_67.dfy(459,12): Related location: this is the postcondition that could not be proved
+    |
+459 |     ensures forall x: int, y: int {:trigger x * y} :: x * y == -x * -y
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 53 verified, 1 error

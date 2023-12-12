@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_pathSum_5.dfy(58,2): Error: a postcondition could not be proved on this return path
+   |
+58 |   return leftPath || rightPath;
+   |   ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_pathSum_5.dfy(41,16): Related location: this is the postcondition that could not be proved
+   |
+41 |   ensures b ==> exists p: seq<TreeNode> :: isPath(p, root) && pathSum(p) == targetSum
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 1 error

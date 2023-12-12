@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_KatzManna_88.dfy(77,17): Error: index 0 out of range
+   |
+77 |     y := y * X[a - 1, a - 1];
+   |                  ^
+
+
+Dafny program verifier finished with 3 verified, 1 error

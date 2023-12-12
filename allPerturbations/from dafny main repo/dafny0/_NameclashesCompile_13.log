@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_NameclashesCompile_13.dfy(25,2): Error: out-parameter 'o', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+25 |   }
+   |   ^
+
+
+Dafny program verifier finished with 8 verified, 1 error

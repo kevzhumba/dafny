@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_gcd_25.dfy(185,2): Error: a postcondition could not be proved on this return path
+    |
+185 |   forall q | q in common
+    |   ^^^^^^
+
+datset/from dafny main repo/dafny4/_gcd_25.dfy(169,10): Related location: this is the postcondition that could not be proved
+    |
+169 |   ensures Gcd(y, x) == Gcd(x, y - x)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

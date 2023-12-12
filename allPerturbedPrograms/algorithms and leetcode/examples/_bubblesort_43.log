@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/examples/_bubblesort_43.dfy(43,4): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-43 |     while j < i
-   |     ^^^^^
-
-
-Dafny program verifier finished with 5 verified, 1 error

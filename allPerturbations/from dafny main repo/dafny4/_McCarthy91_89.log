@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_McCarthy91_89.dfy(67,14): Error: this loop invariant could not be proved on entry
+   |
+67 |     invariant iter(e, mc91, n) == mc91(n0)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_McCarthy91_89.dfy(67,14): Related message: loop invariant violation
+   |
+67 |     invariant iter(e, mc91, n) == mc91(n0)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

@@ -1,0 +1,33 @@
+Not legacy result
+datset/algorithms and leetcode/lib/_seq_47.dfy(99,2): Error: a postcondition could not be proved on this return path
+   |
+99 |   {
+   |   ^
+
+datset/algorithms and leetcode/lib/_seq_47.dfy(98,12): Related location: this is the postcondition that could not be proved
+   |
+98 |     ensures IsPrefix(reverse(xs), reverse(ys))
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/_seq_47.dfy(86,4): Related location
+   |
+86 |     xs == ys[..|xs|]
+   |     ^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/_seq_47.dfy(99,2): Error: a postcondition could not be proved on this return path
+   |
+99 |   {
+   |   ^
+
+datset/algorithms and leetcode/lib/_seq_47.dfy(98,12): Related location: this is the postcondition that could not be proved
+   |
+98 |     ensures IsPrefix(reverse(xs), reverse(ys))
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/_seq_47.dfy(85,4): Related location
+   |
+85 |     |xs| <= |ys| &&
+   |     ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 51 verified, 2 errors

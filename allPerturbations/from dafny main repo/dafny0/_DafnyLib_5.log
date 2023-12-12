@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_DafnyLib_5.dfy(51,2): Error: out-parameter 'a', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+51 |   }
+   |   ^
+
+datset/from dafny main repo/dafny0/_DafnyLib_5.dfy(51,2): Error: out-parameter 'b', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+51 |   }
+   |   ^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

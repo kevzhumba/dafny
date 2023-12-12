@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny1/_KatzManna_52.dfy(35,2): Error: decreases expression might not decrease
-   |
-35 |   while y1 != y2
-   |   ^^^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

@@ -1,0 +1,28 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_SchorrWaite_144.dfy(132,2): Error: decreases expression might not decrease
+    |
+132 |   while true
+    |   ^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_144.dfy(138,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+138 |     invariant forall n :: n in S && n !in stackNodes && n != t ==> n.childrenVisited == 0
+    |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_144.dfy(138,14): Related message: loop invariant violation
+    |
+138 |     invariant forall n :: n in S && n !in stackNodes && n != t ==> n.childrenVisited == 0
+    |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_144.dfy(140,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+140 |     invariant forall n :: n in S && n !in stackNodes ==> n.children == old(n.children)
+    |               ^^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_144.dfy(140,14): Related message: loop invariant violation
+    |
+140 |     invariant forall n :: n in S && n !in stackNodes ==> n.children == old(n.children)
+    |               ^^^^^^
+
+
+Dafny program verifier finished with 9 verified, 3 errors

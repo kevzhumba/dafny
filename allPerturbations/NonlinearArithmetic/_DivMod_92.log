@@ -1,0 +1,25 @@
+Not legacy result
+datset/NonlinearArithmetic/_DivMod_92.dfy(1468,4): Warning: For expression "d * k > 0":
+   /!\ No trigger covering all quantified variables found.
+     |
+1468 |     forall x: int, k: int, d: int | 1 < d && 0 < k
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_92.dfy(1509,4): Warning: For expression "0 < a * b":
+   /!\ No trigger covering all quantified variables found.
+     |
+1509 |     forall x: int, a: int, b: int | 0 < a && 0 < b
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_92.dfy(471,4): Error: a precondition for this call could not be proved
+    |
+471 |     LemmaFundamentalDivModConverse(R / c, d, 0, R / c);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_92.dfy(1261,13): Related location: this is the precondition that could not be proved
+     |
+1261 |     requires 0 <= r < d
+     |              ^^^^^^
+
+
+Dafny program verifier finished with 242 verified, 1 error

@@ -1,7 +1,0 @@
-datset/advanced examples/_Percentile_27.dfy(38,13): Error: index out of range
-   |
-38 |     s := s + A[i];
-   |               ^^^
-
-
-Dafny program verifier finished with 9 verified, 1 error

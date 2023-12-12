@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Intervals_14.dfy(31,13): Error: assertion might not hold
+   |
+31 |       assert i < mid <= j;
+   |              ^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

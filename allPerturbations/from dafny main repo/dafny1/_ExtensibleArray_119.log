@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArray_119.dfy(132,6): Error: target object might be null
+    |
+132 |       more.Append(elements);
+    |       ^^^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

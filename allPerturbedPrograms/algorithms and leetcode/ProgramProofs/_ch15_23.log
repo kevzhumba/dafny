@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/ProgramProofs/_ch15_23.dfy(19,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-19 |   while n != a.Length
-   |   ^^^^^
-
-
-Dafny program verifier finished with 9 verified, 1 error

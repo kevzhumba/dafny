@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/leetcode/_mergeSortedArray_116.dfy(112,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-    |
-112 |   while 0 <= i
-    |   ^^^^^
-
-
-Dafny program verifier finished with 10 verified, 1 error

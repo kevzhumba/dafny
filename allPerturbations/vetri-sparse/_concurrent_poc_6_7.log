@@ -1,0 +1,18 @@
+Not legacy result
+datset/vetri-sparse/_concurrent_poc_6_7.dfy(47,6): Error: a precondition for this call could not be proved
+   |
+47 |       sum_eq(s1[1..], s2[1..]);
+   |       ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_concurrent_poc_6_7.dfy(29,11): Related location: this is the precondition that could not be proved
+   |
+29 |   requires forall i :: 0 <= i < |s1| ==> s1[i] == s2[i]
+   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_concurrent_poc_6_7.dfy(50,39): Error: value does not satisfy the subset constraints of 'nat'
+   |
+50 |       sum_exept(s1[1..], s2[1..], x, j - 1);
+   |                                        ^
+
+
+Dafny program verifier finished with 17 verified, 2 errors

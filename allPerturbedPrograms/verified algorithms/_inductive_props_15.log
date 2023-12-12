@@ -1,7 +1,0 @@
-datset/verified algorithms/_inductive_props_15.dfy(127,18): Error: value does not satisfy the subset constraints of 'nat'
-    |
-127 |     a_implies_b(n - 2);
-    |                   ^
-
-
-Dafny program verifier finished with 31 verified, 1 error

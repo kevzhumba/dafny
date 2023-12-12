@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_ClassRefinement_42.dfy(13,20): Error: assertion might not hold
-   |
-13 |   assert nx == 2 && ny == 1;
-   |                     ^^^^^^^
-
-
-Dafny program verifier finished with 11 verified, 1 error

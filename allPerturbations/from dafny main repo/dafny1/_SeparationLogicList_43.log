@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_SeparationLogicList_43.dfy(111,2): Error: a postcondition could not be proved on this return path
+    |
+111 |   {
+    |   ^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_43.dfy(110,12): Related location: this is the postcondition that could not be proved
+    |
+110 |     ensures IsList() && Contents == [] && fresh(Repr)
+    |             ^^^^^^^^
+
+datset/from dafny main repo/dafny1/_SeparationLogicList_43.dfy(101,4): Related location
+    |
+101 |     this in Repr &&
+    |     ^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 12 verified, 1 error

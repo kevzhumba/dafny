@@ -1,0 +1,48 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(182,11): Warning: /!\ No terms found to trigger on.
+    |
+182 |   var S := set x | lo <= x < lo + len;
+    |            ^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(140,2): Error: a postcondition could not be proved on this return path
+    |
+140 |   if 2 == len {
+    |   ^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(137,36): Related location: this is the postcondition that could not be proved
+    |
+137 |   ensures var s := SMN(xs, n, len); n <= s <= n + len && s !in Elements(xs) && forall x :: n <= x < s ==> x in Elements(xs)
+    |                                     ^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(140,2): Error: a postcondition could not be proved on this return path
+    |
+140 |   if 2 == len {
+    |   ^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(137,41): Related location: this is the postcondition that could not be proved
+    |
+137 |   ensures var s := SMN(xs, n, len); n <= s <= n + len && s !in Elements(xs) && forall x :: n <= x < s ==> x in Elements(xs)
+    |                                          ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(140,2): Error: a postcondition could not be proved on this return path
+    |
+140 |   if 2 == len {
+    |   ^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(137,79): Related location: this is the postcondition that could not be proved
+    |
+137 |   ensures var s := SMN(xs, n, len); n <= s <= n + len && s !in Elements(xs) && forall x :: n <= x < s ==> x in Elements(xs)
+    |                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(140,2): Error: a postcondition could not be proved on this return path
+    |
+140 |   if 2 == len {
+    |   ^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_18.dfy(137,57): Related location: this is the postcondition that could not be proved
+    |
+137 |   ensures var s := SMN(xs, n, len); n <= s <= n + len && s !in Elements(xs) && forall x :: n <= x < s ==> x in Elements(xs)
+    |                                                          ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 20 verified, 4 errors

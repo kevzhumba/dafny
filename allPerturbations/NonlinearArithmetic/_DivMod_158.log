@@ -1,0 +1,25 @@
+Not legacy result
+datset/NonlinearArithmetic/_DivMod_158.dfy(1454,4): Warning: For expression "d * k > 0":
+   /!\ No trigger covering all quantified variables found.
+     |
+1454 |     forall x: int, k: int, d: int | 1 < d && 0 < k
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_158.dfy(1495,4): Warning: For expression "0 < a * b":
+   /!\ No trigger covering all quantified variables found.
+     |
+1495 |     forall x: int, a: int, b: int | 0 < a && 0 < b
+     |     ^^^^^^
+
+datset/NonlinearArithmetic/_DivMod_158.dfy(895,48): Error: the calculation step between the previous line and this line could not be proved
+    |
+895 |       b * (a / b - c * (b * (a / b) / (b * c))) < b * c;
+    |                                                 ^
+
+datset/NonlinearArithmetic/_DivMod_158.dfy(907,28): Error: the calculation step between the previous line and this line could not be proved
+    |
+907 |       b * (a / b) % (b * c) <= b * (c - 1);
+    |                             ^^
+
+
+Dafny program verifier finished with 242 verified, 2 errors

@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny1/_Celebrity_57.dfy(82,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-82 |   while a < n
-   |   ^^^^^
-
-
-Dafny program verifier finished with 4 verified, 1 error

@@ -1,7 +1,0 @@
-datset/vetri-sparse/_spmspv_34.dfy(58,4): Error: decreases expression might not decrease
-   |
-58 |     while kX < pX_end && kV < pV_end
-   |     ^^^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

@@ -1,0 +1,38 @@
+Not legacy result
+datset/vetri-sparse/_spmv_9.dfy(39,18): Error: this loop invariant could not be proved on entry
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                   ^^
+
+datset/vetri-sparse/_spmv_9.dfy(39,18): Related message: loop invariant violation
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                   ^^
+
+datset/vetri-sparse/_spmv_9.dfy(39,21): Error: index out of range
+   |
+39 |       invariant k <= X_pos[n + 1]
+   |                           ^^^^^^^
+
+datset/vetri-sparse/_spmv_9.dfy(42,16): Error: index out of range
+   |
+42 |       invariant y[n] + sum(X_val, X_crd, v, k, X_pos[n + 1]) == sum(X_val, X_crd, v, X_pos[n], X_pos[n + 1])
+   |                  ^^^
+
+datset/vetri-sparse/_spmv_9.dfy(42,23): Error: function precondition could not be proved
+   |
+42 |       invariant y[n] + sum(X_val, X_crd, v, k, X_pos[n + 1]) == sum(X_val, X_crd, v, X_pos[n], X_pos[n + 1])
+   |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_9.dfy(6,11): Related location
+  |
+6 |   requires k <= X_val.Length
+  |            ^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_9.dfy(42,47): Error: index out of range
+   |
+42 |       invariant y[n] + sum(X_val, X_crd, v, k, X_pos[n + 1]) == sum(X_val, X_crd, v, X_pos[n], X_pos[n + 1])
+   |                                                     ^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 5 errors

@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Classics_53.dfy(68,6): Error: decreases expression might not decrease
+   |
+68 |       while r < A[j]
+   |       ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

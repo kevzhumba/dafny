@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_56.dfy(83,11): Error: index out of range
+   |
+83 |       t := elements[i - M];
+   |                    ^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_56.dfy(85,14): Error: a precondition for this call could not be proved
+   |
+85 |       var arr := more.Get(i / 256);
+   |                  ^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_56.dfy(78,18): Related location: this is the precondition that could not be proved
+   |
+78 |     requires 0 <= i < |Contents|
+   |                   ^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_56.dfy(85,17): Error: target object might be null
+   |
+85 |       var arr := more.Get(i / 256);
+   |                  ^^^^
+
+
+Dafny program verifier finished with 8 verified, 3 errors

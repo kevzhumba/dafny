@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_CachedContainer_97.dfy(202,11): Error: assertion might not hold
+    |
+202 |     assert !b;
+    |            ^^
+
+
+Dafny program verifier finished with 39 verified, 1 error

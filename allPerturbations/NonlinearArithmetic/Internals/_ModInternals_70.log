@@ -1,0 +1,8 @@
+Not legacy result
+datset/NonlinearArithmetic/Internals/_ModInternals_70.dfy(129,14): Error: possible violation of postcondition of forall statement
+    |
+129 |       ensures 0 == n * zm + (x - n) % n - x % n
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 1 error

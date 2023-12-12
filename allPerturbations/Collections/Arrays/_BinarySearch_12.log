@@ -1,0 +1,8 @@
+Not legacy result
+datset/Collections/Arrays/_BinarySearch_12.dfy(15,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+15 |     while lo < hi
+   |     ^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

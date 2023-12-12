@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree.min_56.dfy(116,19): Error: assertion might not hold
+    |
+116 |             assert isChild(path[|path| - 3], path[|path| - 2]);
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/lib/binaryTree.dfy(43,21): Related location
+   |
+43 |         a != Nil && (a.left == b || a.right == b)
+   |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 1 error

@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_NumberRepresentations_34.dfy(67,15): Error: assertion might not hold
+   |
+67 |         assert n <= d;
+   |                  ^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

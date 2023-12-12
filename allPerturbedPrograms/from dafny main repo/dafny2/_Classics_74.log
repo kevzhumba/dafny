@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny2/_Classics_74.dfy(68,13): Error: assertion might not hold
-   |
-68 |       assert A[j] <= r <= A[i];
-   |              ^^^^^^^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

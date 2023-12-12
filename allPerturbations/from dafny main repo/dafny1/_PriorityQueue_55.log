@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_PriorityQueue_55.dfy(93,4): Error: a postcondition could not be proved on this return path
+   |
+93 |     while 2 * i == n
+   |     ^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_55.dfy(90,12): Related location: this is the postcondition that could not be proved
+   |
+90 |     ensures Valid()
+   |             ^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_55.dfy(14,4): Related location
+   |
+14 |     forall j :: 
+   |     ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_PriorityQueue_55.dfy(93,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+93 |     while 2 * i == n
+   |     ^^^^^
+
+
+Dafny program verifier finished with 21 verified, 2 errors

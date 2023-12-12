@@ -1,7 +1,0 @@
-datset/advanced examples/_Array2dAs1d_22.dfy(17,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-17 |   while i < rows {
-   |   ^^^^^
-
-
-Dafny program verifier finished with 2 verified, 1 error

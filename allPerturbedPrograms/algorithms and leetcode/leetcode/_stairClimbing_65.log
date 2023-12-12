@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/leetcode/_stairClimbing_65.dfy(202,4): Error: index out of range
-    |
-202 |     steps[1] := 1;
-    |          ^^^
-
-
-Dafny program verifier finished with 25 verified, 1 error

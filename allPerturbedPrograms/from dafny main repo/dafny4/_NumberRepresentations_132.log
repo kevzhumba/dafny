@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_NumberRepresentations_132.dfy(220,13): Error: index out of range
-    |
-220 |     var d := digits[0];
-    |                    ^^^
-
-
-Dafny program verifier finished with 38 verified, 1 error

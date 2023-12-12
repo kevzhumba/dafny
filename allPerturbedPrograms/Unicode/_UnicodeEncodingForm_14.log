@@ -1,7 +1,0 @@
-datset/Unicode/_UnicodeEncodingForm_14.dfy(105,11): Error: assertion might not hold
-    |
-105 |     assert PartitionCodeUnitSequenceChecked(m + s).Some?;
-    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Dafny program verifier finished with 17 verified, 1 error

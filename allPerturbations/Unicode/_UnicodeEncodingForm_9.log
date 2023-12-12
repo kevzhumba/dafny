@@ -1,0 +1,8 @@
+Not legacy result
+datset/Unicode/_UnicodeEncodingForm_9.dfy(74,10): Error: the calculation step between the previous line and this line could not be proved
+   |
+74 |       Some([m] + []);
+   |           ^
+
+
+Dafny program verifier finished with 17 verified, 1 error

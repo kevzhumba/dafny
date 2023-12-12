@@ -1,0 +1,28 @@
+Not legacy result
+datset/advanced examples/_InsertionSort_2.dfy(26,23): Error: index out of range
+   |
+26 |     while down >= 0 && a[down + 1] < a[down]
+   |                         ^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_2.dfy(26,23): Error: index out of range
+   |
+26 |     while down >= 0 && a[down + 1] < a[down]
+   |                         ^^^^^^^^^^
+
+datset/advanced examples/_InsertionSort_2.dfy(26,37): Error: index out of range
+   |
+26 |     while down >= 0 && a[down + 1] < a[down]
+   |                                       ^^^^^^
+
+datset/advanced examples/_InsertionSort_2.dfy(27,16): Error: this loop invariant could not be proved on entry
+   |
+27 |       invariant forall j, k | 0 <= j < k < up + 1 && k != down + 1 :: a[j] <= a[k]
+   |                 ^^^^^^
+
+datset/advanced examples/_InsertionSort_2.dfy(27,16): Related message: loop invariant violation
+   |
+27 |       invariant forall j, k | 0 <= j < k < up + 1 && k != down + 1 :: a[j] <= a[k]
+   |                 ^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 4 errors

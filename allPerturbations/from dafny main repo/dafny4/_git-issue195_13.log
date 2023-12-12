@@ -1,0 +1,23 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_git-issue195_13.dfy(40,23): Error: function precondition could not be proved
+   |
+40 |   print n0 == n1, " ", TestAny(n0, n1), "\n";
+   |                        ^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_git-issue195_13.dfy(26,11): Related location
+   |
+26 |   requires a == b
+   |            ^^^^^^
+
+datset/from dafny main repo/dafny4/_git-issue195_13.dfy(54,45): Error: function precondition could not be proved
+   |
+54 |   print map[x0 := n0] == map[x0 := n1], " ", TestAny(map[x0 := n0], map[x0 := n1]), "\n";
+   |                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_git-issue195_13.dfy(26,11): Related location
+   |
+26 |   requires a == b
+   |            ^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

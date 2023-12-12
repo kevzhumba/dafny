@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArray_88.dfy(130,6): Error: index out of range
+    |
+130 |       elements[length - M] := t;
+    |               ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_88.dfy(136,6): Error: decreases clause might not decrease
+    |
+136 |       more.Append(elements);
+    |       ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 2 errors

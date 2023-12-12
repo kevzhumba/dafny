@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Intervals_27.dfy(25,4): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+25 |     while i < j
+   |     ^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_McCarthy91_34.dfy(20,18): Error: index out of range
-   |
-20 |     var m := Mc91(s[n]);
-   |                    ^^^
-
-
-Dafny program verifier finished with 4 verified, 1 error

@@ -1,0 +1,28 @@
+Not legacy result
+datset/JSON/Utils/_Vectors_22.dfy(110,8): Error: a postcondition could not be proved on this return path
+    |
+110 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_22.dfy(107,18): Related location: this is the postcondition that could not be proved
+    |
+107 |           ensures Valid?()
+    |                   ^^^^^^^^
+
+datset/JSON/Utils/_Vectors_22.dfy(38,10): Related location
+   |
+38 |           items == data[..size]
+   |           ^^^^^^^^^^^^^^^^^^^^^
+
+datset/JSON/Utils/_Vectors_22.dfy(110,8): Error: a postcondition could not be proved on this return path
+    |
+110 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_22.dfy(108,18): Related location: this is the postcondition that could not be proved
+    |
+108 |           ensures capacity == new_capacity
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 2 errors

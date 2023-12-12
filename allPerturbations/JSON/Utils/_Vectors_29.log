@@ -1,0 +1,13 @@
+Not legacy result
+datset/JSON/Utils/_Vectors_29.dfy(133,10): Error: a precondition for this call could not be proved
+    |
+133 |           Realloc(DefaultNewCapacity(capacity));
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/JSON/Utils/_Vectors_29.dfy(105,19): Related location: this is the precondition that could not be proved
+    |
+105 |           requires new_capacity > capacity
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

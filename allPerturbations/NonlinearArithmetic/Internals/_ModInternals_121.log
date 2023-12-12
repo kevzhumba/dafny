@@ -1,0 +1,23 @@
+Not legacy result
+datset/NonlinearArithmetic/Internals/_ModInternals_121.dfy(185,2): Error: a postcondition could not be proved on this return path
+    |
+185 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_121.dfy(183,12): Related location: this is the postcondition that could not be proved
+    |
+183 |     ensures r == x % n
+    |             ^^^^^^^^^^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_121.dfy(185,2): Error: a postcondition could not be proved on this return path
+    |
+185 |   {
+    |   ^
+
+datset/NonlinearArithmetic/Internals/_ModInternals_121.dfy(182,12): Related location: this is the postcondition that could not be proved
+    |
+182 |     ensures q == x / n
+    |             ^^^^^^^^^^
+
+
+Dafny program verifier finished with 23 verified, 2 errors

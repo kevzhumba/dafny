@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_Bug161_2.dfy(18,9): Error: assertion might not hold
+   |
+18 |   assert F(x) == C();
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 1 verified, 1 error

@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_NumberRepresentations_21.dfy(44,11): Error: assertion might not hold
-   |
-44 |     assert base * d + m == n;
-   |                         ^^^^
-
-
-Dafny program verifier finished with 38 verified, 1 error

@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_Celebrity_60.dfy(82,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+82 |   while a < n
+   |   ^^^^^
+
+datset/from dafny main repo/dafny1/_Celebrity_60.dfy(85,21): Error: this invariant could not be proved to be maintained by the loop
+   |
+85 |     invariant c == b || (a <= c && c < n)
+   |                      ^^
+
+datset/from dafny main repo/dafny1/_Celebrity_60.dfy(85,21): Related message: loop invariant violation
+   |
+85 |     invariant c == b || (a <= c && c < n)
+   |                      ^^
+
+
+Dafny program verifier finished with 4 verified, 2 errors

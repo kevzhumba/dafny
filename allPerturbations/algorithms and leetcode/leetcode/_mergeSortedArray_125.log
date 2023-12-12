@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_125.dfy(108,0): Error: a postcondition could not be proved on this return path
+    |
+108 | {
+    | ^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_125.dfy(107,10): Related location: this is the postcondition that could not be proved
+    |
+107 |   ensures sortedArray(xs)
+    |           ^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_125.dfy(23,2): Related location
+   |
+23 |   forall i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 10 verified, 1 error

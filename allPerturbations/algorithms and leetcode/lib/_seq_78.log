@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/lib/_seq_78.dfy(189,2): Error: a postcondition could not be proved on this return path
+    |
+189 |   {
+    |   ^
+
+datset/algorithms and leetcode/lib/_seq_78.dfy(188,12): Related location: this is the postcondition that could not be proved
+    |
+188 |     ensures reverse(xs + ys) == reverse(ys) + reverse(xs)
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 51 verified, 1 error

@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_ArrayElementInitCompile_50.dfy(65,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+65 |   while i == a.Length {
+   |   ^^^^^
+
+datset/from dafny main repo/dafny0/_ArrayElementInitCompile_50.dfy(66,10): Error: index out of range
+   |
+66 |     print a[i], " ";
+   |            ^^^
+
+
+Dafny program verifier finished with 17 verified, 2 errors

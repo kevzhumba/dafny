@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_stairClimbing_13.dfy(65,25): Error: a postcondition could not be proved on this return path
+   |
+65 |   } else if |ys| >= |xs| {
+   |                          ^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_13.dfy(62,10): Related location: this is the postcondition that could not be proved
+   |
+62 |   ensures [someT] + xs != [someT] + ys
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 1 error

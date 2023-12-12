@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_TerminationDemos_27.dfy(66,2): Error: out-parameter 'r', which is subject to definite-assignment rules, might be uninitialized at this return point
+   |
+66 |   }
+   |   ^
+
+
+Dafny program verifier finished with 11 verified, 1 error

@@ -1,0 +1,43 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(9,8): Error: variable 'i', which is subject to definite-assignment rules, might be uninitialized here
+  |
+9 |   while i <= end
+  |         ^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(10,14): Error: this loop invariant could not be proved on entry
+   |
+10 |     invariant 0 <= i <= nums.Length
+   |               ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(10,14): Related message: loop invariant violation
+   |
+10 |     invariant 0 <= i <= nums.Length
+   |               ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(10,19): Error: this loop invariant could not be proved on entry
+   |
+10 |     invariant 0 <= i <= nums.Length
+   |                    ^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(10,19): Related message: loop invariant violation
+   |
+10 |     invariant 0 <= i <= nums.Length
+   |                    ^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(10,19): Error: variable 'i', which is subject to definite-assignment rules, might be uninitialized here
+   |
+10 |     invariant 0 <= i <= nums.Length
+   |                    ^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(12,14): Error: this loop invariant could not be proved on entry
+   |
+12 |     invariant forall k :: 0 <= k < i ==> nums[k] != val
+   |               ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_lc-remove-element_44.dfy(12,14): Related message: loop invariant violation
+   |
+12 |     invariant forall k :: 0 <= k < i ==> nums[k] != val
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 5 errors

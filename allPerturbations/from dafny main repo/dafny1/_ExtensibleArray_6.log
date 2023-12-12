@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArray_6.dfy(15,8): Error: a precondition for this call could not be proved
+   |
+15 |   var k := a.Get(570);
+   |            ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArray_6.dfy(90,18): Related location: this is the precondition that could not be proved
+   |
+90 |     requires 0 <= i < |Contents|
+   |                   ^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 1 error

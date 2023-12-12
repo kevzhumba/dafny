@@ -1,0 +1,78 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(181,11): Warning: /!\ No terms found to trigger on.
+    |
+181 |   var S := set x | lo <= x < lo + len;
+    |            ^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(143,4): Error: a precondition for this call could not be proved
+    |
+143 |     Elements_Property(L);
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(173,11): Related location: this is the precondition that could not be proved
+    |
+173 |   requires NoDuplicates(xs)
+    |            ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(108,4): Related location
+    |
+108 |     x !in Elements(tail) &&
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(143,4): Error: a precondition for this call could not be proved
+    |
+143 |     Elements_Property(L);
+    |     ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(173,11): Related location: this is the precondition that could not be proved
+    |
+173 |   requires NoDuplicates(xs)
+    |            ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(109,4): Related location
+    |
+109 |     NoDuplicates(tail)
+    |     ^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(145,4): Error: a precondition for this call could not be proved
+    |
+145 |     Cardinality(Elements(L), bound);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(113,11): Related location: this is the precondition that could not be proved
+    |
+113 |   requires A <= B
+    |            ^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(150,6): Error: a precondition for this call could not be proved
+    |
+150 |       SMN_Correct(R, n + llen, len - llen);
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(134,11): Related location: this is the precondition that could not be proved
+    |
+134 |   requires NoDuplicates(xs)
+    |            ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(108,4): Related location
+    |
+108 |     x !in Elements(tail) &&
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(150,6): Error: a precondition for this call could not be proved
+    |
+150 |       SMN_Correct(R, n + llen, len - llen);
+    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(134,11): Related location: this is the precondition that could not be proved
+    |
+134 |   requires NoDuplicates(xs)
+    |            ^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SmallestMissingNumber-functional_41.dfy(109,4): Related location
+    |
+109 |     NoDuplicates(tail)
+    |     ^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 20 verified, 5 errors

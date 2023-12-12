@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/_heap2_50.dfy(78,23): Error: index out of range
-   |
-78 |         this.arr[idx], this.arr[nidx] := this.arr[nidx], this.arr[idx];
-   |                                ^^^^^^
-
-
-Dafny program verifier finished with 5 verified, 1 error

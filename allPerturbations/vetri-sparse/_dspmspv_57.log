@@ -1,0 +1,43 @@
+Not legacy result
+datset/vetri-sparse/_dspmspv_57.dfy(98,25): Error: variable 'kV', which is subject to definite-assignment rules, might be uninitialized here
+   |
+98 |     while kX < pX_end && kV < pV_end
+   |                          ^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(100,16): Error: this loop invariant could not be proved on entry
+    |
+100 |       invariant 0 <= kV <= pV_end
+    |                 ^^^^^^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(100,16): Related message: loop invariant violation
+    |
+100 |       invariant 0 <= kV <= pV_end
+    |                 ^^^^^^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(100,21): Error: this loop invariant could not be proved on entry
+    |
+100 |       invariant 0 <= kV <= pV_end
+    |                      ^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(100,21): Related message: loop invariant violation
+    |
+100 |       invariant 0 <= kV <= pV_end
+    |                      ^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(100,21): Error: variable 'kV', which is subject to definite-assignment rules, might be uninitialized here
+    |
+100 |       invariant 0 <= kV <= pV_end
+    |                      ^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(104,16): Error: this loop invariant could not be proved on entry
+    |
+104 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_dspmspv_57.dfy(104,16): Related message: loop invariant violation
+    |
+104 |       invariant y[X_crd1[n]] + sum(X_val, X_crd, v_val, v_crd, kX, kV, pX_end, pV_end) == sum(X_val, X_crd, v_val, v_crd, X_pos[n], 0, X_pos[n + 1], pV_end)
+    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 7 verified, 5 errors

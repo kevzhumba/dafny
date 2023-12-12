@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny3/_CachedContainer_18.dfy(84,11): Error: value does not satisfy the subset constraints of 'nat'
-   |
-84 |       j := -1;
-   |            ^
-
-
-Dafny program verifier finished with 39 verified, 1 error

@@ -1,0 +1,73 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(50,4): Related location
+   |
+50 |     forall k :: 
+   |     ^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Related message: loop invariant violation
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(50,4): Related location
+   |
+50 |     forall k :: 
+   |     ^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(54,4): Related location
+   |
+54 |     forall k :: 
+   |     ^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Related message: loop invariant violation
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(54,4): Related location
+   |
+54 |     forall k :: 
+   |     ^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Error: this invariant could not be proved to be maintained by the loop
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(48,2): Related location
+   |
+48 |   partialSortedArray(arry, start, end) &&
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(34,2): Related location
+   |
+34 |   forall i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(120,14): Related message: loop invariant violation
+    |
+120 |     invariant partialSortedArrayUpper(xs, i + 1, m + n, ys, a + 1, b + 1)
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(48,2): Related location
+   |
+48 |   partialSortedArray(arry, start, end) &&
+   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_mergeSortedArray_82.dfy(34,2): Related location
+   |
+34 |   forall i, j :: 
+   |   ^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 10 verified, 3 errors

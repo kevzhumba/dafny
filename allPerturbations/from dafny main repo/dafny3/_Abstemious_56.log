@@ -1,0 +1,18 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_Abstemious_56.dfy(199,11): Error: a postcondition could not be proved on this return path
+    |
+199 |   if n > 2 {
+    |            ^
+
+datset/from dafny main repo/dafny3/_Abstemious_56.dfy(197,10): Related location: this is the postcondition that could not be proved
+    |
+197 |   ensures nth(n, Fib()) == nfib(n)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny3/_Abstemious_56.dfy(205,12): Error: value does not satisfy the subset constraints of 'nat'
+    |
+205 |       nth(n - 2, F.tail.tail);
+    |             ^
+
+
+Dafny program verifier finished with 18 verified, 2 errors

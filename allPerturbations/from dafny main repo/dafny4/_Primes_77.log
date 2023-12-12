@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_Primes_77.dfy(216,2): Error: decreases expression might not decrease
+    |
+216 |   while true
+    |   ^^^^^
+
+
+Dafny program verifier finished with 14 verified, 1 error

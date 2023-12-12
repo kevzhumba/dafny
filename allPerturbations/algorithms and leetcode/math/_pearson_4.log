@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/math/_pearson_4.dfy(141,12): Error: possible violation of postcondition of forall statement
+    |
+141 |     ensures (a, c) in R_1 + R_2
+    |             ^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/math/_pearson_4.dfy(143,24): Error: assertion might not hold
+    |
+143 |     assert a in S_1 ==> b !in S_2;
+    |                         ^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 2 errors

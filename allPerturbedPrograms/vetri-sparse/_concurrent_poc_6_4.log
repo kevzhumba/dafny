@@ -1,7 +1,0 @@
-datset/vetri-sparse/_concurrent_poc_6_4.dfy(42,11): Error: assertion might not hold
-   |
-42 |     assert j >= |s1|;
-   |              ^^^^^^^
-
-
-Dafny program verifier finished with 17 verified, 1 error

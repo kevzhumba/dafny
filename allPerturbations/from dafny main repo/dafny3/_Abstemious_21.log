@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_Abstemious_21.dfy(28,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+28 |   while i != n {
+   |   ^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

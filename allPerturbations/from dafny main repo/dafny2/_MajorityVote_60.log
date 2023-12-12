@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_MajorityVote_60.dfy(27,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+27 |     invariant 2 * Count(a, s, |a|, K) > |a| - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_MajorityVote_60.dfy(27,14): Related message: loop invariant violation
+   |
+27 |     invariant 2 * Count(a, s, |a|, K) > |a| - s
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 15 verified, 1 error

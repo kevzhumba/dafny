@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_Classics_6.dfy(25,16): Error: this invariant could not be proved to be maintained by the loop
+   |
+25 |       invariant u == s * Factorial(r)
+   |                 ^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_Classics_6.dfy(25,16): Related message: loop invariant violation
+   |
+25 |       invariant u == s * Factorial(r)
+   |                 ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

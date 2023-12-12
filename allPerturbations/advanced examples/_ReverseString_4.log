@@ -1,0 +1,8 @@
+Not legacy result
+datset/advanced examples/_ReverseString_4.dfy(21,15): Error: index out of range
+   |
+21 |   outarr[0] := arr[j];
+   |                   ^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

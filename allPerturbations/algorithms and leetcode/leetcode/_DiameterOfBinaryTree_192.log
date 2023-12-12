@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/lib/binaryTree.dfy(565,17): Warning: /!\ No terms found to trigger on.
+    |
+565 |         requires forall i :: 0 <= i < |path| - 1 ==> path[i+1] in TreeSet(path[i+1])
+    |                  ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_192.dfy(547,9): Error: a postcondition could not be proved on this return path
+    |
+547 |   } else if |path| == 1 {
+    |          ^^
+
+datset/algorithms and leetcode/leetcode/_DiameterOfBinaryTree_192.dfy(544,10): Related location: this is the postcondition that could not be proved
+    |
+544 |   ensures forall node :: node in path ==> node != Nil
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 78 verified, 1 error

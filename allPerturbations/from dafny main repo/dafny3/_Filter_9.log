@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_Filter_9.dfy(60,22): Error: result of operation might violate subset type constraint for 'nat'
+   |
+60 |     t, n := t.tail, n - 1;
+   |                       ^
+
+
+Dafny program verifier finished with 27 verified, 1 error

@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_validAnagram_18.dfy(24,27): Error: this invariant could not be proved to be maintained by the loop
+   |
+24 |     invariant s - sremoved == scopy
+   |                            ^^
+
+datset/algorithms and leetcode/leetcode/_validAnagram_18.dfy(24,27): Related message: loop invariant violation
+   |
+24 |     invariant s - sremoved == scopy
+   |                            ^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

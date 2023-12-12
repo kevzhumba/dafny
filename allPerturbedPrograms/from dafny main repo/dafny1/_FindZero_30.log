@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny1/_FindZero_30.dfy(52,4): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-52 |     while m < n + a[n]
-   |     ^^^^^
-
-
-Dafny program verifier finished with 7 verified, 1 error

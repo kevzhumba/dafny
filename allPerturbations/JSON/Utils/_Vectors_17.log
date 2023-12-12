@@ -1,0 +1,8 @@
+Not legacy result
+datset/JSON/Utils/_Vectors_17.dfy(93,29): Error: result of operation might violate newtype constraint for 'uint32'
+   |
+93 |           for idx: uint32 := -1 to count
+   |                              ^
+
+
+Dafny program verifier finished with 22 verified, 1 error

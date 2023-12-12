@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_NumberRepresentations_45.dfy(111,4): Error: decreases clause might not decrease
+    |
+111 |     digits := Complete(n - 1, lowDigit, base);
+    |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 38 verified, 1 error

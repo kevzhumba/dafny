@@ -1,0 +1,38 @@
+
+// ReverseString.dfy
+
+predicate reversed(arr: array<char>, outarr: array<char>)
+  requires arr != null && outarr != null
+  requires arr.Length == outarr.Length
+  reads arr, outarr
+{
+  forall k :: 
+    0 <= k <= arr.Length - 1 ==>
+      outarr[k] == arr[arr.Length - 1 - k]
+}
+
+method yarra(arr: array<char>) returns (outarr: array<char>)
+  requires arr != null && arr.Length > 0
+  ensures outarr != null && arr.Length == outarr.Length && reversed(arr, outarr)
+{
+  var i := 0;
+  var j := arr.Length - 1;
+  outarr := new char[arr.Length];
+  outarr[0] := arr[j];
+  i := i + 1;
+  j := j - 1;
+  while i < arr.Length && 0 <= j < arr.Length
+    invariant 0 <= i <= arr.Length
+    invariant j == arr.Length - 1 - i
+    invariant forall k | 0 <= k < i :: outarr[k] == arr[arr.Length - 1 - k]
+    decreases arr.Length - i, j
+  {
+    outarr[i] := arr[j];
+    i := i + 1;
+    j := j - 1;
+  }
+}
+
+method Main()
+{
+}

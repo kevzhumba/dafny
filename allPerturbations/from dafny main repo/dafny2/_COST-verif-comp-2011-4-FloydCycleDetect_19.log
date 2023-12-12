@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_COST-verif-comp-2011-4-FloydCycleDetect_19.dfy(49,4): Error: decreases expression might not decrease
+   |
+49 |     while hare != tortoise
+   |     ^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

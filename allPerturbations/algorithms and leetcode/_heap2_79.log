@@ -1,0 +1,13 @@
+Not legacy result
+datset/algorithms and leetcode/_heap2_79.dfy(71,16): Error: possible division by zero
+   |
+71 |         nidx := 2 / idx + 2;
+   |                   ^^^^^
+
+datset/algorithms and leetcode/_heap2_79.dfy(77,15): Error: assertion might not hold
+   |
+77 |         assert nidx == 2 * idx + 1 || nidx == 2 * idx + 2;
+   |                                    ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny3/_InfiniteTrees_34.dfy(78,4): Error: missing case in match statement: Nil
+   |
+78 |     match s {
+   |     ^^^^^
+
+
+Dafny program verifier finished with 47 verified, 1 error

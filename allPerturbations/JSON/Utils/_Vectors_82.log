@@ -1,0 +1,13 @@
+Not legacy result
+datset/JSON/Utils/_Vectors_82.dfy(184,8): Error: a postcondition could not be proved on this return path
+    |
+184 |         {
+    |         ^
+
+datset/JSON/Utils/_Vectors_82.dfy(182,18): Related location: this is the postcondition that could not be proved
+    |
+182 |           ensures size == old(size) + 1
+    |                   ^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 22 verified, 1 error

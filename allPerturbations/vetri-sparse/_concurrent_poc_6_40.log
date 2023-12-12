@@ -1,0 +1,8 @@
+Not legacy result
+datset/vetri-sparse/_concurrent_poc_6_40.dfy(110,17): Error: value does not satisfy the subset constraints of 'nat'
+    |
+110 |     curColumn := -1;
+    |                  ^
+
+
+Dafny program verifier finished with 17 verified, 1 error

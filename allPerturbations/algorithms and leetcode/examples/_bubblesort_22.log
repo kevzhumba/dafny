@@ -1,0 +1,18 @@
+Not legacy result
+datset/algorithms and leetcode/examples/_bubblesort_22.dfy(45,18): Error: this invariant could not be proved to be maintained by the loop
+   |
+45 |       invariant j <= i
+   |                   ^^
+
+datset/algorithms and leetcode/examples/_bubblesort_22.dfy(45,18): Related message: loop invariant violation
+   |
+45 |       invariant j <= i
+   |                   ^^
+
+datset/algorithms and leetcode/examples/_bubblesort_22.dfy(47,16): Error: index out of range
+   |
+47 |       if a[j] > a[j + 1] {
+   |                  ^^^^^^^
+
+
+Dafny program verifier finished with 5 verified, 2 errors

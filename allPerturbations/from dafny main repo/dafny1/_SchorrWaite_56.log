@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_SchorrWaite_56.dfy(60,2): Error: decreases expression might not decrease
+   |
+60 |   while true
+   |   ^^^^^
+
+datset/from dafny main repo/dafny1/_SchorrWaite_56.dfy(84,45): Error: value does not satisfy the subset constraints of 'nat'
+   |
+84 |       t.childrenVisited := t.childrenVisited - 1;
+   |                                              ^
+
+
+Dafny program verifier finished with 9 verified, 2 errors

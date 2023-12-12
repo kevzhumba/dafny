@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny2/_SegmentSum_29.dfy(23,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+23 |     invariant forall b :: 0 <= b <= n ==> Sum(a, b, n) <= Sum(a, c, n)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny2/_SegmentSum_29.dfy(23,14): Related message: loop invariant violation
+   |
+23 |     invariant forall b :: 0 <= b <= n ==> Sum(a, b, n) <= Sum(a, c, n)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

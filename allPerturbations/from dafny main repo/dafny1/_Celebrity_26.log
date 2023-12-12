@@ -1,0 +1,28 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_Celebrity_26.dfy(54,2): Error: decreases expression might not decrease
+   |
+54 |   while R != {}
+   |   ^^^^^
+
+datset/from dafny main repo/dafny1/_Celebrity_26.dfy(58,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+58 |     invariant IsCelebrity(c, R + {b})
+   |               ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_Celebrity_26.dfy(9,2): Related location
+  |
+9 |   c in people &&
+  |   ^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_Celebrity_26.dfy(58,14): Related message: loop invariant violation
+   |
+58 |     invariant IsCelebrity(c, R + {b})
+   |               ^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_Celebrity_26.dfy(9,2): Related location
+  |
+9 |   c in people &&
+  |   ^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 2 errors

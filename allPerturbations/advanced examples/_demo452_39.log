@@ -1,0 +1,13 @@
+Not legacy result
+datset/advanced examples/_demo452_39.dfy(17,14): Error: this invariant could not be proved to be maintained by the loop
+   |
+17 |     invariant forall m | j <= m < k :: a[m] == 0
+   |               ^^^^^^
+
+datset/advanced examples/_demo452_39.dfy(17,14): Related message: loop invariant violation
+   |
+17 |     invariant forall m | j <= m < k :: a[m] == 0
+   |               ^^^^^^
+
+
+Dafny program verifier finished with 2 verified, 1 error

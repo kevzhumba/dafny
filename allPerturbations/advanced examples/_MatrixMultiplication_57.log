@@ -1,0 +1,13 @@
+Not legacy result
+datset/advanced examples/_MatrixMultiplication_57.dfy(29,0): Error: a postcondition could not be proved on this return path
+   |
+29 | {
+   | ^
+
+datset/advanced examples/_MatrixMultiplication_57.dfy(28,10): Related location: this is the postcondition that could not be proved
+   |
+28 |   ensures forall i, j | 0 <= i < m3.Length0 && 0 <= j < m3.Length1 :: m3[i, j] == RowColumnProduct(m1, m2, i, j)
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

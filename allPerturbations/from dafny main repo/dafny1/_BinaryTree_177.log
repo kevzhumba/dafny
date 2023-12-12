@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_BinaryTree_177.dfy(249,11): Error: assertion might not hold
+    |
+249 |     assert present <==> x == 12 || x == 24;
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 18 verified, 1 error

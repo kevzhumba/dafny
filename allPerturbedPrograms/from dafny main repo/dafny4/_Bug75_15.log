@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny4/_Bug75_15.dfy(41,15): Error: index out of range
-   |
-41 |   if 2 >= n && s[n - 2] < s[n - 1] {
-   |                 ^^^^^^^
-
-
-Dafny program verifier finished with 8 verified, 1 error

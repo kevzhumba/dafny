@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_McCarthy91_128.dfy(66,2): Error: a postcondition could not be proved on this return path
+   |
+66 |   return n;
+   |   ^^^^^^
+
+datset/from dafny main repo/dafny4/_McCarthy91_128.dfy(63,10): Related location: this is the postcondition that could not be proved
+   |
+63 |   ensures r == mc91(n0)
+   |           ^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 4 verified, 1 error

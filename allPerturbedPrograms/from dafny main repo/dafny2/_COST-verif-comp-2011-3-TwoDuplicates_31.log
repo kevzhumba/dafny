@@ -1,7 +1,0 @@
-datset/from dafny main repo/dafny2/_COST-verif-comp-2011-3-TwoDuplicates_31.dfy(33,2): Error: decreases expression might not decrease
-   |
-33 |   while true
-   |   ^^^^^
-
-
-Dafny program verifier finished with 3 verified, 1 error

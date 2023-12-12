@@ -1,0 +1,8 @@
+Not legacy result
+datset/advanced examples/_MatrixMultiplication_47.dfy(32,2): Error: cannot prove termination; try supplying a decreases clause for the loop
+   |
+32 |   while i < m1.Length0
+   |   ^^^^^
+
+
+Dafny program verifier finished with 3 verified, 1 error

@@ -1,7 +1,0 @@
-datset/algorithms and leetcode/leetcode/_validAnagram_23.dfy(23,2): Error: cannot prove termination; try supplying a decreases clause for the loop
-   |
-23 |   while scopy != multiset{}
-   |   ^^^^^
-
-
-Dafny program verifier finished with 2 verified, 1 error

@@ -1,0 +1,13 @@
+Not legacy result
+datset/NonlinearArithmetic/_Mul_39.dfy(241,2): Error: a postcondition could not be proved on this return path
+    |
+241 |   {
+    |   ^
+
+datset/NonlinearArithmetic/_Mul_39.dfy(240,12): Related location: this is the postcondition that could not be proved
+    |
+240 |     ensures x == y
+    |             ^^^^^^
+
+
+Dafny program verifier finished with 53 verified, 1 error

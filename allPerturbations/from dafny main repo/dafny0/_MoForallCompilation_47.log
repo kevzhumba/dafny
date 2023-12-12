@@ -1,0 +1,8 @@
+Not legacy result
+datset/from dafny main repo/dafny0/_MoForallCompilation_47.dfy(58,17): Error: index 1 out of range
+   |
+58 |       print m[i, j], " ";
+   |                  ^
+
+
+Dafny program verifier finished with 17 verified, 1 error

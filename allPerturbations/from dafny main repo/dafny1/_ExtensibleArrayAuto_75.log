@@ -1,0 +1,28 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_75.dfy(103,9): Error: a postcondition could not be proved on this return path
+    |
+103 |   method Append(t: T)
+    |          ^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_75.dfy(103,9): Related location: this is the postcondition that could not be proved
+    |
+103 |   method Append(t: T)
+    |          ^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_75.dfy(57,6): Related location
+   |
+57 |       M < length) &&
+   |       ^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_75.dfy(111,6): Error: index out of range
+    |
+111 |       elements[length - M] := t;
+    |               ^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny1/_ExtensibleArrayAuto_75.dfy(117,6): Error: decreases clause might not decrease
+    |
+117 |       more.Append(elements);
+    |       ^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 8 verified, 3 errors

@@ -1,7 +1,0 @@
-datset/JSON/Utils/_Vectors_54.dfy(155,10): Error: decreases expression might not decrease
-    |
-155 |           while reserved >= new_capacity - size
-    |           ^^^^^
-
-
-Dafny program verifier finished with 22 verified, 1 error

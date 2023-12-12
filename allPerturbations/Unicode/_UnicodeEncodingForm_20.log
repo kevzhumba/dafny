@@ -1,0 +1,18 @@
+Not legacy result
+datset/Unicode/_UnicodeEncodingForm_20.dfy(114,11): Error: a postcondition could not be proved on this return path
+    |
+114 |     } else {
+    |            ^
+
+datset/Unicode/_UnicodeEncodingForm_20.dfy(110,12): Related location: this is the postcondition that could not be proved
+    |
+110 |     ensures IsWellFormedCodeUnitSequence(Seq.Flatten(ms))
+    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/Unicode/_UnicodeEncodingForm_20.dfy(92,4): Related location
+   |
+92 |     PartitionCodeUnitSequenceChecked(s).Some?
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Dafny program verifier finished with 17 verified, 1 error

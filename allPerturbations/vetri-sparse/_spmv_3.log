@@ -1,0 +1,18 @@
+Not legacy result
+datset/vetri-sparse/_spmv_3.dfy(28,0): Error: a postcondition could not be proved on this return path
+   |
+28 | {
+   | ^
+
+datset/vetri-sparse/_spmv_3.dfy(26,10): Related location: this is the postcondition that could not be proved
+   |
+26 |   ensures y.Length + 1 == X_pos.Length
+   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/vetri-sparse/_spmv_3.dfy(29,29): Error: value does not satisfy the subset constraints of 'nat'
+   |
+29 |   var N: nat := X_pos.Length - 2;
+   |                              ^
+
+
+Dafny program verifier finished with 3 verified, 2 errors

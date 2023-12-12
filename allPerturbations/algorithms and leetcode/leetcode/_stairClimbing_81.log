@@ -1,0 +1,38 @@
+Not legacy result
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(211,4): Error: a postcondition could not be proved on this return path
+    |
+211 |     return steps[n];
+    |     ^^^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(197,10): Related location: this is the postcondition that could not be proved
+    |
+197 |   ensures exists ss: set<seq<Steps>> :: count == |ss| && allEndAtN(ss, n)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(215,9): Error: index out of range
+    |
+215 |   assert steps[2] == 2;
+    |               ^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(215,9): Error: assertion might not hold
+    |
+215 |   assert steps[2] == 2;
+    |                   ^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(216,66): Error: index out of range
+    |
+216 |   assert forall k: nat :: k < 3 ==> exists ss: set<seq<Steps>> :: steps[k] == |ss| && allEndAtN(ss, k);
+    |                                                                        ^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(219,19): Error: this loop invariant could not be proved on entry
+    |
+219 |     invariant 3 <= i <= n + 1
+    |                    ^^^^^^^^^^
+
+datset/algorithms and leetcode/leetcode/_stairClimbing_81.dfy(219,19): Related message: loop invariant violation
+    |
+219 |     invariant 3 <= i <= n + 1
+    |                    ^^^^^^^^^^
+
+
+Dafny program verifier finished with 25 verified, 5 errors

@@ -1,0 +1,28 @@
+Not legacy result
+datset/from dafny main repo/dafny4/_ACL2-extractor_43.dfy(259,12): Error: a postcondition could not be proved on this return path
+    |
+259 |   if i != 0 {
+    |             ^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_43.dfy(256,10): Related location: this is the postcondition that could not be proved
+    |
+256 |   ensures nth(i, append(xs, ys)) == nth(i, xs)
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_43.dfy(269,9): Error: the calculation step between the previous line and this line could not be proved
+    |
+269 |       nth(i - 1, append(xs.tail, ys));
+    |          ^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_43.dfy(271,8): Error: a precondition for this call could not be proved
+    |
+271 |         NthAppendA(i - 1, xs.tail, ys);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+datset/from dafny main repo/dafny4/_ACL2-extractor_43.dfy(255,11): Related location: this is the precondition that could not be proved
+    |
+255 |   requires 0 <= i < length(xs)
+    |            ^^^^^^
+
+
+Dafny program verifier finished with 21 verified, 3 errors

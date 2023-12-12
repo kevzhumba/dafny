@@ -1,0 +1,13 @@
+Not legacy result
+datset/from dafny main repo/dafny1/_MatrixFun_65.dfy(38,25): Error: this invariant could not be proved to be maintained by the loop
+   |
+38 |     invariant a < b <= N || (a == N && b == N + 1)
+   |                          ^^
+
+datset/from dafny main repo/dafny1/_MatrixFun_65.dfy(38,25): Related message: loop invariant violation
+   |
+38 |     invariant a < b <= N || (a == N && b == N + 1)
+   |                          ^^
+
+
+Dafny program verifier finished with 5 verified, 1 error
